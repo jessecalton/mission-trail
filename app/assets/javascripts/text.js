@@ -1,4 +1,4 @@
-var game = new Phaser.Game(400, 200, Phaser.CANVAS, 'phaser-example', { create: create });
+var game = new Phaser.Game(300, 200, Phaser.CANVAS, 'phaser-example', { create: create });
 
 console.log(gon.gametext)
 
