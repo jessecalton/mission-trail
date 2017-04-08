@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     awesome_print (1.7.0)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -169,9 +170,11 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-16
 
 DEPENDENCIES
   awesome_print
+  bcrypt (~> 3.1.7)
   better_errors
   byebug
   coffee-rails (~> 4.2)
