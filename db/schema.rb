@@ -10,22 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407225539) do
+ActiveRecord::Schema.define(version: 20170408020352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "attr_changes", force: :cascade do |t|
+    t.integer  "fomo_change"
+    t.integer  "battery_change"
+    t.integer  "time_change"
+    t.integer  "money_change"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.text     "text"
+    t.integer  "game_id"
+    t.string   "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "games", force: :cascade do |t|
-    t.string   "player_name"
-    t.integer  "fomo_level"
-    t.integer  "battery_level"
-    t.integer  "popularity_level"
-    t.integer  "time_remaining",   default: 120
-    t.integer  "money_level"
+    t.string   "username"
+    t.integer  "fomo"
+    t.integer  "battery"
+    t.integer  "time",       default: 120
+    t.integer  "money"
     t.string   "occupation"
     t.integer  "user_id"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.text     "text"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.text     "text"
+    t.integer  "option_id"
+    t.integer  "attr_change_id"
+    t.integer  "event_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|
