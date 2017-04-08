@@ -1,17 +1,24 @@
 var game = new Phaser.Game(1200, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 
 console.log(gon.gametext)
-
+// these are for the menu bar
 // gon.gametext
 // gon.gameimage
 // gon.fomo
 // gon.battery
 // gon.time
 // gon.money
+
+// these are for the options
 // gon.option1
 // gon.option2
 // gon.option3
 // gon.option4
+// gon.result
+// gon.option1route
+// gon.option2route
+// gon.option3route
+// gon.option4route
 
 
 var content = [
@@ -45,16 +52,22 @@ function create() {
     if (gon.option2 != null){
     option2Button = game.add.button(400, 750, 'button', option2Click, this)
     option2_text = game.add.text(440, 760, "option2", { font: "20px Arial", fill: "#FFA500" })
-}
-if (gon.option3 != null){
-    option3Button = game.add.button(600, 750, 'button', option1Click, this)
-    option3_text = game.add.text(640, 760, "option3", { font: "20px Arial", fill: "#FFA500" })
-}
+    }
+    if (gon.option3 != null){
+        option3Button = game.add.button(600, 750, 'button', option1Click, this)
+        option3_text = game.add.text(640, 760, "option3", { font: "20px Arial", fill: "#FFA500" })
+    }
 
-if (gon.option4 != null){
-    option4Button = game.add.button(800, 750, 'button', option2Click, this)
-    option4_text = game.add.text(840, 760, "option4", { font: "20px Arial", fill: "#FFA500" })
-}
+    if (gon.option4 != null){
+        option4Button = game.add.button(800, 750, 'button', option2Click, this)
+        option4_text = game.add.text(840, 760, "option4", { font: "20px Arial", fill: "#FFA500" })
+    }
+
+    if (gon.option1 == null && gon.option2 == null && gon.option3 == null && gon.option4 == null && gon.result != null ) {
+
+        resultButton = game.add.button(500, 750, 'button', resultClick, this)
+        option4_text = game.add.text(540, 760, "result", { font: "20px Arial", fill: "#FFA500" })
+    }
 
     couple = game.add.sprite(300, 0, 'image')
 
@@ -73,59 +86,50 @@ if (gon.option4 != null){
 
 }
 
-function option1Click() {
+function resultClick() {
 window.location.href = gon.option1route
 }
 
+function option1Click() {
+window.location.href = gon.option2route
+}
+
 function option2Click() {
-window.location.href = "https://yahoo.com";
+window.location.href = gon.option2route;
 }
 
 function option3Click() {
-window.location.href = "https://google.com";
+window.location.href = gon.option2route;
 }
 
 function option4Click() {
-window.location.href = "https://google.com";
+window.location.href = gon.option2route;
 }
 
 function nextLine() {
 
     if (lineIndex === content.length)
     {
-        //  We're finished
         return;
     }
-
-    //  Split the current line on spaces, so one word per array element
     line = content[lineIndex].split(' ');
-
-    //  Reset the word index to zero (the first word in the line)
     wordIndex = 0;
-
-    //  Call the 'nextWord' function once for each word in the line (line.length)
     game.time.events.repeat(wordDelay, line.length, nextWord, this);
-
-    //  Advance to the next line
     lineIndex++;
 
 }
 
 function nextWord() {
 
-    //  Add the next word onto the text string, followed by a space
     text.text = text.text.concat(line[wordIndex] + " ");
 
-    //  Advance the word index to the next word in the line
     wordIndex++;
 
-    //  Last word?
     if (wordIndex === line.length)
     {
-        //  Add a carriage return
+
         text.text = text.text.concat("\n");
 
-        //  Get the next line after the lineDelay amount of ms has elapsed
         game.time.events.add(lineDelay, nextLine, this);
     }
 
