@@ -12,7 +12,6 @@ class GamesController < ApplicationController
     gon.option2 = "eat the burrito"
     gon.option3 = "run away screaming"
     gon.option4 = "have an awkward conversation"
-
   end
 
   def new
@@ -23,16 +22,34 @@ class GamesController < ApplicationController
     if params[:game][:occupation] == "Yoga Instructor"
       @game = Game.new(
         username: params[:game][:username],
+        fomo: 30,
+        battery: 20,
+        money: 35,
+        occupation: params[:game][:occupation],
+        )
+    elsif params[:game][:occupation] == "Hedge Fund Manager"
+      @game = Game.new(
+        username: params[:game][:username],
         fomo: 50,
         battery: 20,
-        money: 20,
+        money: 70,
+        occupation: params[:game][:occupation],
+        )
+    elsif params[:game][:occupation] == "Tech Bro"
+      @game = Game.new(
+        username: params[:game][:username],
+        fomo: 50,
+        battery: 40,
+        money: 50,
         occupation: params[:game][:occupation],
         )
     end
     p @game
-
-
+    redirect_to @game
   end
 
+  def show
+    @game = Game.find(params[:id])
+  end
 
 end
