@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require phaser
-//= require text
+//= require _game_event
