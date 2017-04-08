@@ -1,9 +1,22 @@
-var game = new Phaser.Game(400, 200, Phaser.CANVAS, 'phaser-example', { create: create });
+var game = new Phaser.Game(1000, 600, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 
 console.log(gon.gametext)
 
+// gon.gametext
+// gon.gameimage
+// gon.fomo
+// gon.battery
+// gon.time
+// gon.money
+// gon.option1
+// gon.option2
+// gon.option3
+// gon.option4
+
+
 var content = [
     gon.gametext
+
 ];
 
 var line = [];
@@ -14,11 +27,28 @@ var lineIndex = 0;
 var wordDelay = 120;
 var lineDelay = 400;
 
+
+function preload(){
+    game.load.image('image', gon.gameimage)
+}
+
+
 function create() {
 
-    text = game.add.text(32, 32, '', { font: "15px Arial", fill: "#19de65" });
+    couple = game.add.sprite(300, 0, 'image')
+
+    fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
+
+    battery = game.add.text(0, 40, "Battery life:" + gon.battery, { font: "15px Arial", fill: "#19de65" })
+
+    time = game.add.text(0, 60, "Time:" + gon.time, { font: "15px Arial", fill: "#19de65" })
+
+    money = game.add.text(0, 80, "Money:" + gon.money, { font: "15px Arial", fill: "#19de65" })
+
+    text = game.add.text(30, 450, '', { font: "15px Arial", fill: "#19de65" });
 
     nextLine();
+
 
 }
 
