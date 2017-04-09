@@ -40,8 +40,6 @@ result2 = Result.create(text: "Well, that was awkward.", option_id: option2.id, 
 result3 = Result.create(text: "You disappeared behind a cloud of Dragonfruit vape smoke. That was so tight!", option_id: option3.id, attr_change_id: attr_change2.id, event_id: event.id)
 result4 = Result.create(text: "You kicked them and ran! Serves 'em right! That relationship was the worst two weeks ever!", option_id: option4.id, attr_change_id: attr_change2.id, event_id: event.id)
 
-
-
 ### OG Kushman trade flannel event ###
 event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/og_kushman.jpg", attr_change_id: 1)
 
@@ -58,7 +56,6 @@ local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells y
 local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1)
 
 
-
-
-
-
+average-game-ending = Event.create(name: "average-game-ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.")
+bad-game-ending = Event.create(name: "bad-game-ending", text: "You reached the party. Its sucks, you wished you stayed home rewatching on 'Friends' again")
+good-game-ending = Event.create(name: "good-game-ending", text: "The Party is the greatest ever. People love your small talk and hipster style")
