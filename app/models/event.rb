@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :game
   has_many :options
   has_many :results
+  belongs_to :attr_change
 end

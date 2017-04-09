@@ -1,5 +1,5 @@
-var game = new Phaser.Game(1200, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
-
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
+console.log(gon.option1route)
 console.log(gon.gametext)
 // these are for the menu bar
 // gon.gametext
@@ -42,8 +42,12 @@ function preload(){
     game.load.spritesheet('player_walk', 'assets/walk.png', 44, 60, 2);
 
     game.load.image('image', gon.gameimage)
+<<<<<<< HEAD
     game.load.image('button', "assets/button.png" )
     game.load.image('bar', "assets/bar.png")
+=======
+    game.load.image('button', "/assets/button.png" )
+>>>>>>> 80f2c50a0f99ea3ff0b114c6e352a059461f6c5e
 
 }
 
@@ -64,9 +68,9 @@ function create() {
 
     gameimage = game.add.sprite(300, 130, 'image')
 
-    name = game.add.text (0, 20, "Name: " + gon.username, { font: "15px Arial", fill: "#19de65" })
+    username = game.add.text(0, 0, "Name:" + gon.username, { font: "15px Arial", fill: "#19de65" })
 
-    fomo = game.add.text(0, 40, "FOMO: " + gon.fomo, { font: "15px Arial", fill: "#19de65" })
+    fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
 
     battery = game.add.text(0, 60, "Battery life: " + gon.battery, { font: "15px Arial", fill: "#19de65" })
 

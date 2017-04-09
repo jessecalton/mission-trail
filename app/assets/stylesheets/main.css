@@ -1,0 +1,17 @@
+.background {
+  background-color: black;
+}
+
+#button {
+  position:absolute;
+  transition: .5s ease;
+  top: 95%;
+  left: 50%;
+}
+
+h1 {
+  position:absolute;
+  left: 40%;
+  color: white;
+  font-style
+}

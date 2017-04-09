@@ -7,7 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 game = Game.create(username: "Ronin", fomo: 20, battery: 20, time: 120, money: 35, occupation: "Yoga Instructor")
-event = Event.create(name: "ex-girlfriend", text: "You run into your ex with their new boo. They are having such a good time without you. What do you do?", game_id: game.id, image_url: "assets/starwar.png")
+
+
+
+event = Event.create(name: "ex-girlfriend", text: "You run into your ex with their new boo. They are having such a good time without you. What do you do?", image_url: "assets/starwar.png")
+insta_event1 = Event.create(name: "good-insta", text: "You have 11 Insta likes. You are happy.", attr_change_id: 3)
+insta_event2 = Event.create(name: "bad-insta", text: "You have 3 Instagram likes. Sucks to be you.", attr_change_id: 2)
+
 option1 = Option.create(text: "Hide behind a compost bin", event_id: event.id)
 option2 = Option.create(text: "Engage in awkward conversation", event_id: event.id)
 option3 = Option.create(text: "Disappear behind a cloud of Dragonfruit vape smoke", event_id: event.id)
@@ -15,6 +21,7 @@ option4 = Option.create(text: "Kick them and make them drop their coconut water 
 
 attr_change1 = AttrChange.create(fomo_change: 0, battery_change: 0, time_change: -5, money_change: 0)
 attr_change2 = AttrChange.create(fomo_change: 5, battery_change: 0, time_change: -5, money_change: 0)
+attr_change3 = AttrChange.create(fomo_change: -5, battery_change: 0, time_change: -5, money_change: 0)
 
 result1 = Result.create(text: "You hid behind a compost bin. Nice move, Slick.", option_id: Option.first.id, attr_change_id: attr_change1.id, event_id: Event.first.id)
 result2 = Result.create(text: "Well, that was awkward.", option_id: Option.second.id, attr_change_id: attr_change1.id, event_id: Event.first.id)
