@@ -2,6 +2,7 @@ class GamesController < ApplicationController
 
   def index
     @game = Game.first
+    gon.username = "Paul"
     gon.gametext = "somebody once told me the world is gonna roll me"
     gon.fomo = "10,0000"
     gon.battery = "140"

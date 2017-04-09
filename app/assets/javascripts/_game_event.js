@@ -3,6 +3,7 @@ var game = new Phaser.Game(1200, 800, Phaser.CANVAS, 'phaser-example', {preload:
 console.log(gon.gametext)
 // these are for the menu bar
 // gon.gametext
+// gon.name
 // gon.gameimage
 // gon.fomo
 // gon.battery
@@ -36,7 +37,10 @@ var lineDelay = 400;
 
 
 function preload(){
-    // game.load.spritesheet('mummy', 'assets/mummy.png', 37, 45, 18);
+    game.load.spritesheet('smiles', 'assets/spritesheet.png', 170, 140, 2);
+
+    game.load.spritesheet('mummy', 'assets/walk.png', 14, 60, 3);
+
     game.load.image('image', gon.gameimage)
     game.load.image('button', "assets/button.png" )
 
@@ -45,18 +49,28 @@ function preload(){
 
 function create() {
 
+    smiles = game.add.sprite(10, 360, 'smiles', 10);
+    smiles.scale.set(1);
+    smiles.smoothed = false;
+    anim = smiles.animations.add('walk');
 
+    // mummy = game.add.sprite(50, 360, 'mummy', 5);
+    // mummy.scale.set(1);
+    // mummy.smoothed = false;
+    // anim = mummy.animations.add('walk');
+    anim.play(10, true);
 
     couple = game.add.sprite(300, 0, 'image')
 
+    name = game.add.text (0, 20, "Name: " + gon.username, { font: "15px Arial", fill: "#19de65" })
 
-    fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
+    fomo = game.add.text(0, 40, "FOMO: " + gon.fomo, { font: "15px Arial", fill: "#19de65" })
 
-    battery = game.add.text(0, 40, "Battery life:" + gon.battery, { font: "15px Arial", fill: "#19de65" })
+    battery = game.add.text(0, 60, "Battery life: " + gon.battery, { font: "15px Arial", fill: "#19de65" })
 
-    time = game.add.text(0, 60, "Time:" + gon.time, { font: "15px Arial", fill: "#19de65" })
+    time = game.add.text(0, 80, "Time: " + gon.time, { font: "15px Arial", fill: "#19de65" })
 
-    money = game.add.text(0, 80, "Money:" + gon.money, { font: "15px Arial", fill: "#19de65" })
+    money = game.add.text(0, 100, "Money: " + gon.money, { font: "15px Arial", fill: "#19de65" })
 
     text = game.add.text(30, 550, '', { font: "15px Arial", fill: "#19de65" });
 
