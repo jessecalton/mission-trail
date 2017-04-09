@@ -1,5 +1,5 @@
 <%= form_for @game, url: {action: "create"}, html: {class: "new_game_form"} do |f| %>
-  <h4>What is your name?</h4> <%= f.text_field :username %> 
+  <h4>What is your name?</h4> <%= f.text_field :username %>
   <h4>What is your occupation?</h4><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"]%>
   <br>
   <%= f.submit "Hit The Trail!" %>
@@ -11,3 +11,4 @@
   <h4>Tech Bro:</h4><p>The Tech Bro begins the game with the highest amount of phone battery</p>
   <h4>Yoga Instructor:</h4><p>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
   </div>
+<br>

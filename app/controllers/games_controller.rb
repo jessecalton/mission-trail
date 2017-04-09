@@ -20,7 +20,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new(params[:id])
-    
+
   end
 
   def create
