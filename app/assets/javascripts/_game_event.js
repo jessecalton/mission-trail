@@ -3,6 +3,7 @@ var game = new Phaser.Game(1200, 800, Phaser.CANVAS, 'phaser-example', {preload:
 console.log(gon.gametext)
 // these are for the menu bar
 // gon.gametext
+// gon.name
 // gon.gameimage
 // gon.fomo
 // gon.battery
@@ -36,6 +37,10 @@ var lineDelay = 400;
 
 
 function preload(){
+    game.load.spritesheet('smiles', 'assets/spritesheet.png', 170, 50, 2);
+
+    game.load.spritesheet('mummy', 'assets/walk.png', 40, 60, 2);
+
     game.load.image('image', gon.gameimage)
     game.load.image('button', "assets/button.png" )
 
@@ -43,41 +48,29 @@ function preload(){
 
 
 function create() {
-    if (gon.option1 != null){
-    option1Button = game.add.button(200, 750, 'button', option1Click, this)
 
-    option1_text = game.add.text(240, 760, "option1", { font: "20px Arial", fill: "#FFA500" })
-    }
+    // smiles = game.add.sprite(10, 360, 'smiles', 10);
+    // smiles.scale.set(1);
+    // smiles.smoothed = false;
+    // anim = smiles.animations.add('walk');
 
-    if (gon.option2 != null){
-    option2Button = game.add.button(400, 750, 'button', option2Click, this)
-    option2_text = game.add.text(440, 760, "option2", { font: "20px Arial", fill: "#FFA500" })
-    }
-    if (gon.option3 != null){
-        option3Button = game.add.button(600, 750, 'button', option1Click, this)
-        option3_text = game.add.text(640, 760, "option3", { font: "20px Arial", fill: "#FFA500" })
-    }
-
-    if (gon.option4 != null){
-        option4Button = game.add.button(800, 750, 'button', option2Click, this)
-        option4_text = game.add.text(840, 760, "option4", { font: "20px Arial", fill: "#FFA500" })
-    }
-
-    if (gon.option1 == null && gon.option2 == null && gon.option3 == null && gon.option4 == null && gon.result != null ) {
-
-        resultButton = game.add.button(500, 750, 'button', resultClick, this)
-        option4_text = game.add.text(540, 760, "result", { font: "20px Arial", fill: "#FFA500" })
-    }
+    mummy = game.add.sprite(50, 360, 'mummy', 5);
+    mummy.scale.set(1);
+    mummy.smoothed = false;
+    anim = mummy.animations.add('walk');
+    anim.play(10, true);
 
     couple = game.add.sprite(300, 0, 'image')
 
-    fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
+    name = game.add.text (0, 20, "Name: " + gon.username, { font: "15px Arial", fill: "#19de65" })
 
-    battery = game.add.text(0, 40, "Battery life:" + gon.battery, { font: "15px Arial", fill: "#19de65" })
+    fomo = game.add.text(0, 40, "FOMO: " + gon.fomo, { font: "15px Arial", fill: "#19de65" })
 
-    time = game.add.text(0, 60, "Time:" + gon.time, { font: "15px Arial", fill: "#19de65" })
+    battery = game.add.text(0, 60, "Battery life: " + gon.battery, { font: "15px Arial", fill: "#19de65" })
 
-    money = game.add.text(0, 80, "Money:" + gon.money, { font: "15px Arial", fill: "#19de65" })
+    time = game.add.text(0, 80, "Time: " + gon.time, { font: "15px Arial", fill: "#19de65" })
+
+    money = game.add.text(0, 100, "Money: " + gon.money, { font: "15px Arial", fill: "#19de65" })
 
     text = game.add.text(30, 550, '', { font: "15px Arial", fill: "#19de65" });
 
