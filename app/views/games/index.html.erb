@@ -10,4 +10,6 @@
 <%= link_to "Check Tinder", tinder_index_path %>
 <% end %>
 
-<%= link_to "Talk to Locals", events_path %>
+<% if @game.talked_to_locals == false %>
+<%= link_to "Talk to Locals", local_index_path %>
+<% end %>

@@ -22,7 +22,17 @@ module ApplicationHelper
       @event = Event.find_by(name: "bad-insta")
       @attr_change = @event.attr_change
     end
-    
+  end
+
+  def local_event_generator
+    @events = Event.all
+    @event_array = []
+    @events.each do |event|
+      if event.name.include?("local")
+        @event_array << event
+      end
+    end
+    @event_array
   end
 
   def decrease_fomo

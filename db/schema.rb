@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.string   "occupation"
     t.boolean  "checked_instagram", default: false
     t.boolean  "checked_tinder",    default: false
+    t.boolean  "talked_to_locals",  default: false
     t.integer  "user_id"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
