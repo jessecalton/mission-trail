@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   include ApplicationHelper
   def index
     p randomize_event
-    redirect_to event_path(@event)
+    redirect_to event_path(@event.id)
   end
 
   def show

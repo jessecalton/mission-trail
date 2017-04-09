@@ -1,7 +1,10 @@
 class GamesController < ApplicationController
+  include ApplicationHelper
 
   def index
     @game = Game.find(session[:id])
+    p @game
+
     gon.username = @game.username
     gon.gametext = "Get to Anchor & Hope"
     gon.fomo = @game.fomo
@@ -57,7 +60,11 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+  end
 
+  def update
+    p "it works"
+    redirect_to games_path
   end
 
 end
