@@ -2,19 +2,7 @@ class GamesController < ApplicationController
   include ApplicationHelper
 
   def index
-<<<<<<< HEAD
-    @game = Game.first
-    gon.username = "Paul"
-    gon.gametext = "somebody once told me the world is gonna roll me"
-    gon.fomo = "10,0000"
-    gon.battery = "140"
-    gon.time = "120"
-    gon.money = "$40"
-    gon.gameimage = "assets/googlemaps.png"
-=======
-    @game = Game.find(session[:id])
-    p @game
-
+    @game = Game.find(session[:id]
     gon.username = @game.username
     gon.gametext = "Get to Anchor & Hope"
     gon.fomo = @game.fomo
@@ -29,7 +17,6 @@ class GamesController < ApplicationController
     gon.result = "result"
     gon.resultroute = "/games/new"
     gon.option1route = "/games/new"
->>>>>>> 80f2c50a0f99ea3ff0b114c6e352a059461f6c5e
   end
 
   def new
