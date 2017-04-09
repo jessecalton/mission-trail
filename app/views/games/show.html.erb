@@ -1,6 +1,13 @@
+<% if @game.time == 0 %>
+<%=  link_to "Enter Party", game_end_index_path %>
+
+<% else %>
+
 <h1>Welcome to the trail, <%=@game.username%></h1>
 
 <h4>Fomo:</h4><%=@game.fomo %>
 <h4>Minutes to goal:</h4><%=@game.time %>
 <h4>Money:</h4>$<%=@game.money %>
 <h4>Battery:</h4><%=@game.battery %>
+
+<% end %>
