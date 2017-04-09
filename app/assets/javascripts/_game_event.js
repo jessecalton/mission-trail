@@ -39,7 +39,7 @@ var lineDelay = 400;
 function preload(){
     game.load.spritesheet('smiles', 'assets/spritesheet.png', 170, 50, 2);
 
-    game.load.spritesheet('mummy', 'assets/walk.png', 40, 60, 2);
+    game.load.spritesheet('mummy', 'assets/walk.png', 44, 60, 2);
 
     game.load.image('image', gon.gameimage)
     game.load.image('button', "assets/button.png" )
@@ -54,13 +54,13 @@ function create() {
     // smiles.smoothed = false;
     // anim = smiles.animations.add('walk');
 
-    mummy = game.add.sprite(50, 360, 'mummy', 5);
+    mummy = game.add.sprite(120, 50, 'mummy', 5);
     mummy.scale.set(1);
     mummy.smoothed = false;
     anim = mummy.animations.add('walk');
     anim.play(10, true);
 
-    couple = game.add.sprite(300, 0, 'image')
+    gameimage = game.add.sprite(300, 130, 'image')
 
     name = game.add.text (0, 20, "Name: " + gon.username, { font: "15px Arial", fill: "#19de65" })
 
