@@ -1,12 +1,13 @@
 module ApplicationHelper
   def randomize_event
     @events = Event.all
+    @event_array = []
     @events.each do |event|
-      if event.options != 0
-        @event = event
+      if event.options.length != 0
+        @event_array << event
       end
-      return @event
     end
+    @event_array
   end
 
   def instagram_check
@@ -21,7 +22,17 @@ module ApplicationHelper
       @event = Event.find_by(name: "bad-insta")
       @attr_change = @event.attr_change
     end
-    
+  end
+
+  def local_event_generator
+    @events = Event.all
+    @event_array = []
+    @events.each do |event|
+      if event.name.include?("local")
+        @event_array << event
+      end
+    end
+    @event_array
   end
 
   def decrease_fomo
