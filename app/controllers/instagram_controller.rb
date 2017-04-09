@@ -13,6 +13,14 @@ class InstagramController < ApplicationController
       @event = Event.find_by(name: "bad-insta")
       @attr_change = @event.attr_change
     end
+    gon.username = @game.username
+    gon.fomo = @game.fomo
+    gon.battery = @game.battery
+    gon.time = @game.time
+    gon.money = @game.money
+    gon.gametext = @event.text
+    gon.gameimage = "/assets/instagram.png"
+
   end
 
   def show
