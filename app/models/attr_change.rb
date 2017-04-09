@@ -1,3 +1,5 @@
 class AttrChange < ApplicationRecord
-  belongs_to :result
+  has_many :results
+  has_many :events
+
 end
