@@ -4,5 +4,8 @@ Rails.application.routes.draw do
     resources :results
   end
 
-  root to: 'games#index'
+  root to: 'welcome#index'
+
+  resources :welcome
+    get '/welcome/fomo_details', to: 'welcome#show'
 end
