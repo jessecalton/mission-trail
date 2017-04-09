@@ -10,7 +10,7 @@ game = Game.create(username: "Ronin", fomo: 20, battery: 20, time: 120, money: 3
 
 
 
-event = Event.create(name: "ex-girlfriend", text: "You run into your ex with their new boo. They are having such a good time without you. What do you do?", game_id: game.id, image_url: "assets/starwar.png")
+event = Event.create(name: "ex-girlfriend", text: "You run into your ex with their new boo. They are having such a good time without you. What do you do?", image_url: "assets/starwar.png")
 
 
 option1 = Option.create(text: "Hide behind a compost bin", event_id: event.id)

@@ -1,5 +1,5 @@
-var game = new Phaser.Game(1200, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
-
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
+console.log(gon.option1route)
 console.log(gon.gametext)
 // these are for the menu bar
 // gon.gametext
@@ -37,7 +37,7 @@ var lineDelay = 400;
 
 function preload(){
     game.load.image('image', gon.gameimage)
-    game.load.image('button', "assets/button.png" )
+    game.load.image('button', "/assets/button.png" )
 
 }
 
@@ -70,6 +70,8 @@ function create() {
     }
 
     couple = game.add.sprite(300, 0, 'image')
+
+    username = game.add.text(0, 0, "Name:" + gon.username, { font: "15px Arial", fill: "#19de65" })
 
     fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
 

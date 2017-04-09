@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def randomize_event
+    @events = Event.all
+    @event = @events.sample
+  end
+
   def decrease_fomo
     @game = Game.find(params[:id])
     @game.fomo += -10
