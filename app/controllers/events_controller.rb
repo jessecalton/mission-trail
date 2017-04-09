@@ -1,8 +1,9 @@
 class EventsController < ApplicationController
   include ApplicationHelper
   def index
-    p randomize_event
-    redirect_to event_path(@event.id)
+    randomize_event
+    @event = @event_array.sample
+    redirect_to event_path(@event)
   end
 
   def show
@@ -17,6 +18,6 @@ class EventsController < ApplicationController
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
-    gon.gameimage = "/assets/couple.jpg"
+    gon.gameimage = @event.image_url
   end
 end

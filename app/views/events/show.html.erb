@@ -1,5 +1,8 @@
 
 <script src="/assets/_game_event.js"></script>
 
-<%= link_to "Show", event_result_path(@event.results.first.id) %>
+<% @event.options.each_with_index do |option, val| %>
+
+  <%= link_to option.text, event_result_path(@event, @event.results[val].id) %>
+<% end %>
 

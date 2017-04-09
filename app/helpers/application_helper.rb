@@ -1,12 +1,13 @@
 module ApplicationHelper
   def randomize_event
     @events = Event.all
+    @event_array = []
     @events.each do |event|
-      if event.options != 0
-        @event = event
+      if event.options.length != 0
+        @event_array << event
       end
-      return @event
     end
+    @event_array
   end
 
   def instagram_check
