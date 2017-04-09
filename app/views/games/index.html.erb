@@ -2,7 +2,9 @@
 
 <%= link_to "Hit the Trail", events_path %>
 
+<% if @game.checked_instagram == false %>
 <%=  link_to "Check Instagram", instagram_index_path %>
+<% end %>
 
 <%= link_to "Check Tinder", events_path %>
 

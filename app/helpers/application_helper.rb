@@ -1,18 +1,24 @@
 module ApplicationHelper
   def randomize_event
     @events = Event.all
-    @event = @events.sample
+    @events.each do |event|
+      if event.options != 0
+        @event = event
+      end
+      return @event
+    end
   end
 
   def instagram_check
     @game = Game.find(session[:id])
     @game.checked_instagram = true
     @num = rand(50)
+    p @num
     if @num >= 40
       @event = Event.find_by(name: "good-insta")
       @attr_change = @event.attr_change
     elsif @num < 40
-      @event = Event.find_by(name: "good-insta")
+      @event = Event.find_by(name: "bad-insta")
       @attr_change = @event.attr_change
     end
     

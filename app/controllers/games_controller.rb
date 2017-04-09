@@ -3,6 +3,7 @@ class GamesController < ApplicationController
 
   def index
     @game = Game.find(session[:id])
+    p @game
 
     gon.username = @game.username
     gon.gametext = "Get to Anchor & Hope"

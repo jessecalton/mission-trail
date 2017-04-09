@@ -11,7 +11,8 @@ game = Game.create(username: "Ronin", fomo: 20, battery: 20, time: 120, money: 3
 
 
 event = Event.create(name: "ex-girlfriend", text: "You run into your ex with their new boo. They are having such a good time without you. What do you do?", image_url: "assets/starwar.png")
-insta_event1 = 
+insta_event1 = Event.create(name: "good-insta", text: "You have 11 Insta likes. You are happy.", attr_change_id: 3)
+insta_event2 = Event.create(name: "bad-insta", text: "You have 3 Instagram likes. Sucks to be you.", attr_change_id: 2)
 
 option1 = Option.create(text: "Hide behind a compost bin", event_id: event.id)
 option2 = Option.create(text: "Engage in awkward conversation", event_id: event.id)
