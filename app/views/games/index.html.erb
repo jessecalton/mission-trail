@@ -6,6 +6,8 @@
 <%=  link_to "Check Instagram", instagram_index_path %>
 <% end %>
 
-<%= link_to "Check Tinder", events_path %>
+<% if @game.checked_tinder == false %>
+<%= link_to "Check Tinder", tinder_index_path %>
+<% end %>
 
 <%= link_to "Talk to Locals", events_path %>

@@ -10,10 +10,10 @@ class TinderController < ApplicationController
       @event = Event.find_by(name: "good-tinder")
       @attr_change = @event.attr_change
     elsif @num >= 20 && @num < 40
-      @event = Event.find_by(name: "neutral-insta")
+      @event = Event.find_by(name: "neutral-tinder")
       @attr_change = @event.attr_change
     else
-      @event = Event.find_by(name: "bad-insta")
+      @event = Event.find_by(name: "bad-tinder")
       @attr_change = @event.attr_change
     end
   end
