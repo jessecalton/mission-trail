@@ -26,6 +26,7 @@ class ResultsController < ApplicationController
     @game.update_attributes(battery: (@game.battery += @result.attr_change.battery_change))
     @game.update_attributes(time: (@game.time += @result.attr_change.time_change))
     @game.update_attributes(money: (@game.money += @result.attr_change.money_change))
+    @game.update_attributes(checked_instagram: false)
 
     redirect_to games_path
   end
