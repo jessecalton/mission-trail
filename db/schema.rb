@@ -27,22 +27,24 @@ ActiveRecord::Schema.define(version: 20170408020352) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.text     "text"
-    t.integer  "game_id"
     t.string   "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "attr_change_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "games", force: :cascade do |t|
     t.string   "username"
     t.integer  "fomo"
     t.integer  "battery"
-    t.integer  "time",       default: 120
+    t.integer  "time",              default: 120
     t.integer  "money"
     t.string   "occupation"
+    t.boolean  "checked_instagram", default: false
+    t.boolean  "checked_tinder",    default: false
     t.integer  "user_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "options", force: :cascade do |t|

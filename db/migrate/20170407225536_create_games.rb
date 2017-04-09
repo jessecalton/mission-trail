@@ -7,6 +7,8 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.integer :time, default: 120
       t.integer :money
       t.string :occupation
+      t.boolean :checked_instagram, default: false
+      t.boolean :checked_tinder, default: false
       t.integer :user_id
 
       t.timestamps
