@@ -58,10 +58,11 @@ function create() {
     player_walk.smoothed = false;
     anim = player_walk.animations.add('walk');
     anim.play(10, true);
+    }
+    else {
     gameimage = game.add.sprite(300, 130, 'image')
 
     }
-
     username = game.add.text(0, 0, "Name:" + gon.username, { font: "15px Arial", fill: "#19de65" })
 
     fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
@@ -79,27 +80,6 @@ function create() {
 
 
 }
-
-function resultClick() {
-window.location.href = gon.option1route
-}
-
-function option1Click() {
-window.location.href = gon.option2route
-}
-
-function option2Click() {
-window.location.href = gon.option2route;
-}
-
-function option3Click() {
-window.location.href = gon.option2route;
-}
-
-function option4Click() {
-window.location.href = gon.option2route;
-}
-
 function nextLine() {
 
     if (lineIndex === content.length)
