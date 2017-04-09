@@ -36,6 +36,7 @@ var lineDelay = 400;
 
 
 function preload(){
+    // game.load.spritesheet('mummy', 'assets/mummy.png', 37, 45, 18);
     game.load.image('image', gon.gameimage)
     game.load.image('button', "assets/button.png" )
 
@@ -43,33 +44,11 @@ function preload(){
 
 
 function create() {
-    if (gon.option1 != null){
-    option1Button = game.add.button(200, 750, 'button', option1Click, this)
 
-    option1_text = game.add.text(240, 760, "option1", { font: "20px Arial", fill: "#FFA500" })
-    }
 
-    if (gon.option2 != null){
-    option2Button = game.add.button(400, 750, 'button', option2Click, this)
-    option2_text = game.add.text(440, 760, "option2", { font: "20px Arial", fill: "#FFA500" })
-    }
-    if (gon.option3 != null){
-        option3Button = game.add.button(600, 750, 'button', option1Click, this)
-        option3_text = game.add.text(640, 760, "option3", { font: "20px Arial", fill: "#FFA500" })
-    }
-
-    if (gon.option4 != null){
-        option4Button = game.add.button(800, 750, 'button', option2Click, this)
-        option4_text = game.add.text(840, 760, "option4", { font: "20px Arial", fill: "#FFA500" })
-    }
-
-    if (gon.option1 == null && gon.option2 == null && gon.option3 == null && gon.option4 == null && gon.result != null ) {
-
-        resultButton = game.add.button(500, 750, 'button', resultClick, this)
-        option4_text = game.add.text(540, 760, "result", { font: "20px Arial", fill: "#FFA500" })
-    }
 
     couple = game.add.sprite(300, 0, 'image')
+
 
     fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
 
