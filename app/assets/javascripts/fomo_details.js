@@ -25,7 +25,7 @@ function create() {
 
     couple = game.add.sprite(200, 0, 'image')
 
-    text = game.add.text(30, 550, '', { font: "15px Arial", fill: "#19de65" });
+    text = game.add.text(20, 400, '', { font: "15px Arial", fill: "#19de65" });
 
     nextLine();
 }
