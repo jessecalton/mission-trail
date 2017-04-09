@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
   end
 
   def show
-    gon.gameimage = "assets/mission_sign2.gif"
+    gon.gameimage = "/assets/mission_sign2.gif"
 
     gon.gametext = "FOMO\nnoun, informal\nAnxiety that an exciting or interesting event may currently be happening\nelsewhere, often aroused by posts seen on social media.‘Constant real-time\nawareness - through Facebook check-ins and Twitter updates - of the fun\neveryone is having can spark the instant insecurity of FOMO, or fear of missing\nout.’"
   end
