@@ -13,6 +13,10 @@ class InstagramController < ApplicationController
       @event = Event.find_by(name: "bad-insta")
       @attr_change = @event.attr_change
     end
+
+
+
+
   end
 
   def show
