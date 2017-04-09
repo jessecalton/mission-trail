@@ -17,6 +17,9 @@ class EventsController < ApplicationController
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
-    gon.gameimage = "/assets/couple.jpg"
+    gon.gameimage = "/assets/burningman.png"
   end
 end
+
+
+
