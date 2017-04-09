@@ -8,7 +8,7 @@ class GamesController < ApplicationController
     gon.battery = "140"
     gon.time = "120"
     gon.money = "$40"
-    gon.gameimage = "assets/couple.jpg"
+    gon.gameimage = "assets/instagram.png"
   end
 
   def new
