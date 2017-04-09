@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :text
       t.string :image_url
-      t.integer :attr_change_id
+      t.integer :attr_change_id, default: 1
 
       t.timestamps
     end
