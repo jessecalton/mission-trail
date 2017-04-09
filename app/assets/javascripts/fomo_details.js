@@ -23,9 +23,9 @@ function preload(){
 
 function create() {
 
-    couple = game.add.sprite(200, 0, 'image')
+    fomo = game.add.sprite(350, 50, 'image')
 
-    text = game.add.text(20, 400, '', { font: "15px Arial", fill: "#19de65" });
+    text = game.add.text(350, 550, '', { font: "20px Berkelium", fill: "white" });
 
     nextLine();
 }

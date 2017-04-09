@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :welcome
-    get '/welcome/fomo_details', to: 'welcome#show'
+    get '/welcome/show', to: 'welcome#show'
 end

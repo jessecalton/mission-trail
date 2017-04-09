@@ -2,6 +2,7 @@ var game = new Phaser.Game(1000, 800, Phaser.CANVAS, 'phaser-example', {preload:
 
 console.log(gon.gametext)
 
+
 var content = [
     gon.gametext
 
@@ -23,9 +24,9 @@ function preload(){
 
 function create() {
 
-    couple = game.add.sprite(200, 0, 'image')
+    sign = game.add.sprite(350, 50, 'image')
 
-    text = game.add.text(30, 550, '', { font: "15px Arial", fill: "#19de65" });
+    text = game.add.text(350, 550, '', { font: "20px Berkelium", fill: "white" });
 
     nextLine();
 }
