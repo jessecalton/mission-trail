@@ -10,6 +10,7 @@ class LocalController < ApplicationController
       local_event_generator
     end
     @event = @event_array.sample
+    @event.update_attributes(seen?: true)
     @attr_change = @event.attr_change
 
     gon.username = @game.username
