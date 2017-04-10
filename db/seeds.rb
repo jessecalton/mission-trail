@@ -71,10 +71,10 @@ corner_option2 = Option.create(text: "$5 - Buy a coconut water", event_id: corne
 corner_option3 = Option.create(text: "$10 - Buy blueberry muffin vape juice", event_id: corner_event1.id)
 corner_option4 = Option.create(text: "Leave Store", event_id: corner_event1.id)
 
-corner_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_option1.id, attr_change_id: 3)
-corner_result2 = Result.create(text: "You bought a coconut water. Mmmm... Refreshing.", option_id: corner_option2.id, attr_change_id: 3)
-corner_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_option3.id, attr_change_id: 3)
-corner_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_option4.id, attr_change_id: 1)
+corner_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_option1.id, attr_change_id: 3, event_id: corner_event1.id)
+corner_result2 = Result.create(text: "You bought a coconut water. Mmmm... Refreshing.", option_id: corner_option2.id, attr_change_id: 3, event_id: corner_event1.id)
+corner_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_option3.id, attr_change_id: 3, event_id: corner_event1.id)
+corner_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_option4.id, attr_change_id: 1, event_id: corner_event1.id)
 
 
 
