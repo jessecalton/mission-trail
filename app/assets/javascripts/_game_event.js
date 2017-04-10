@@ -10,18 +10,6 @@ console.log(gon.gametext)
 // gon.time
 // gon.money
 
-// these are for the options
-// gon.option1
-// gon.option2
-// gon.option3
-// gon.option4
-// gon.result
-// gon.option1route
-// gon.option2route
-// gon.option3route
-// gon.option4route
-
-
 var content = [
     gon.gametext
 
@@ -38,13 +26,13 @@ var lineDelay = 400;
 
 function preload(){
 
-    game.load.spritesheet('smiles', 'assets/spritesheet.png', 170, 50, 2);
+    game.load.spritesheet('smiles', '/assets/spritesheet.png', 170, 50, 2);
 
     game.load.spritesheet('player_walk', '/assets/walk.png', 44, 60, 2);
 
     game.load.image('image', gon.gameimage)
 
-    game.load.image('bar', 'assets/bar.png')
+    game.load.image('bar', '/assets/bar.png')
 
 }
 
@@ -52,7 +40,12 @@ function preload(){
 function create() {
 
     if (gon.gametext == "Get to Anchor & Hope") {
-    bar = game.add.sprite(gon.time*10, 0, 'bar')
+        if (gon.time <= 15) {
+            bar = game.add.sprite(150, 0, 'bar')
+        }
+        else {
+            bar = game.add.sprite(gon.time*10, 0, 'bar')
+        }
     player_walk = game.add.sprite(120, 50, 'player_walk', 5);
     player_walk.scale.set(1);
     player_walk.smoothed = false;
