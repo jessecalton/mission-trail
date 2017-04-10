@@ -76,6 +76,25 @@ corner_result2 = Result.create(text: "You bought a coconut water. Mmmm... Refres
 corner_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_option3.id, attr_change_id: 3, event_id: corner_event1.id)
 corner_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_option4.id, attr_change_id: 1, event_id: corner_event1.id)
 
+### Half-eaten Burrito Event ###
+
+burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground")
+
+burrito_option1 = Option.create(text: "Eat it?", event_id: burrito_event.id)
+burrito_option2 = Option.create(text: "Leave it be.", event_id: burrito_event.id)
+
+burrito_result1 = Result.create(text: "You have died of dysentery.\n Just kidding! This is modern San Francisco! You cure all your ills with Soylent and move on.", option_id: burrito_option1.id, attr_change_id: 2, event_id: burrito_event.id)
+
+burrito_result2 = Result.create(text: "You left it alone. Probably for the best", option_id: burrito_option2.id, attr_change_id: 3, event_id: burrito_event.id)
+
+### Wine Bar Event ###
+
+wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to a wine tasting!")
+
+wine_option = Option.create(text: "Go in! You are so cool.", event_id: wine_bar1.id)
+
+wine_result = Result.create(text: "This is probably a much better party than the hip, new trendy bar in the Marina. Unfortunately, FOMO is real and you must continue.", option_id: wine_option.id, attr_change_id: 3, event_id: wine_bar1.id)
+
 
 
 ### Talk to Locals 1 ###
@@ -83,6 +102,9 @@ local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells y
 
 ### Talk to Locals 2 ###
 local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1, image_url: "/assets/burningman.png")
+
+### Talk to Locals 3 ###
+local_event_3 = Event.create(name: "local-hit-on", text: "You get hit on by a local who says, 'Woo, that flannel is making me feel things I probably shouldn't.", attr_change_id: 3)
 
 ### Game Ending ###
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.")
