@@ -84,6 +84,7 @@ corner_option2 = Option.create(text: "$5 - Buy a doblet and charge your phone", 
 corner_option3 = Option.create(text: "$10 - Buy blueberry muffin vape juice", event_id: corner_event1.id)
 corner_option4 = Option.create(text: "Leave Store", event_id: corner_event1.id)
 
+
 corner_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_option1.id, attr_change_id: 9, event_id: corner_event1.id, image_url: "/assets/smile.png")
 corner_result2 = Result.create(text: "Your phone has some more juice! Check that Tinder!", option_id: corner_option2.id, attr_change_id: 7, event_id: corner_event1.id, image_url: "/assets/smile.png")
 corner_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_option3.id, attr_change_id: 8, event_id: corner_event1.id, image_url: "/assets/smile.png")
@@ -162,8 +163,6 @@ local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped 
 
 ### Talk to Locals 7 ###
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3)
-
-
 
 ### Game Ending ###
 
