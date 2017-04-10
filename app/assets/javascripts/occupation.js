@@ -2,6 +2,7 @@ var game = new Phaser.Game(1000, 800, Phaser.CANVAS, 'phaser-example', {preload:
 
 console.log(gon.gametext)
 
+
 var content = [
     gon.gametext
 
@@ -23,7 +24,7 @@ function preload(){
 
 function create() {
 
-    text = game.add.text(350, 25, '', { font: "20px Berkelium", fill: "white" });
+  text = game.add.text(335, 0, '', { font: "20px Berkelium", fill: "white" });
 
     nextLine();
 }
@@ -56,4 +57,3 @@ function nextWord() {
     }
 
 }
-

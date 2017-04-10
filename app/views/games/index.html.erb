@@ -1,11 +1,12 @@
 <script src="assets/_game_event.js"></script>
 
-<%= link_to "Hit the Trail", events_path %>
+<div class="button">
+  <%= link_to "Hit the Trail", events_path %>
+</div>
+  <% if @game.checked_instagram == false %>
+  <%=  link_to "Check Instagram", instagram_index_path %>
+  <% end %>
 
-<% if @game.checked_instagram == false %>
-<%=  link_to "Check Instagram", instagram_index_path %>
-<% end %>
+  <%= link_to "Check Tinder", events_path %>
 
-<%= link_to "Check Tinder", events_path %>
-
-<%= link_to "Talk to Locals", events_path %>
+  <%= link_to "Talk to Locals", events_path %>

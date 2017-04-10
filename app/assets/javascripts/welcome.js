@@ -24,9 +24,7 @@ function preload(){
 
 function create() {
 
-    sign = game.add.sprite(350, 50, 'image')
-
-    text = game.add.text(350, 550, '', { font: "20px Berkelium", fill: "white" });
+    text = game.add.text(350, 25, '', { font: "20px Berkelium", fill: "white" });
 
     nextLine();
 }
