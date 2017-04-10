@@ -4,7 +4,7 @@ class EventsController < ApplicationController
     randomize_event
 
     @event = @event_array.sample
-
+    @event.update_attributes(seen?: true)
     redirect_to event_path(@event)
   end
 
