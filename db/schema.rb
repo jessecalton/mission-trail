@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.text     "text"
     t.string   "image_url"
     t.integer  "attr_change_id", default: 1
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "seen?",          default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "games", force: :cascade do |t|

@@ -47,8 +47,13 @@ class GamesController < ApplicationController
         )
     end
     session[:id] = @game.id
-    p "****************"
-    p @game.id
+
+    @events = Event.all
+
+    @events.each do |event|
+      event.update_attributes(seen?: false)
+    end
+
     redirect_to games_path
   end
 
@@ -57,7 +62,6 @@ class GamesController < ApplicationController
   end
 
   def update
-    p "it works"
     redirect_to games_path
   end
 
