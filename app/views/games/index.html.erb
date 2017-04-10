@@ -3,7 +3,9 @@
 <%=  link_to "Enter Party", game_end_index_path %>
 <% end %>
 
-<%= link_to "Hit the Trail", events_path %>
+<div class="button">
+  <%= link_to "Hit the Trail", events_path %>
+</div>
 
 <% if @game.checked_instagram == false && @game.battery > 0%>
 <%=  link_to "Check Instagram", instagram_index_path %>
