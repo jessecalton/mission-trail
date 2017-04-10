@@ -1,4 +1,4 @@
-var game = new Phaser.Game(1400, 600, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
+var game = new Phaser.Game(1050, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 console.log(gon.option1route)
 console.log(gon.gametext)
 // these are for the menu bar
@@ -57,13 +57,13 @@ function create() {
 
     }
     if (gon.username != undefined) {
-    username = game.add.text(0, 0, "Name:" + gon.username, { font: "15px Arial", fill: "#19de65" })
-    fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
-    battery = game.add.text(0, 40, "Battery life: " + gon.battery, { font: "15px Arial", fill: "#19de65" })
-    time = game.add.text(0, 60, "Time: " + gon.time, { font: "15px Arial", fill: "#19de65" })
-    money = game.add.text(0, 80, "Money: " + gon.money, { font: "15px Arial", fill: "#19de65" })
+    username = game.add.text(350, 10, "Name: " + gon.username, { font: "15px Press Start 2P", fill: "white" });
+    fomo = game.add.text(350, 35, "FOMO: " + gon.fomo, { font: "15px Press Start 2P", fill: "white" });
+    battery = game.add.text(350, 60, "Battery life: " + gon.battery, { font: "15px Press Start 2P", fill: "white" });
+    time = game.add.text(350, 85, "Time: " + gon.time, { font: "15px Press Start 2P", fill: "white" });
+    money = game.add.text(350, 110, "Money: " + gon.money, { font: "15px Press Start 2P", fill: "white" });
     }
-    text = game.add.text(30, 550, '', { font: "15px Arial", fill: "#19de65" });
+
 
     nextLine();
 
