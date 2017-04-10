@@ -13,5 +13,5 @@ Rails.application.routes.draw do
 
   resources :welcome, only: [:index, :show]
     get '/welcome/fomo_details', to: 'welcome#show'
-
+    resources :game_end, only: [:index]
 end
