@@ -24,7 +24,7 @@ function preload(){
 
 function create() {
 
-    text = game.add.text(350, 25, '', { font: "20px Berkelium", fill: "white" });
+    text = game.add.text(350, 25, '', { font: "15px Press Start 2P", fill: "white" });
 
     nextLine();
 }

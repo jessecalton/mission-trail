@@ -6,12 +6,12 @@ class GamesController < ApplicationController
 
     @game = Game.find(session[:id])
     gon.username = @game.username
-    gon.gametext = "Get to Anchor & Hope"
+    gon.gametext = "Mission Trail"
     gon.fomo = @game.fomo
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
-    gon.gameimage = "assets/couple.jpg"
+
   end
 
   def new
@@ -47,8 +47,13 @@ class GamesController < ApplicationController
         )
     end
     session[:id] = @game.id
-    p "****************"
-    p @game.id
+
+    @events = Event.all
+
+    @events.each do |event|
+      event.update_attributes(seen?: false)
+    end
+
     redirect_to games_path
   end
 
@@ -57,7 +62,6 @@ class GamesController < ApplicationController
   end
 
   def update
-    p "it works"
     redirect_to games_path
   end
 
