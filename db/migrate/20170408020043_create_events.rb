@@ -5,6 +5,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.text :text
       t.string :image_url
       t.integer :attr_change_id, default: 1
+      t.boolean :seen?, default: false
 
       t.timestamps
     end

@@ -159,10 +159,11 @@ local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped 
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3)
 
 
+
 ### Game Ending ###
 
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/smile.png")
-bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, you wished you stayed home rewatching on 'Friends' again", image_url: "/assets/smile.png")
+bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/smile.png")
 good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/smile.png")
 
 

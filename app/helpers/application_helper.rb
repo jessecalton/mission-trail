@@ -3,7 +3,7 @@ module ApplicationHelper
     @events = Event.all
     @event_array = []
     @events.each do |event|
-      if event.options.length != 0
+      if event.options.length != 0 && event.seen? == false
         @event_array << event
       end
     end
@@ -28,7 +28,7 @@ module ApplicationHelper
     @events = Event.all
     @event_array = []
     @events.each do |event|
-      if event.name.include?("local")
+      if event.name.include?("local") && event.seen? == false
         @event_array << event
       end
     end
