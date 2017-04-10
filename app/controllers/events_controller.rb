@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   include ApplicationHelper
   def index
+    puts "STARTING INDEX YAY!!" 
     randomize_event
     if @event_array.length == 0
       regenerate_events
