@@ -21,3 +21,6 @@ class EventsController < ApplicationController
     gon.gameimage = @event.image_url
   end
 end
+
+
+

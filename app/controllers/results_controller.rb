@@ -13,6 +13,7 @@ class ResultsController < ApplicationController
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
+    gon.gameimage = @result.image_url
   end
 
   def update

@@ -2,6 +2,8 @@ class GamesController < ApplicationController
   include ApplicationHelper
 
   def index
+
+
     @game = Game.find(session[:id])
     gon.username = @game.username
     gon.gametext = "Get to Anchor & Hope"
