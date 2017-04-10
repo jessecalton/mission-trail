@@ -2,11 +2,14 @@ class GamesController < ApplicationController
   include ApplicationHelper
 
   def index
-
+    @game = Game.find(session[:id])
+    if @game.time <= 0
+      redirect_to game_end_index_path
+    end
 
     @game = Game.find(session[:id])
     gon.username = @game.username
-    gon.gametext = "Get to Anchor & Hope"
+    gon.gametext = "Mission Trail"
     gon.fomo = @game.fomo
     gon.battery = @game.battery
     gon.time = @game.time

@@ -2,10 +2,16 @@ class LocalController < ApplicationController
  include ApplicationHelper
 
   def index
+    puts "STARTING INDEX YAY!!"
     @game = Game.find(session[:id])
     @game.update_attributes(talked_to_locals: true)
-    local_event_generator
+    @event_array = Event.local
+    if @event_array.empty?
+      Event.reset_locals
+      @event_array = Event.local
+    end
     @event = @event_array.sample
+    @event.update_attributes(seen?: true)
     @attr_change = @event.attr_change
 
     gon.username = @game.username
