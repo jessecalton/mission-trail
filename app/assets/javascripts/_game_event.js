@@ -1,5 +1,4 @@
-var game = new Phaser.Game(1500, 500, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
-
+var game = new Phaser.Game(1400, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 console.log(gon.option1route)
 console.log(gon.gametext)
 // these are for the menu bar
@@ -47,7 +46,7 @@ function create() {
         else {
             bar = game.add.sprite(gon.time*10, 0, 'bar')
         }
-    player_walk = game.add.sprite(300, 50, 'player_walk', 5);
+    player_walk = game.add.sprite(120, 50, 'player_walk', 5);
     player_walk.scale.set(1);
     player_walk.smoothed = false;
     anim = player_walk.animations.add('walk');
@@ -58,14 +57,14 @@ function create() {
 
     }
     if (gon.username != undefined) {
-    username = game.add.text(10, 10, "Name: " + gon.username, { font: "15px Press Start 2P", fill: "white" });
-    fomo = game.add.text(10, 35, "FOMO: " + gon.fomo, { font: "15px Press Start 2P", fill: "white" });
-    battery = game.add.text(10, 60, "Battery life: " + gon.battery, { font: "15px Press Start 2P", fill: "white" });
-    time = game.add.text(10, 85, "Time: " + gon.time, { font: "15px Press Start 2P", fill: "white" });
-    money = game.add.text(10, 110, "Money: " + gon.money, { font: "15px Press Start 2P", fill: "white" });
+    username = game.add.text(0, 10, "Name: " + gon.username, { font: "15px Press Start 2P", fill: "white" });
+    fomo = game.add.text(0, 35, "FOMO: " + gon.fomo, { font: "15px Press Start 2P", fill: "white" });
+    battery = game.add.text(0, 60, "Battery life: " + gon.battery, { font: "15px Press Start 2P", fill: "white" });
+    time = game.add.text(0, 85, "Time: " + gon.time, { font: "15px Press Start 2P", fill: "white" });
+    money = game.add.text(0, 110, "Money: " + gon.money, { font: "15px Press Start 2P", fill: "white" });
     }
 
-    text = game.add.text(30, 250, '', { font: "30px Arial", fill: "#19de65" });
+    text = game.add.text(30, 550, '', { font: "30px Arial", fill: "#19de65" });
     nextLine();
 
 
