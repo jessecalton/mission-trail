@@ -1,9 +1,7 @@
 class EventsController < ApplicationController
   include ApplicationHelper
   def index
-    randomize_event
-
-    @event = @event_array.sample
+    @event = randomize_event.sample
     @event.update_attributes(seen?: true)
     redirect_to event_path(@event)
   end
@@ -21,6 +19,3 @@ class EventsController < ApplicationController
     gon.gameimage = @event.image_url
   end
 end
-
-
-
