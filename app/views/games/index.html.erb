@@ -1,28 +1,29 @@
-<div class="container">
+<div class="phaser">
 <script src="assets/_game_event.js"></script>
-
+</div>
+<div class="container">
 <div id="occupations-header">
   <h1>Mission Trail</h1>
 </div>
-<div class="button">
+<div class="options">
   <%= link_to "Hit the Trail", events_path %>
 </div>
-<div class="button">
+<div class="options">
 <% if @game.checked_instagram == false && @game.battery > 0%>
 <%=  link_to "Check Instagram", instagram_index_path %>
 <% end %>
 </div>
-<div class="button">
+<div class="options">
 <% if @game.checked_tinder == false && @game.battery > 0 %>
 <%= link_to "Check Tinder", tinder_index_path %>
 <% end %>
 </div>
-<div class="button">
+<div class="options">
 <% if @game.talked_to_locals == false %>
 <%= link_to "Talk to Locals", local_index_path %>
 <% end %>
 </div>
-<div class="button">
+<div class="options">
 <% if @game.checked_googlemaps == false && @game.battery > 0 %>
 <%= link_to "Check Google Maps", googlemaps_path %>
 <% end %>

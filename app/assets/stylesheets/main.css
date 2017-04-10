@@ -2,6 +2,11 @@
   background-color: black;
 }
 
+canvas {
+margin: auto;
+width: 50%;
+}
+
 .button {
   display: inline-block;
   -webkit-box-sizing: content-box;
