@@ -20,13 +20,7 @@ module ApplicationHelper
 
   def local_event_generator
     @events = Event.all
-    @event_array = []
-    @events.each do |event|
-      if event.name.include?("local") && event.seen? == false
-        @event_array << event
-      end
-    end
-    @event_array
+    @events.select { |event| event.name.include?("local") && event.seen? == false }
   end
 
   def decrease_fomo

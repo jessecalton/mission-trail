@@ -4,8 +4,7 @@ class LocalController < ApplicationController
   def index
     @game = Game.find(session[:id])
     @game.update_attributes(talked_to_locals: true)
-    local_event_generator
-    @event = @event_array.sample
+    @event = local_event_generator.sample
     @attr_change = @event.attr_change
 
     gon.username = @game.username
