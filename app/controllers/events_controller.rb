@@ -12,10 +12,6 @@ class EventsController < ApplicationController
     @game = Game.find(session[:id])
     @event = Event.find(params[:id])
 
-    p "**********"
-    p @event.name
-    p "**********"
-
     gon.username = @game.username
     gon.gametext = @event.text
     gon.fomo = @game.fomo
