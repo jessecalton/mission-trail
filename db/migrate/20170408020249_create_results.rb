@@ -5,7 +5,7 @@ class CreateResults < ActiveRecord::Migration[5.0]
       t.integer :option_id
       t.integer :attr_change_id
       t.integer :event_id
-
+      t.string  :image_url
       t.timestamps
     end
   end
