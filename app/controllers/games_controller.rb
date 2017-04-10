@@ -6,7 +6,7 @@ class GamesController < ApplicationController
 
     @game = Game.find(session[:id])
     gon.username = @game.username
-    gon.gametext = "Get to Anchor & Hope"
+    gon.gametext = "Mission Trail"
     gon.fomo = @game.fomo
     gon.battery = @game.battery
     gon.time = @game.time
