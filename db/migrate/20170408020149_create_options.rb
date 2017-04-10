@@ -3,7 +3,6 @@ class CreateOptions < ActiveRecord::Migration[5.0]
     create_table :options do |t|
       t.text :text
       t.integer :event_id
-      t.string :image_url
 
       t.timestamps
     end

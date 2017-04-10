@@ -26,13 +26,13 @@ var lineDelay = 400;
 
 function preload(){
 
-    game.load.spritesheet('smiles', 'assets/spritesheet.png', 170, 50, 2);
+    game.load.spritesheet('smiles', '/assets/spritesheet.png', 170, 50, 2);
 
     game.load.spritesheet('player_walk', '/assets/walk.png', 44, 60, 2);
 
     game.load.image('image', gon.gameimage)
 
-    game.load.image('bar', 'assets/bar.png')
+    game.load.image('bar', '/assets/bar.png')
 
 }
 
