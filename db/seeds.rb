@@ -35,6 +35,10 @@ attr_change8 = AttrChange.create(fomo_change: -5, battery_change: 0, time_change
 #Fomo Decrease x 2 & Time Decrease & Money Decrease
 attr_change9 = AttrChange.create(fomo_change: -10, battery_change: 0, time_change: -5, money_change: -10)
 
+### googlemaps Events ###
+google_event1 = Event.create(name: "good-map", text: "You found a nifty shortcut through a hole in the wall store. The place had some awesome doodads, you remember this address for another time", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+google_event2 = Event.create(name: "bad-map", text: "You check your map to find that you have been walking in the opposite direction to your destination. whoops..", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+
 ### Instagram Events ###
 
 insta_event1 = Event.create(name: "good-insta", text: "You have 11 Insta likes. You are happy.", attr_change_id: 4, image_url: "/assets/instagram.png" )
@@ -135,7 +139,8 @@ mix_tape_option1 = Option.create(text: "Sure, I'll buy it.", event_id: mix_tape_
 mix_tape_option2 = Option.create(text: "No, thanks.", event_id: mix_tape_event.id)
 
 mix_tape_result1 = Result.create(text: "You bought the mix tape for $5. It's a scratched up CD-R and you don't own anything that plays CD's, but you tell all your friends it's straight fire, yo.", option_id: mix_tape_option1.id, attr_change_id: 8, event_id: mix_tape_event.id)
-mix_tape_result2 = Result.create(text: "You passed on the mix tape. Mumford & Sons is more your cup of gluten-free cashew milk anyway.", option_id: mix_tape_option2.id, attr_change_id: 1, event_id: mix_tape_event.id)
+
+mix_tape_result2 = Result.create(text: "You passed on the mix tape. The Chainsmokers are more your cup of gluten-free cashew milk anyway.", option_id: mix_tape_option2.id, attr_change_id: 1, event_id: mix_tape_event.id)
 
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/hotdog.png")
@@ -158,13 +163,14 @@ local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped 
 ### Talk to Locals 7 ###
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3)
 
-
-
 ### Game Ending ###
 
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/smile.png")
 bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/smile.png")
 good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/smile.png")
+
+
+
 
 
 

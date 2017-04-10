@@ -1,9 +1,8 @@
+<div class="container">
 <script src="assets/_game_event.js"></script>
-<% if @game.time <= 0 %>
-<%=  link_to "Enter Party", game_end_index_path %>
-<% end %>
+
 <div id="occupations-header">
-  <h1>Get to Anchor & Hope</h1>
+  <h1>Mission Trail</h1>
 </div>
 <div class="button">
   <%= link_to "Hit the Trail", events_path %>
@@ -23,3 +22,7 @@
 <%= link_to "Talk to Locals", local_index_path %>
 <% end %>
 </div>
+<div class="button">
+<% if @game.checked_googlemaps == false && @game.battery > 0 %>
+<%= link_to "Check Google Maps", googlemaps_path %>
+<% end %>
