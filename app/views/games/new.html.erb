@@ -1,12 +1,22 @@
-<script src="/assets/occupation.js"></script>
+<!-- <script src="/assets/occupation.js"></script> -->
 
-<div id="occupations-header">
+<div class="header">
   <h1>Occupations</h1>
 </div>
-<div id="occupation">
+<div class="typewriter">
+<p>Hedge Fund Manager:</p>
+<p>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p><br>
+<p>Tech Bro:</p>
+<p>The Tech Bro begins the game with the highest amount of phone battery.</p><br>
+<p>Yoga Instructor:</p>
+<p>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO.</p><br>
+<p>Namaste, brah.</p><br>
+</div>
+<div id="occupation-form">
   <%= form_for @game, url: {action: "create"}, html: {class: "new_game_form"} do |f| %>
-    <h4>What is your name?</h4> <%= f.text_field :username %>
+    <p>What is your name?</p> <%= f.text_field :username, :rows => "50" %>
     <h4>What is your occupation?</h4><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"]%>
-    <div id="hit-trail-button"><%= f.submit "Hit the Trail" %></div>
+
+    <%= f.submit "Hit the Trail" %>
   <% end %>
   </div>

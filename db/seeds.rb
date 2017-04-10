@@ -131,28 +131,21 @@ micro_dosing_result2 = Result.create(text: "You passed on the micro-dose. Trends
 
 mix_tape_event = Event.create(name: "mix_tape", text: "This guy asks if you'll buy his mix tape. He seems really earnest but you don't really like the rap music.")
 
-<<<<<<< HEAD
-=======
 mix_tape_option1 = Option.create(text: "Sure, I'll buy it.", event_id: mix_tape_event.id)
 mix_tape_option2 = Option.create(text: "No, thanks.", event_id: mix_tape_event.id)
 
 mix_tape_result1 = Result.create(text: "You bought the mix tape for $5. It's a scratched up CD-R and you don't own anything that plays CD's, but you tell all your friends it's straight fire, yo.", option_id: mix_tape_option1.id, attr_change_id: 8, event_id: mix_tape_event.id)
 mix_tape_result2 = Result.create(text: "You passed on the mix tape. The Chainsmokers are more your cup of gluten-free cashew milk anyway.", option_id: mix_tape_option2.id, attr_change_id: 1, event_id: mix_tape_event.id)
 
->>>>>>> 2e5ac71c4654cd164d7d72b0fe742fe322e47197
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/hotdog.png")
 
 ### Talk to Locals 2 ###
 local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1, image_url: "/assets/burningman.png")
 
-
 ### Talk to Locals 3 ###
 local_event_3 = Event.create(name: "local-hit-on", text: "You get hit on by a local who says, 'Woo, that flannel is making me feel things I probably shouldn't.", attr_change_id: 3)
 
-<<<<<<< HEAD
-local_event_4 = Event.create(name: "local-unicycle", text: "You get side-swiped by a tech bro on an electric unicycle. He shouts 'Scooty-Puff Junior,' as he scoots away.", attr_change_id: 2)
-=======
 ### Talk to Locals 4 ###
 local_event_4 = Event.create(name: "local-kramer", text: "I have a line in the upcoming Woody Allen film. I say, 'These pretzels are making me thirsty.'", attr_change_id: 1)
 
@@ -164,7 +157,6 @@ local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped 
 
 ### Talk to Locals 7 ###
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3)
->>>>>>> 2e5ac71c4654cd164d7d72b0fe742fe322e47197
 
 
 
@@ -173,6 +165,4 @@ local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/smile.png")
 bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/smile.png")
 good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/smile.png")
-
-
 

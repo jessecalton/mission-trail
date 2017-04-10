@@ -1,8 +1,13 @@
-
 <script src="/assets/_game_event.js"></script>
 
-<% @event.options.each_with_index do |option, val| %>
+<div class="header">
+  <h1>Local Wisdom</h1>
+</div>
 
-  <%= link_to option.text, event_result_path(@event, @event.results[val].id) %>
-<% end %>
+<div class="gamepage-link">
+  <% @event.options.each_with_index do |option, val| %>
+
+    <%= link_to option.text, event_result_path(@event, @event.results[val].id) %>
+  <% end %>
+</div>
 

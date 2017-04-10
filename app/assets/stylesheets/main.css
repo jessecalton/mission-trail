@@ -2,8 +2,15 @@
   background-color: black;
 }
 
-.button {
+.phaser-window {
+  background-color: black;
   display: inline-block;
+  position: relative;
+  height: 25px;
+
+}
+
+.link {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -11,18 +18,18 @@
   overflow: hidden;
   border: none;
   font: normal 70px/1 "VT323", Helvetica, sans-serif;
-  color: rgba(232, 2, 2);
+  color: rgba(255, 0, 0);
   text-align: center;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  text-shadow: 5px 5px 0 rgba(255,38,0,1) ;
-  position: relative;
-  right: 125px;
+  text-shadow: 5px 5px 0 rgba(255,255,255,1) ;
+  /*position: relative;*/
+  /*right: 100px;*/
   top: 500px;
 }
 
 .header {
-  display: inline-block;
+  /*display: inline-block;*/
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -35,31 +42,14 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-shadow: 5px 5px 0 white;
-  position: relative;
-  left: 25%;
-}
-
-#occupations-header {
-  display: inline-block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 2px;
-  overflow: hidden;
-  border: none;
-  font: normal 50px/1 "VT323", Helvetica, sans-serif;
-  color: rgb(255, 0, 0);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  text-shadow: 5px 5px 0 white;
-  position: relative;
-  left: 25%;
+  bottom: 1000px;
+/*  position: relative;
+  left: 25%;*/
 }
 
 #occupation {
   position: relative;
-  top: 80%;
+  top: 400px;
   left: 25%;
   color: white;
 }
@@ -82,4 +72,56 @@
   right: 125px;
   left: 200px;
   top: 500px;
+}
+
+.gamepage-link {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 30px;
+  overflow: hidden;
+  border: none;
+  font: normal 40px/1 "VT323", Helvetica, sans-serif;
+  color: rgba(232, 2, 2);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 2px 2px 0 rgba(255,38,0,1) ;
+  position: relative;
+  /*right: 700px;*/
+  left: 160px;
+  top: 450px;
+}
+
+p {
+  font-family: "Press Start 2P";
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  line-height: 175%;
+}
+
+#occupation-form {
+  font-family: "Press Start 2P";
+  text-align: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+  overflow: scroll; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+p span {
+  display: block;
 }

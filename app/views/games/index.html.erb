@@ -1,24 +1,23 @@
-<script src="assets/_game_event.js"></script>
+<!-- <script src="assets/_game_event.js"></script> -->
+
+
 <% if @game.time <= 0 %>
 <%=  link_to "Enter Party", game_end_index_path %>
 <% end %>
-<div id="occupations-header">
+<div class="header">
   <h1>Mission Trail</h1>
 </div>
-<div class="button">
+<div class="gamepage-link">
   <%= link_to "Hit the Trail", events_path %>
-</div>
-<div class="button">
+
 <% if @game.checked_instagram == false && @game.battery > 0%>
 <%=  link_to "Check Instagram", instagram_index_path %>
 <% end %>
-</div>
-<div class="button">
+
 <% if @game.checked_tinder == false && @game.battery > 0 %>
 <%= link_to "Check Tinder", tinder_index_path %>
 <% end %>
-</div>
-<div class="button">
+
 <% if @game.talked_to_locals == false %>
 <%= link_to "Talk to Locals", local_index_path %>
 <% end %>
