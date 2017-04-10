@@ -56,15 +56,15 @@ result4 = Result.create(text: "You kicked them and ran! Serves 'em right! That r
 ### OG Kushman trade flannel event ###
 event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/og_kushman.png", attr_change_id: 1)
 
-kush_option1 = Option.create(text: "Sounds good boss playa!", event_id: event2.id, image_url: "/assets/smile.png" )
-kush_option2 = Option.create(text: "No thanks. I'm straight edge. And I'm a Vegan btw.", event_id: event2.id, image_url: "/assets/smile.png")
+kush_option1 = Option.create(text: "Sounds good boss playa!", event_id: event2.id)
+kush_option2 = Option.create(text: "No thanks. I'm straight edge. And I'm a Vegan btw.", event_id: event2.id)
 
 result1 = Result.create(text: "You got some OG Kush! You are mellowed out!", option_id: kush_option1.id, attr_change_id: attr_change3.id, event_id: event2.id, image_url: "/assets/smile.png")
 result2 = Result.create(text: "Good job in turning down that poison! You stayed true! You are so much better than everyone else! (but you're dying inside...)", option_id: kush_option2.id, attr_change_id: attr_change2.id, event_id: event2.id, image_url: "/assets/smile.png")
 
 ### Corner Store Event 1 ###
 
-corner_event1 = Event.create(name: "corner-store-1", text: "You have reached the Chill ASF corner store")
+corner_event1 = Event.create(name: "corner-store-1", text: "You have reached the Chill ASF corner store", image_url: "/assets/smile.png")
 
 corner_option1 = Option.create(text: "$10 - Buy a flannel", event_id: corner_event1.id)
 corner_option2 = Option.create(text: "$5 - Buy a coconut water", event_id: corner_event1.id)

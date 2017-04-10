@@ -11,7 +11,7 @@ class GamesController < ApplicationController
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
-    gon.gameimage = "assets/couple.jpg"
+
   end
 
   def new
