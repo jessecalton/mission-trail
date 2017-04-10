@@ -5,6 +5,10 @@ class LocalController < ApplicationController
     @game = Game.find(session[:id])
     @game.update_attributes(talked_to_locals: true)
     local_event_generator
+    if @event_array.length == 0
+      regenerate_local_events
+      local_event_generator
+    end
     @event = @event_array.sample
     @attr_change = @event.attr_change
 
