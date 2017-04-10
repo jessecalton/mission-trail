@@ -4,11 +4,11 @@ class GameEndController < ApplicationController
     @game = Game.find(session[:id])
     @fomo = @game.fomo
       if @fomo > 80
-        @event = Event.find_by(name: "bad-game-ending")
+        @event = Event.find_by(name: "bad_game_ending")
       elsif @fomo < 80 && @fomo > 40
-        @event = Event.find_by(name: "average-game-ending")
+        @event = Event.find_by(name: "average_game_ending")
       else
-        @event = Event.find_by(name: "good-game-ending")
+        @event = Event.find_by(name: "good_game_ending")
       end
   end
 end
