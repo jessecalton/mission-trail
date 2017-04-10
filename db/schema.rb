@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.integer  "option_id"
     t.integer  "attr_change_id"
     t.integer  "event_id"
-    t.string   "image_url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "image_url",      default: "/assets/smile.png"
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -104,7 +104,7 @@ corner_2_result4 = Result.create(text: "You left without buying anything. You ge
 
 ### Half-eaten Burrito Event ###
 
-burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground")
+burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground", image_url: "/assets/smile.png")
 
 burrito_option1 = Option.create(text: "Eat it?", event_id: burrito_event.id)
 burrito_option2 = Option.create(text: "Leave it be.", event_id: burrito_event.id)
@@ -115,7 +115,7 @@ burrito_result2 = Result.create(text: "You left it alone. Probably for the best"
 
 ### Wine Bar Event ###
 
-wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to a wine tasting!")
+wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to a wine tasting!", image_url: "/assets/smile.png")
 
 wine_option = Option.create(text: "Go in! It's like free pre-gaming!", event_id: wine_bar1.id)
 
@@ -123,7 +123,7 @@ wine_result = Result.create(text: "This is probably a much better party than the
 
 ### Micro-Dosing Event ###
 
-micro_dosing_event = Event.create(name: "micro-dosing", text: "All the cool kids are micro-dosing. They say it makes you way more creative or something. Do you partake in this semi-controversial but relatively benign act?")
+micro_dosing_event = Event.create(name: "micro-dosing", text: "All the cool kids are micro-dosing. They say it makes you way more creative or something. Do you partake in this semi-controversial but relatively benign act?", image_url: "/assets/smile.png")
 
 micro_dosing_option1 = Option.create(text: "Yes, I will micro-dose.", event_id: micro_dosing_event.id)
 micro_dosing_option2 = Option.create(text: "No, I will not partake.", event_id: micro_dosing_event.id)
@@ -133,7 +133,7 @@ micro_dosing_result2 = Result.create(text: "You passed on the micro-dose. Trends
 
 ### Mix-tape Event ###
 
-mix_tape_event = Event.create(name: "mix_tape", text: "This guy asks if you'll buy his mix tape. He seems really earnest but you don't really like the rap music.")
+mix_tape_event = Event.create(name: "mix_tape", text: "This guy asks if you'll buy his mix tape. He seems really earnest but you don't really like the rap music.", image_url: "/assets/smile.png")
 
 mix_tape_option1 = Option.create(text: "Sure, I'll buy it.", event_id: mix_tape_event.id)
 mix_tape_option2 = Option.create(text: "No, thanks.", event_id: mix_tape_event.id)
