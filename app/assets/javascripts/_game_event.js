@@ -56,18 +56,14 @@ function create() {
     gameimage = game.add.sprite(300, 130, 'image')
 
     }
+    if (gon.username != undefined) {
     username = game.add.text(0, 0, "Name:" + gon.username, { font: "15px Arial", fill: "#19de65" })
-
     fomo = game.add.text(0, 20, "FOMO:" + gon.fomo, { font: "15px Arial", fill: "#19de65" })
-
     battery = game.add.text(0, 40, "Battery life: " + gon.battery, { font: "15px Arial", fill: "#19de65" })
-
     time = game.add.text(0, 60, "Time: " + gon.time, { font: "15px Arial", fill: "#19de65" })
-
     money = game.add.text(0, 80, "Money: " + gon.money, { font: "15px Arial", fill: "#19de65" })
-
+    }
     text = game.add.text(30, 550, '', { font: "15px Arial", fill: "#19de65" });
-
 
     nextLine();
 
