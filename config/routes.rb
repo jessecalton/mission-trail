@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :games
   resources :instagram, only: [:index, :show, :update]
+  resources :tinder, only: [:index, :show, :update]
+  resources :local, only: [:index, :show, :update]
   resources :attr_changes
 
   resources :events do

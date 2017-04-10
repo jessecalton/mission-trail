@@ -1,12 +1,13 @@
 class EventsController < ApplicationController
   include ApplicationHelper
   def index
-    p randomize_event
-    redirect_to event_path(@event.id)
+    randomize_event
+    @event = @event_array.sample
+    redirect_to event_path(@event)
   end
 
   def show
-    
+
 
     @game = Game.find(session[:id])
     @event = Event.find(params[:id])
@@ -17,13 +18,9 @@ class EventsController < ApplicationController
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
-    gon.gameimage = "/assets/couple.jpg"
-    gon.option1 = "/assets/button_option1.png"
-    gon.option2 = "/assets/button_option2.png"
-    gon.option3 = "/assets/button_option3.png"
-    gon.option4 = "/assets/button_option4.png"
-    gon.result = "result"
-    # gon.resultroute = "/events/'#{@event.id}'"
-    gon.option1route = "/events/1/results/1"
+    gon.gameimage = @event.image_url
   end
 end
+
+
+

@@ -2,9 +2,9 @@ class GamesController < ApplicationController
   include ApplicationHelper
 
   def index
-    @game = Game.find(session[:id])
-    p @game
 
+
+    @game = Game.find(session[:id])
     gon.username = @game.username
     gon.gametext = "Get to Anchor & Hope"
     gon.fomo = @game.fomo
@@ -12,13 +12,6 @@ class GamesController < ApplicationController
     gon.time = @game.time
     gon.money = @game.money
     gon.gameimage = "assets/couple.jpg"
-    # gon.option1 = "assets/button_option1.png"
-    # gon.option2 = "assets/button_option2.png"
-    # gon.option3 = "assets/button_option3.png"
-    # gon.option4 = "assets/button_option4.png"
-    gon.result = "result"
-    gon.resultroute = "/games/new"
-    gon.option1route = "/games/new"
   end
 
   def new
