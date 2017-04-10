@@ -54,27 +54,27 @@ result3 = Result.create(text: "You disappeared behind a cloud of Dragonfruit vap
 result4 = Result.create(text: "You kicked them and ran! Serves 'em right! That relationship was the worst two weeks ever!", option_id: option4.id, attr_change_id: attr_change2.id, event_id: event.id, image_url: "/assets/kickandrun.png")
 
 ### OG Kushman trade flannel event ###
-event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/og_kushman.jpg", attr_change_id: 1)
+event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/og_kushman.png", attr_change_id: 1)
 
 kush_option1 = Option.create(text: "Sounds good boss playa!", event_id: event2.id)
 kush_option2 = Option.create(text: "No thanks. I'm straight edge. And I'm a Vegan btw.", event_id: event2.id)
 
-result1 = Result.create(text: "You got some OG Kush! You are mellowed out!", option_id: kush_option1.id, attr_change_id: attr_change3.id, event_id: event2.id)
-result2 = Result.create(text: "Good job in turning down that poison! You stayed true! You are so much better than everyone else! (but you're dying inside...)", option_id: kush_option2.id, attr_change_id: attr_change2.id, event_id: event2.id)
+result1 = Result.create(text: "You got some OG Kush! You are mellowed out!", option_id: kush_option1.id, attr_change_id: attr_change3.id, event_id: event2.id, image_url: "/assets/smile.png")
+result2 = Result.create(text: "Good job in turning down that poison! You stayed true! You are so much better than everyone else! (but you're dying inside...)", option_id: kush_option2.id, attr_change_id: attr_change2.id, event_id: event2.id, image_url: "/assets/smile.png")
 
 ### Corner Store Event 1 ###
 
-corner_event1 = Event.create(name: "corner-store-1", text: "You have reached the Chill ASF corner store")
+corner_event1 = Event.create(name: "corner-store-1", text: "You have reached the Chill ASF corner store", image_url: "/assets/smile.png")
 
 corner_option1 = Option.create(text: "$10 - Buy a flannel", event_id: corner_event1.id)
 corner_option2 = Option.create(text: "$5 - Buy a coconut water", event_id: corner_event1.id)
 corner_option3 = Option.create(text: "$10 - Buy blueberry muffin vape juice", event_id: corner_event1.id)
 corner_option4 = Option.create(text: "Leave Store", event_id: corner_event1.id)
 
-corner_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_option1.id, attr_change_id: 3, event_id: corner_event1.id)
-corner_result2 = Result.create(text: "You bought a coconut water. Mmmm... Refreshing.", option_id: corner_option2.id, attr_change_id: 3, event_id: corner_event1.id)
-corner_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_option3.id, attr_change_id: 3, event_id: corner_event1.id)
-corner_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_option4.id, attr_change_id: 1, event_id: corner_event1.id)
+corner_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_option1.id, attr_change_id: 3, event_id: corner_event1.id, image_url: "/assets/smile.png")
+corner_result2 = Result.create(text: "You bought a coconut water. Mmmm... Refreshing.", option_id: corner_option2.id, attr_change_id: 3, event_id: corner_event1.id, image_url: "/assets/smile.png")
+corner_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_option3.id, attr_change_id: 3, event_id: corner_event1.id, image_url: "/assets/smile.png")
+corner_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_option4.id, attr_change_id: 1, event_id: corner_event1.id, image_url: "/assets/smile.png")
 
 ### Half-eaten Burrito Event ###
 
@@ -96,18 +96,21 @@ wine_option = Option.create(text: "Go in! You are so cool.", event_id: wine_bar1
 wine_result = Result.create(text: "This is probably a much better party than the hip, new trendy bar in the Marina. Unfortunately, FOMO is real and you must continue.", option_id: wine_option.id, attr_change_id: 3, event_id: wine_bar1.id)
 
 
-
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/hotdog.png")
 
 ### Talk to Locals 2 ###
 local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1, image_url: "/assets/burningman.png")
 
+
 ### Talk to Locals 3 ###
 local_event_3 = Event.create(name: "local-hit-on", text: "You get hit on by a local who says, 'Woo, that flannel is making me feel things I probably shouldn't.", attr_change_id: 3)
 
 ### Game Ending ###
-average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.")
-bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, you wished you stayed home rewatching on 'Friends' again")
-good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style")
+
+average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/smile.png")
+bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, you wished you stayed home rewatching on 'Friends' again", image_url: "/assets/smile.png")
+good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/smile.png")
+
+
 
