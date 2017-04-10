@@ -1,4 +1,4 @@
-var game = new Phaser.Game(300, 200, Phaser.CANVAS, 'phaser-example', { create: create });
+var game = new Phaser.Game(1050, 800, Phaser.CANVAS, 'phaser-example', { create: create });
 
 console.log(gon.gametext)
 
@@ -16,7 +16,7 @@ var lineDelay = 400;
 
 function create() {
 
-    text = game.add.text(32, 32, '', { font: "15px Arial", fill: "#19de65" });
+    text = game.add.text(32, 32, '', { font: "15px Press Start 2P", fill: "#19de65" });
 
     nextLine();
 

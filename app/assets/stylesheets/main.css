@@ -16,9 +16,9 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-shadow: 5px 5px 0 rgba(255,38,0,1) ;
-  position: fixed;
-  right: 550px;
-  top: 650px;
+  position: relative;
+  right: 125px;
+  top: 500px;
 }
 
 .header {
@@ -47,7 +47,7 @@
   padding: 2px;
   overflow: hidden;
   border: none;
-  font: normal 35px/1 "VT323", Helvetica, sans-serif;
+  font: normal 50px/1 "VT323", Helvetica, sans-serif;
   color: rgb(255, 0, 0);
   text-align: center;
   -o-text-overflow: ellipsis;
@@ -78,7 +78,8 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-shadow: 5px 5px 0 rgba(255,38,0,1) ;
-    position:absolute;
-  left: 38%;
-  top: 65%;
+  position: relative;
+  right: 125px;
+  left: 200px;
+  top: 500px;
 }
