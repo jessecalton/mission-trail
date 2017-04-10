@@ -1,4 +1,37 @@
-<h3>Instagram</h3>
 
-<script src="assets/_game_event.js"></script>
-<%= button_to "Return to Trail", attr_change_path(@attr_change), method: "put" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+    <link rel="stylesheet" href="game_event.css">
+    <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+<div id="stats">
+    <p> Name: <%= @game.username %> </p>
+    <p> FOMO: <%= @game.fomo %>% <br> </p>
+    <p> Time: <%= @game.time %> Minutes <br> </p>
+    <p> Money: $<%= @game.money %> <br> </p>
+    <p> Battery: <%= @game.battery %>% <br> </p>
+  </div>
+  <div class="container">
+      <p class="typing">
+        <%=@event.text%>
+      </p>
+  <div class="hiders">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  </div>
+  <div class="image">
+    <img src=<%=@event.image_url%>>
+  </div>
+
+  <div class="stuff">
+      <li class="return-to-trail"><%= link_to "Return to Trail", attr_change_path(@attr_change), method: "put"%></li>
+  </div>
+</body>
+</html>
