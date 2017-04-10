@@ -84,7 +84,7 @@ local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells y
 ### Talk to Locals 2 ###
 local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1, image_url: "/assets/burningman.png")
 
-
+### Game Ending ###
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.")
 bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, you wished you stayed home rewatching on 'Friends' again")
 good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style")

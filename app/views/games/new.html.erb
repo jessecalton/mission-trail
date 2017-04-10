@@ -7,10 +7,6 @@
   <%= form_for @game, url: {action: "create"}, html: {class: "new_game_form"} do |f| %>
     <h4>What is your name?</h4> <%= f.text_field :username %>
     <h4>What is your occupation?</h4><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"]%>
+    <div id="hit-trail-button"><%= f.submit "Hit the Trail" %></div>
   <% end %>
 </div>
-  <br>
-  <br>
-  <div class="button">
-    <%= link_to "Hit The Trail!",controller: 'games', action: 'index' %>
-  </div>
