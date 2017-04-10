@@ -38,15 +38,16 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.string   "username"
     t.integer  "fomo"
     t.integer  "battery"
-    t.integer  "time",              default: 120
+    t.integer  "time",               default: 120
     t.integer  "money"
     t.string   "occupation"
-    t.boolean  "checked_instagram", default: false
-    t.boolean  "checked_tinder",    default: false
-    t.boolean  "talked_to_locals",  default: false
+    t.boolean  "checked_instagram",  default: false
+    t.boolean  "checked_tinder",     default: false
+    t.boolean  "talked_to_locals",   default: false
+    t.boolean  "checked_googlemaps", default: false
     t.integer  "user_id"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "options", force: :cascade do |t|

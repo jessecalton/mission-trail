@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :tinder, only: [:index, :show, :update]
   resources :local, only: [:index, :show, :update]
   resources :attr_changes
-
+  resources :googlemaps, only: [:index, :show, :update]
   resources :events do
     resources :results
   end

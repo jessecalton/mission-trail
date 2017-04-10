@@ -1,5 +1,12 @@
 .background {
-  background-color: black;
+  background-color: white;
+}
+
+.container {
+  display: inline-block;
+
+  right: 500px;
+  top: 800px;
 }
 
 .button {

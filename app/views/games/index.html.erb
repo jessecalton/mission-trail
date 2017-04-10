@@ -1,4 +1,6 @@
+<div class="container">
 <script src="assets/_game_event.js"></script>
+<div>
 <% if @game.time <= 0 %>
 <%=  link_to "Enter Party", game_end_index_path %>
 <% end %>
@@ -23,3 +25,7 @@
 <%= link_to "Talk to Locals", local_index_path %>
 <% end %>
 </div>
+<div class="button">
+<% if @game.checked_googlemaps == false && @game.battery > 0 %>
+<%= link_to "Check Google Maps", googlemaps_path %>
+<% end %>

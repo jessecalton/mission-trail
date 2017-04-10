@@ -35,6 +35,11 @@ attr_change8 = AttrChange.create(fomo_change: -5, battery_change: 0, time_change
 #Fomo Decrease x 2 & Time Decrease & Money Decrease
 attr_change9 = AttrChange.create(fomo_change: -10, battery_change: 0, time_change: -5, money_change: -10)
 
+### googlemaps Events ###
+google_event1 = Event.create(name: "good-map", text: "You found a nifty shortcut through a hole in the wall store. The place had some awesome doodads, you remember this address for another time", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+google_event2 = Event.create(name: "bad-map", text: "You check your map to find that you have been walking in the opposite direction to your destination. whoops..", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+
+
 ### Instagram Events ###
 
 insta_event1 = Event.create(name: "good-insta", text: "You have 11 Insta likes. You are happy.", attr_change_id: 4, image_url: "/assets/instagram.png" )

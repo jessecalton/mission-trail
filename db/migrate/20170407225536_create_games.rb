@@ -10,6 +10,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.boolean :checked_instagram, default: false
       t.boolean :checked_tinder, default: false
       t.boolean :talked_to_locals, default: false
+      t.boolean :checked_googlemaps, default: false
       t.integer :user_id
 
       t.timestamps
