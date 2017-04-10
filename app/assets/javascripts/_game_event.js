@@ -1,3 +1,4 @@
+
 var game = new Phaser.Game(1400, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 console.log(gon.option1route)
 console.log(gon.gametext)
