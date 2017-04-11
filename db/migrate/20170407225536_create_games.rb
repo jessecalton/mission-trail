@@ -4,7 +4,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.string :username
       t.integer :fomo
       t.integer :battery
-      t.integer :time, default: 120
+      t.integer :time, default: 60  
       t.integer :money
       t.string :occupation
       t.boolean :checked_instagram, default: false

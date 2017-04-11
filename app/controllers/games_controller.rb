@@ -27,24 +27,24 @@ class GamesController < ApplicationController
     if params[:game][:occupation] == "Yoga Instructor"
       @game = Game.create(
         username: params[:game][:username],
-        fomo: 30,
-        battery: 20,
+        fomo: 50,
+        battery: 50,
         money: 35,
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Hedge Fund Manager"
       @game = Game.create(
         username: params[:game][:username],
-        fomo: 50,
-        battery: 20,
+        fomo: 60,
+        battery: 50,
         money: 70,
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Tech Bro"
       @game = Game.create(
         username: params[:game][:username],
-        fomo: 50,
-        battery: 40,
+        fomo: 60,
+        battery: 70,
         money: 50,
         occupation: params[:game][:occupation],
         )

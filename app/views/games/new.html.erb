@@ -1,22 +1,23 @@
-<!-- <script src="/assets/occupation.js"></script> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
 
-<div class="header">
-  <h1>Occupations</h1>
-</div>
-<div class="typewriter">
-<p>Hedge Fund Manager:</p>
-<p>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p><br>
-<p>Tech Bro:</p>
-<p>The Tech Bro begins the game with the highest amount of phone battery.</p><br>
-<p>Yoga Instructor:</p>
-<p>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO.</p><br>
-<p>Namaste, brah.</p><br>
-</div>
-<div id="occupation-form">
-  <%= form_for @game, url: {action: "create"}, html: {class: "new_game_form"} do |f| %>
-    <p>What is your name?</p> <%= f.text_field :username, :rows => "50" %>
-    <h4>What is your occupation?</h4><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"]%>
+<p><center>Choose an Occupation:</center></p>
+<div class=occupations>
+<p id=job-title>Hedge Fund Manager:</p><p id=job-descriptor>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p>
+<p id=job-title>Tech Bro:</p><p id=job-descriptor>The Tech Bro begins the game with the highest amount of phone battery.</p>
+<p id=job-title>Yoga Instructor:</p><p id=job-descriptor>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
 
-    <%= f.submit "Hit the Trail" %>
-  <% end %>
   </div>
+  <br>
+  <%= form_for @game, url: {action: "create"}, :html => {:class => "create-game-form"} do |f| %>
+    What is your name? <%= f.text_field :username %> <br>
+    What is your occupation?<%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"], { :class => 'selector-class' }%>
+    <%= f.submit "Let's Hit The Trail!", :class => 'hit-trail-button' %>
+  <% end %>
+</body>
+</html>

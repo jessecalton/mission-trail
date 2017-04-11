@@ -42,7 +42,7 @@ width: 50%;
   padding: 2px;
   overflow: hidden;
   border: none;
-  font: normal 60px/1 "VT323", Helvetica, sans-serif;
+  font: normal 20px/1 "VT323", Helvetica, sans-serif;
   color: rgb(255, 0, 0);
   text-align: center;
   -o-text-overflow: ellipsis;
@@ -70,12 +70,12 @@ width: 50%;
   left: 25%;
 }
 
-#occupation {
+/*#occupation {
   position: relative;
   top: 80%;
   left: 25%;
   color: white;
-}
+}*/
 
 .trail-link {
     display: inline-block;
