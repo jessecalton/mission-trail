@@ -1,8 +1,15 @@
 #stats {
-  color: white;
+  color: black;
   /*font-size: 15px;*/
   display: block;
   width: 20%;
   padding: 5px;
   font: 30px "VT323", sans-serif;
+  background-color: white;
+  float: left;
+  height: 150px;
+  width: 156px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
 }

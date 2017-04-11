@@ -83,6 +83,7 @@ h1 {
   top: 300px;
   margin: auto;
   width: 50%;
-  ont: 70px "VT323", sans-serif;
+  font: 70px "VT323", sans-serif;
   text-shadow: 2px 2px white;
+  text-decoration: none;
 }

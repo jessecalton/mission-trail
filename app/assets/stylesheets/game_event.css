@@ -1,7 +1,7 @@
 body {
   color: white;
-  /*font-size: 50px;
-  font-family: "Press Start 2P";*/
+  font-size: 50px;
+  font-family: "Press Start 2P";
 
 }
 
@@ -67,10 +67,11 @@ body {
   display: inline-block;
   width: 95%;
   text-align: center;
-  line-height: 2;
-  color: green;
-  font: 40px "VT323", sans-serif;
-  text-shadow: 2px 2px white;
+  line-height: 5;
+  /*color: green;*/
+  font: 40px "VT323";
+  font-color: white;
+  /*text-shadow: 2px 2px white;*/
   /*background: yellow;*/
 }
 
