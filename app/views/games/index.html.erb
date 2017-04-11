@@ -1,38 +1,46 @@
-<div id="event-header">
-  <h1>Mission Trail</h1>
-</div>
-<div id="stats">
-    <p> Name: <%= @game.username %> </p>
-    <p> FOMO: <%= @game.fomo %>% <br> </p>
-    <p> Time: <%= @game.time %> Minutes <br> </p>
-    <p> Money: $<%= @game.money %> <br> </p>
-    <p> Battery: <%= @game.battery %>% <br> </p>
+<div class="page-flexbox-wrapper">
+  <div class="top-content">
+    <div id="stats">
+        <p> Name: <%= @game.username %> </p>
+        <p> FOMO: <%= @game.fomo %>% <br> </p>
+        <p> Time: <%= @game.time %> Minutes <br> </p>
+        <p> Money: $<%= @game.money %> <br> </p>
+        <p> Battery: <%= @game.battery %>% <br> </p>
+    </div>
+    <div id="event-header">
+      <h1>Mission Trail</h1>
+    </div>
+    <div id="top-content-buffer"></div>
   </div>
-<div class="options">
-  <%= link_to "Hit the Trail", events_path %>
-</div>
-<div class="options">
-<% if @game.talked_to_locals == false %>
-<%= link_to "Talk to Locals", local_index_path %>
-<% end %>
-</div>
-<div class="options">
-<% if @game.checked_instagram == false && @game.battery > 0%>
-<%=  link_to "Check Instagram", instagram_index_path %>
-<% end %>
-</div>
-<div class="options">
-<% if @game.checked_tinder == false && @game.battery > 0 %>
-<%= link_to "Check Tinder", tinder_index_path %>
-<% end %>
-</div>
-<div class="options">
-<% if @game.checked_googlemaps == false && @game.battery > 0 %>
-<%= link_to "Check Google Maps", googlemaps_path %>
-<% end %>
-</div>
-<br><br>
+
 <div class="sprite">
 </div>
-<img src="/assets/bar.png" class="bar">
 <script src="/assets/sprite.js"></script>
+
+  <div class="all-options">
+    <div class="options">
+      <%= link_to "Hit the Trail", events_path %>
+    </div>
+    <div class="options">
+    <% if @game.talked_to_locals == false %>
+    <%= link_to "Talk to Locals", local_index_path %>
+    <% end %>
+    </div>
+    <div class="options">
+    <% if @game.checked_instagram == false && @game.battery > 0%>
+    <%=  link_to "Check Instagram", instagram_index_path %>
+    <% end %>
+    </div>
+    <div class="options">
+    <% if @game.checked_tinder == false && @game.battery > 0 %>
+    <%= link_to "Check Tinder", tinder_index_path %>
+    <% end %>
+    </div>
+    <div class="options">
+    <% if @game.checked_googlemaps == false && @game.battery > 0 %>
+    <%= link_to "Check Google Maps", googlemaps_path %>
+    <% end %>
+    </div>
+  </div>
+</div>
+<img src="/assets/bar.png" class="bar">

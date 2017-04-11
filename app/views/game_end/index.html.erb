@@ -1,7 +1,28 @@
-<h1>You've reached the party</h1>
-
-<script src="/assets/text.js"></script>
-
-<audio autoplay loop>
-     <source src="/assets/SONG1.mp3">
- </audio
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+    <link rel="stylesheet" href="game_event.css">
+    <link rel="stylesheet" href="stats.css">
+    <h1>You've reached the party</h1>
+</head>
+<body>
+  <div class="container">
+      <p class="typing">
+        <%=@event.text%>
+      </p>
+  </div>
+  <audio autoplay loop>
+       <source src="/assets/SONG1.mp3">
+   </audio>
+  <div class="image">
+    <img src=<%=@event.image_url%>>
+  </div>
+  <div class="link">
+  <%= link_to "New Game", controller: 'games', action: 'new' %>
+</div>
+<div class="link">
+<%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
+</div>
+</body>
+</html>
