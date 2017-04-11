@@ -4,9 +4,9 @@
   <title></title>
     <link rel="stylesheet" href="game_event.css">
     <link rel="stylesheet" href="stats.css">
+    <h1>You've reached the party</h1>
 </head>
 <body>
-  <h1>You've reached the party</h1>
   <div class="container">
       <p class="typing">
         <%=@event.text%>
@@ -20,6 +20,9 @@
   </div>
   <div class="link">
   <%= link_to "New Game", controller: 'games', action: 'new' %>
+</div>
+<div class="link">
+<%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
 </div>
 </body>
 </html>
