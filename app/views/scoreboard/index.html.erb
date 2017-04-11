@@ -1,0 +1,14 @@
+<center>
+<h1> High Scores  </h1>
+<div>
+<%= link_to "restart game", root_path%>
+<div>
+<div class="scoreboard">
+<%count = 1%>
+<%@scoreboard.each do |board| %>
+<%=count%>. <%=board.initials%>: <%=board.score%>
+<%count += 1%>
+<br>
+<%end%>
+</center>
+</div>

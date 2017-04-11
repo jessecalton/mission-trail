@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408020352) do
+ActiveRecord::Schema.define(version: 20170411163851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,13 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.string   "image_url",      default: "/assets/smile.png"
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+  end
+
+  create_table "scoreboards", force: :cascade do |t|
+    t.string   "initials",   limit: 3
+    t.integer  "score",                null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "users", force: :cascade do |t|

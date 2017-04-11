@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   resources :local, only: [:index, :show, :update]
   resources :attr_changes
   resources :googlemaps, only: [:index, :show, :update]
+  resources :scoreboard, only: [:index, :new, :create]
+
   resources :events do
-    resources :results
+  resources :results
+
   end
 
   root to: 'welcome#index'
