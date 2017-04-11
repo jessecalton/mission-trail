@@ -3,7 +3,7 @@ class ResultsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.find(params[:event_id])
     @game = Game.find(session[:id])
     @result = Result.find(params[:id])
 

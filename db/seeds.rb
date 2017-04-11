@@ -174,15 +174,15 @@ protest_result4 = Result.create(text: "You push through! Unfortunately you get m
 
 ### Hot Dog Event ###
 
-hot_dog_event = Event.create(name: "hot-dog-event", text: "You arrive at Billy Boy's Hot Dog Stand.")
+hot_dog_event = Event.create(name: "hot-dog-event", text: "You arrive at Billy Boy's Hot Dog Stand.", image_url: "/assets/foodtruck.jpg")
 
 hot_dog_option1 = Option.create(text: "Buy a hot dog.", event_id: hot_dog_event.id)
 hot_dog_option2 = Option.create(text: "Do not buy a hot dog.", event_id: hot_dog_event.id)
 hot_dog_option3 = Option.create(text: "Buy a vegan hot dog.", event_id: hot_dog_event.id)
 
-hot_dog_result1 = Result.create(text: "You bought a hot dog from Billy Boy's Hot Dog Stand. You don't know why you did this. You begin to question your life choices.", option_id: hot_dog_option1.id, attr_change_id: 11, event_id: hot_dog_event.id)
-hot_dog_result2 = Result.create(text: "As you walk away, you feel a twang of hunger and question your recent life choices.", option_id: hot_dog_option2.id, attr_change_id: 2, event_id: hot_dog_event.id)
-hot_dog_result3 = Result.create(text: "You bought a vegan hot dog from Billy Boy's Hot Dog Stand. It may not be completely animal free, but you trust your homie Billy Boy.", option_id: hot_dog_option3.id, attr_change_id: 8, event_id: hot_dog_event.id)
+hot_dog_result1 = Result.create(text: "You bought a hot dog from Billy Boy's Hot Dog Stand. You don't know why you did this. You begin to question your life choices.", option_id: hot_dog_option1.id, attr_change_id: 11, event_id: hot_dog_event.id, image_url: "/assets/foodtruck.jpg")
+hot_dog_result2 = Result.create(text: "As you walk away, you feel a twang of hunger and question your recent life choices.", option_id: hot_dog_option2.id, attr_change_id: 2, event_id: hot_dog_event.id, image_url: "/assets/foodtruck.jpg")
+hot_dog_result3 = Result.create(text: "You bought a vegan hot dog from Billy Boy's Hot Dog Stand. It may not be completely animal free, but you trust your homie Billy Boy.", option_id: hot_dog_option3.id, attr_change_id: 8, event_id: hot_dog_event.id, image_url: "/assets/foodtruck.jpg")
 
 ### Game of Thrones Event ###
 
