@@ -70,12 +70,12 @@ width: 50%;
   left: 25%;
 }
 
-#occupation {
+/*#occupation {
   position: relative;
   top: 80%;
   left: 25%;
   color: white;
-}
+}*/
 
 .trail-link {
     display: inline-block;
