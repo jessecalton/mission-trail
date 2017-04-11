@@ -16,7 +16,7 @@ body {
   float: right;
   left-margin: 10%;
   width: 70%;
-  font-family: Consolas, monospace;
+  font: 25px "VT323", sans-serif;
 }
 
 .typing {
@@ -62,15 +62,17 @@ body {
 }
 
 .options {
-  outline: none;
-  text-decoration: none;
+  /*outline: none;*/
+  /*text-decoration: none;*/
   display: inline-block;
-  width: 75.5%;
+  width: 95%;
   text-align: center;
-  line-height: 2;
-  color: green;
-  font-size: 20px;
-  background: yellow;
+  line-height: 5;
+  /*color: green;*/
+  font: 40px "VT323";
+  font-color: white;
+  /*text-shadow: 2px 2px white;*/
+  /*background: yellow;*/
 }
 
 .image {
@@ -82,10 +84,16 @@ body {
   outline: none;
   text-decoration: none;
   display: inline-block;
-  width: 100%;
+  width: 50%;
   text-align: center;
   line-height: 2;
-  color: green;
+  font-color: white;
   font-size: 20px;
-  background: yellow;
+  background: red;
+  font: 25px "VT323", sans-serif;
+}
+
+.occupation-question {
+  font: 25px "VT323", sans-serif;
+  font-color: red;
 }

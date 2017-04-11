@@ -12,11 +12,13 @@
 }
 
 #job-title {
+  font: 40px "VT323", sans-serif;
   color: yellow;
 
 }
 
 #job-descriptor {
+  font: 30px "VT323", sans-serif;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -28,7 +30,7 @@
 body {
   color: white;
   font-size: 20px;
-  
+
 
 }
 

@@ -1,4 +1,4 @@
-var game = new Phaser.Game(1050, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
+var game = new Phaser.Game(1500, 500, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 
 console.log(gon.gametext)
 

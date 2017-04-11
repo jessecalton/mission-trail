@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,18 +5,25 @@
     <link rel="stylesheet" href="welcome.css">
 </head>
 <body>
-
-<p><center>Choose an Occupation:</center></p>
+  <div class="header">
+    <p><center>Choose an Occupation:</center></p>
+  </div>
 <div class=occupations>
-<p id=job-title>Hedge Fund Manager:</p><p id=job-descriptor>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p>
-<p id=job-title>Tech Bro:</p><p id=job-descriptor>The Tech Bro begins the game with the highest amount of phone battery.</p>
-<p id=job-title>Yoga Instructor:</p><p id=job-descriptor>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
+  <p id=job-title>Hedge Fund Manager:</p><p id=job-descriptor>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p>
+  <p id=job-title>Tech Bro:</p><p id=job-descriptor>The Tech Bro begins the game with the highest amount of phone battery.</p>
+  <p id=job-title>Yoga Instructor:</p><p id=job-descriptor>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
+</div>
+<br>
+  <%= form_for @game, url: {action: "create"}, :html => {:class => "create-game-form"} do |f| %>
+  <div class="occupation-question">
+    <p>What is your name?<p><%= f.text_field :username %>
+    <br>
+    <br>
+    <p>What is your occupation?<p><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"], { :class => 'selector-class' }%>
   </div>
   <br>
-  <%= form_for @game, url: {action: "create"}, :html => {:class => "create-game-form"} do |f| %>
-    What is your name? <%= f.text_field :username %> <br>
-    What is your occupation?<%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"], { :class => 'selector-class' }%>
     <%= f.submit "Let's Hit The Trail!", :class => 'hit-trail-button' %>
   <% end %>
+
 </body>
-</html> 
+</html>

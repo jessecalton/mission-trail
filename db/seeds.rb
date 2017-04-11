@@ -189,7 +189,7 @@ hot_dog_result3 = Result.create(text: "You bought a vegan hot dog from Billy Boy
 got_event = Event.create(name: "thrones-event", text: "Word has just gotten out that Game of Thrones will be canceled mid-season. \n George R.R. Martin has decided to spend his remaining days curating his fantasy football teams and watching Anime. \n Millenials are outraged and have taken to the streets!")
 
 got_option1 = Option.create(text: "Throw an environmentally-friendly Duraflame on a pile of burning books.", event_id: got_event.id)
-got_option1 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id)
+got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id)
 
 got_result1 = Result.create(text: "You immediately regret your decision. Khalisi would be so disappointed in you.", option_id: got_option1.id, attr_change_id: 2, event_id: got_event.id)
 got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like all put-together and masculine like Jon Snow.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id)
@@ -216,19 +216,13 @@ local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped 
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3)
 
 ### Talk to Locals 8 ###
-local_event_8 = Event.create(name: "local-froyo", text: "'I just bought some salmon fro-yo! It changed my life for the better!'", attr_change: 1)
+local_event_8 = Event.create(name: "local-froyo", text: "'I just bought some salmon fro-yo! It changed my life for the better!'", attr_change_id: 1)
 
 ### Talk to Locals 9 ###
-local_event_8 = Event.create(name: "local-stroller-dog", text: "Someone is pushing a stroller. Upon closer examination, there is not a human baby, but a small dog in the stroller. \n Nothing strange here.", attr_change: 1)
+local_event_9 = Event.create(name: "local-stroller-dog", text: "Someone is pushing a stroller. Upon closer examination, there is not a human baby, but a small dog in the stroller. \n Nothing strange here.", attr_change_id: 1)
 
 ### Game Ending ###
 
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/smile.png")
 bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/smile.png")
 good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/smile.png")
-
-
-
-
-
-
