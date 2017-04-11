@@ -29,7 +29,7 @@
   padding: 2px;
   overflow: hidden;
   border: none;
-  font: normal 60px/1 "VT323", Helvetica, sans-serif;
+  font: normal 20px/1 "VT323", Helvetica, sans-serif;
   color: rgb(255, 0, 0);
   text-align: center;
   -o-text-overflow: ellipsis;
