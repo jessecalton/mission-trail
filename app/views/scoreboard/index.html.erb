@@ -1,14 +1,20 @@
 <center>
 <h1> High Scores  </h1>
+<br>
 <div>
-<%= link_to "restart game", root_path%>
+<%= link_to "Start New Game", root_path%>
+<br><br>
 <div>
+<marquee behavior="scroll" align="middle" direction="up" style="height:800px"
 <div class="scoreboard">
 <%count = 1%>
 <%@scoreboard.each do |board| %>
 <%=count%>. <%=board.initials%>: <%=board.score%>
+<br><br>
 <%count += 1%>
-<br>
-<%end%>
-</center>
 </div>
+<%end%>
+
+</marquee>
+</center>
+<script src="assets/scoreboard.js"></script>
