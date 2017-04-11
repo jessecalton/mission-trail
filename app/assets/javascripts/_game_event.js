@@ -41,13 +41,13 @@ function preload(){
 function create() {
 
     if (gon.gametext == " ") {
-        if (gon.time <= 30) {
+        if (gon.time <= 15) {
             bar = game.add.sprite(300, 0, 'bar')
         }
         else {
             bar = game.add.sprite(gon.time*10, 0, 'bar')
         }
-    player_walk = game.add.sprite(250, 50, 'player_walk', 5);
+    player_walk = game.add.sprite(150, 50, 'player_walk', 5);
     player_walk.scale.set(1);
     player_walk.smoothed = false;
     anim = player_walk.animations.add('walk');

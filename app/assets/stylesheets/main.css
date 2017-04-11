@@ -2,6 +2,14 @@
   background-color: black;
 }
 
+h1 {
+
+  margin:auto;
+  width:54%;
+}
+
+
+
 canvas {
 margin: auto;
 width: 50%;
