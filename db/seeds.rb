@@ -142,7 +142,7 @@ mix_tape_result2 = Result.create(text: "You passed on the mix tape. The Chainsmo
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/hotdog.png")
 
 ### Talk to Locals 2 ###
-local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1, image_url: "/assets/burningman.png")
+local_event_2 = Event.create(name: "local_burning_man_guy", text: "Hi, my name is Sunny Snowflake. Are you going to Burning Man this year?", attr_change_id: 1, image_url: "/assets/burning_man.jpg")
 
 
 ### Talk to Locals 3 ###
