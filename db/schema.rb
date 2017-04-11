@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.string   "username"
     t.integer  "fomo"
     t.integer  "battery"
-    t.integer  "time",               default: 120
+    t.integer  "time",               default: 60
     t.integer  "money"
     t.string   "occupation"
     t.boolean  "checked_instagram",  default: false

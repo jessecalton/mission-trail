@@ -6,16 +6,27 @@
 <html>
 <head>
   <title></title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="game_event.css">
 </head>
 <body>
   <div class="header">
-  <h1>Mission Trail</h1>
-</div>
-<div class="typewriter">
-  <p><span>Your mission, should you choose to accept it: A hip, new, trendy bar has just opened in</span><span>the Marina District. All ride-sharing services are nonexistent. You have to make it</span><span>to this party before your FOMO decreases and you literally can't even. Traveling by</span><span>foot, you have two hours to make it to the Marina. You are about to witness the</span><span>struggle of the modern millenial...</span></p><br><br>
-  <p>The struggle is real.</p>
-</div>
-<div class="link">
+    <h1>Mission Trail</h1>
+    <br>
+  </div>
+  <div class="container">
+    <p class="typing">Your mission, should you choose to accept it: A hip, new, trendy bar has just opened in the Marina District. All ride-sharing services are nonexistent. You have to make it to this party before your FOMO decreases and you literally can't even. Traveling by foot, you have two hours to make it to the Marina. You are about to witness the struggle of the modern millenial...
+    The struggle is real.</p>
+  <div class="hiders">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="link">
   <%= link_to "Start Game", { :action => "show"}, :method => :get %>
 </div>
 </body>
