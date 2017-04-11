@@ -2,6 +2,19 @@
   background-color: black;
 }
 
+h1 {
+
+  margin:auto;
+  width:54%;
+}
+
+
+
+canvas {
+margin: auto;
+width: 50%;
+}
+
 .button {
   display: inline-block;
   -webkit-box-sizing: content-box;

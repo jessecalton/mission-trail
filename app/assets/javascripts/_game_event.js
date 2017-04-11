@@ -1,4 +1,4 @@
-var game = new Phaser.Game(1400, 800, Phaser.CANVAS, 'phaser', {preload: preload, create: create });
+var game = new Phaser.Game(800, 130, Phaser.canvas, 'phaser', {preload: preload, create: create });
 
 console.log(gon.option1route)
 console.log(gon.gametext)
@@ -40,14 +40,14 @@ function preload(){
 
 function create() {
 
-    if (gon.gametext == "Mission Trail") {
+    if (gon.gametext == " ") {
         if (gon.time <= 15) {
-            bar = game.add.sprite(150, 0, 'bar')
+            bar = game.add.sprite(300, 0, 'bar')
         }
         else {
             bar = game.add.sprite(gon.time*10, 0, 'bar')
         }
-    player_walk = game.add.sprite(120, 50, 'player_walk', 5);
+    player_walk = game.add.sprite(150, 50, 'player_walk', 5);
     player_walk.scale.set(1);
     player_walk.smoothed = false;
     anim = player_walk.animations.add('walk');
@@ -57,15 +57,9 @@ function create() {
     gameimage = game.add.sprite(300, 130, 'image')
 
     }
-    if (gon.username != undefined) {
-    username = game.add.text(0, 10, "Name: " + gon.username, { font: "15px Press Start 2P", fill: "white" });
-    fomo = game.add.text(0, 35, "FOMO: " + gon.fomo, { font: "15px Press Start 2P", fill: "white" });
-    battery = game.add.text(0, 60, "Battery life: " + gon.battery, { font: "15px Press Start 2P", fill: "white" });
-    time = game.add.text(0, 85, "Time: " + gon.time, { font: "15px Press Start 2P", fill: "white" });
-    money = game.add.text(0, 110, "Money: " + gon.money, { font: "15px Press Start 2P", fill: "white" });
-    }
 
     text = game.add.text(30, 550, '', { font: "30px Arial", fill: "#19de65" });
+
     nextLine();
 
 

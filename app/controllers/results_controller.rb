@@ -30,6 +30,8 @@ class ResultsController < ApplicationController
     @game.update_attributes(checked_instagram: false)
     @game.update_attributes(checked_tinder: false)
     @game.update_attributes(talked_to_locals: false)
+    @game.update_attributes(checked_googlemaps: false)
+
 
     redirect_to games_path
   end
