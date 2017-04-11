@@ -1,9 +1,8 @@
-body {
+/*body {
   color: white;
   font-size: 50px;
   font-family: "Press Start 2P";
-
-}
+}*/
 
 @keyframes typing {
     from { width: 100% }
@@ -62,17 +61,33 @@ body {
 }
 
 .options {
-  /*outline: none;*/
-  /*text-decoration: none;*/
-  display: inline-block;
-  width: 95%;
+  position: relative;
   text-align: center;
-  line-height: 5;
-  /*color: green;*/
-  font: 40px "VT323";
-  font-color: white;
-  /*text-shadow: 2px 2px white;*/
-  /*background: yellow;*/
+  top: 300px;
+  margin: auto;
+  width: 20%;
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+a:hover {
+  color: white;
 }
 
 .image {
@@ -96,4 +111,19 @@ body {
 .occupation-question {
   font: 25px "VT323", sans-serif;
   font-color: red;
+}
+
+#event-header {
+  display: inline-block;
+  font: normal 70px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 5px 5px 0 white;
+  position: relative;
+  left: 2%;
+  top: 50px;
+  width: 98%;
+  text-align: center;
 }
