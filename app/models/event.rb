@@ -9,7 +9,7 @@ class Event < ApplicationRecord
   # scope :trail, -> { where(options_count?: true).where(seen?: false) }
 
   def self.reset_locals
-    local.updates_attributes(seen?: false)
+    local.update_attributes(seen?: false)
   end
 
   # def options_count?
