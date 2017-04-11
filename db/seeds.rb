@@ -66,7 +66,7 @@ result3 = Result.create(text: "You disappeared behind a cloud of Dragonfruit vap
 result4 = Result.create(text: "You kicked them and ran! Serves 'em right! That relationship was the worst two weeks ever!", option_id: option4.id, attr_change_id: attr_change2.id, event_id: event.id, image_url: "/assets/kickandrun.png")
 
 ### OG Kushman trade flannel event ###
-event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/og_kushman.png", attr_change_id: 1)
+event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/ogkushman.jpg", attr_change_id: 1)
 
 kush_option1 = Option.create(text: "Sounds good boss playa!", event_id: event2.id)
 kush_option2 = Option.create(text: "No thanks. I'm straight edge. And I'm a Vegan btw.", event_id: event2.id)
