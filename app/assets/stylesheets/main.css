@@ -2,6 +2,10 @@
   background-color: black;
 }
 
+canvas {
+  border: #333 10px solid;
+}
+
 h1 {
 
   margin:auto;

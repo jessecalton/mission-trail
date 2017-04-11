@@ -1,0 +1,22 @@
+.sprite {
+  position:relative;
+  bottom: 150px;
+  right: 400px;
+  width: 40px;
+  height: 60px;
+  margin: 2% auto;
+  background: url('/assets/walk.png') left center;
+  animation: play 1s steps(10) infinite;
+}
+
+@keyframes play {
+    100% { background-position: -1900px; }
+}
+
+.bar {
+  position:relative;
+  bottom: 300px;
+  left: 600px;
+
+
+}
