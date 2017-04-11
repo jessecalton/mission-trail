@@ -2,99 +2,28 @@
   background-color: black;
 }
 
-h1 {
-
-  margin:auto;
-  width:54%;
-}
-
 .header {
-  display: inline-block;
+  text-align: center;
   font: normal 70px/1 "VT323", Helvetica, sans-serif;
   color: rgb(255, 0, 0);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  text-shadow: 5px 5px 0 white;
-  /*position: relative;*/
-  float: right;
-  left: 25%;
-}
-
-#occupations-header {
-  display: inline-block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 2px;
-  overflow: hidden;
-  border: none;
-  font: normal 50px/1 "VT323", Helvetica, sans-serif;
-  color: rgb(255, 0, 0, 0);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  text-shadow: 5px 5px 0 white;
-  position: relative;
-  left: 25%;
-}
-
-/*#occupation {
-  position: relative;
-  top: 80%;
-  left: 25%;
-  color: white;
-}*/
-
-/*.trail-link {
-    display: inline-block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 12px;
-  overflow: hidden;
-  border: none;
-  font: normal 70px/1 "VT323", Helvetica, sans-serif;
-  color: rgba(232, 2, 2);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  text-shadow: 5px 5px 0 rgba(255,38,0,1) ;
-  position: relative;
-  right: 125px;
-  left: 200px;
-  top: 500px;
-}*/
-
-.image {
-  width: 200px;
-  height: 300px;
-  text-align: right;
+  text-shadow: 3px 3px 0 white;
+  margin: auto;
 }
 
 .link {
-  position: relative;
   text-align: center;
-  top: 500px;
+  top: 350px;
   margin: auto;
-  width: 20%;
+  position: relative;
   font: 70px "VT323", sans-serif;
   text-shadow: 1px 1px white;
 }
 
-a:link{
-  color: white;
-  text-decoration: none;
-}
-
-a:visited{
-  color: purple;
-  text-decoration: none;
-}
-a:hover{
-  color: red;
-}
-
-a:active{
-  color: red;
+#hop-on-trail-link {
+  text-align: center;
+  top: 150px;
+  margin: auto;
+  position: relative;
+  font: 70px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
 }

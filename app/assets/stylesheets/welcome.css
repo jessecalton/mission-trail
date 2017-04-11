@@ -1,7 +1,6 @@
 .create-game-form {
   position: relative;
   display: block;
-
   line-height: 5;
 
 }
@@ -11,14 +10,27 @@
   line-height: 2;
 }
 
+#occupations-header {
+ text-align: center;
+  font: normal 70px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  margin: auto;
+}
+
+.occupation-question {
+  font: 25px "VT323", sans-serif;
+  color: yellow;
+}
+
 #job-title {
-  font: 40px "VT323", sans-serif;
+  font: 25px "VT323", sans-serif;
   color: yellow;
 
 }
 
 #job-descriptor {
-  font: 30px "VT323", sans-serif;
+  font: 25px "VT323", sans-serif;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -30,88 +42,21 @@
 body {
   color: white;
   font-size: 20px;
-
-
-}
-
-@keyframes typing {
-    from { width: 100% }
-    to { width: 0 }
-
-}
-
-.container {
-  position: relative;
-  float: right;
-  top-margin: 50%;
-  left-margin: 10%;
-  width: 98%;
-  font: 40px "VT323", sans-serif;
-}
-
-.typing {
-  position: absolute;
-  top: 0;
-  margin: 0;
-}
-
-.hiders {
-  margin: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.hiders p {
-  position: relative;
-  clear: both;
-  margin: 0;
-  float: right; /* makes animation go left-to-right */
-  width:0; /* graceful degradation: if animation doesn't work, these are invisible by default */
-  background: black; /* same as page background */
-  animation: typing 2s steps(30, end);
-  animation-fill-mode: both;  /* load first keyframe on page load, leave on last frame at end */
-}
-
-.hiders p:nth-child(2) {
-  animation-delay: 2s;
-}
-.hiders p:nth-child(3) {
-  animation-delay: 4s;
-}
-.hiders p:nth-child(4) {
-  animation-delay: 6s;
-}
-.hiders p:nth-child(5) {
-  animation-delay: 8s;
-}
-
-.stuff {
-  padding: 5px;
-
-}
-
-.image {
-    display: inline-block;
-    padding: 5px;
 }
 
 .hit-trail-button {
-    background-color: red; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    font-family: "VT323";
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font: 40px "VT323", sans-serif;
 }
 
-#occupation-button {
-  position: relative;
+#hit-trail {
   text-align: center;
-  top: 10px;
-  font: courier, sans-serif;
-  font-size: 5px;
+  margin: auto;
 }
