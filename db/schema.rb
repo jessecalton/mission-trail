@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 20170408020352) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.text     "text"
-    t.string   "image_url"
+    t.string   "image_url",      default: "/assets/smile.png"
     t.integer  "attr_change_id", default: 1
     t.boolean  "seen?",          default: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
   create_table "games", force: :cascade do |t|
@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.integer  "option_id"
     t.integer  "attr_change_id"
     t.integer  "event_id"
-    t.string   "image_url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "image_url",      default: "/assets/smile.png"
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
   create_table "users", force: :cascade do |t|
