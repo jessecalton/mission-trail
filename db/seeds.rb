@@ -192,7 +192,7 @@ got_option1 = Option.create(text: "Throw an environmentally-friendly Duraflame o
 got_option1 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id)
 
 got_result1 = Result.create(text: "You immediately regret your decision. Khalisi would be so disappointed in you.", option_id: got_option1.id, attr_change_id: 2, event_id: got_event.id)
-got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like Jon Snow but you know nothing.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id)
+got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like all put-together and masculine like Jon Snow.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id)
 
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/hotdog.png")
