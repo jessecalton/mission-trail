@@ -12,12 +12,14 @@
         <%=@event.text%>
       </p>
   </div>
+  <audio autoplay loop>
+       <source src="/assets/SONG1.mp3">
+   </audio>
   <div class="image">
     <img src=<%=@event.image_url%>>
   </div>
-  <audio autoplay loop>
-       <source src="/assets/SONG1.mp3">
-   </audio
-
+  <div class="link">
+  <%= link_to "New Game", controller: 'games', action: 'new' %>
+</div>
 </body>
 </html>
