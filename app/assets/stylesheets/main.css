@@ -10,19 +10,14 @@ h1 {
 
 .header {
   display: inline-block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 2px;
-  overflow: hidden;
-  border: none;
   font: normal 70px/1 "VT323", Helvetica, sans-serif;
   color: rgb(255, 0, 0);
   text-align: center;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-shadow: 5px 5px 0 white;
-  position: relative;
+  /*position: relative;*/
+  float: right;
   left: 25%;
 }
 
@@ -80,10 +75,26 @@ h1 {
 .link {
   position: relative;
   text-align: center;
-  top: 300px;
+  top: 500px;
   margin: auto;
-  width: 50%;
+  width: 20%;
   font: 70px "VT323", sans-serif;
-  text-shadow: 2px 2px white;
+  text-shadow: 1px 1px white;
+}
+
+a:link{
+  color: white;
   text-decoration: none;
+}
+
+a:visited{
+  color: purple;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+
+a:active{
+  color: red;
 }

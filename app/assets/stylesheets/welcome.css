@@ -45,8 +45,8 @@ body {
   float: right;
   top-margin: 50%;
   left-margin: 10%;
-  width: 100%;
-  font-family: Consolas, monospace;
+  width: 98%;
+  font: 40px "VT323", sans-serif;
 }
 
 .typing {
@@ -106,4 +106,12 @@ body {
     display: inline-block;
     font-size: 25px;
     font-family: "VT323";
+}
+
+#occupation-button {
+  position: relative;
+  text-align: center;
+  top: 10px;
+  font: courier, sans-serif;
+  font-size: 5px;
 }

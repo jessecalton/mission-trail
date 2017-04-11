@@ -68,10 +68,10 @@ ActiveRecord::Schema.define(version: 20170411163851) do
   end
 
   create_table "scoreboards", force: :cascade do |t|
-    t.string   "initials",   limit: 3
-    t.integer  "score",                null: false
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.string   "initials",   limit: 3, default: "AAA"
+    t.integer  "score",                                null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "users", force: :cascade do |t|
