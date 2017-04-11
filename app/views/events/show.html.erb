@@ -3,8 +3,6 @@
 <html>
 <head>
   <title></title>
-    <link rel="stylesheet" href="game_event.css">
-    <link rel="stylesheet" href="stats.css">
 </head>
 <body>
   <div id="stats">
@@ -15,7 +13,10 @@
     <p> Battery: <%= @game.battery %>% <br> </p>
   </div>
   <div class="container">
-      <p class="typing">
+    <div class="header">
+      <h1>Trail Event</h1>
+    </div>
+      <p class="event-typing">
         <%=@event.text%>
       </p>
   <div class="hiders">
@@ -32,7 +33,7 @@
 
   <div class="stuff">
     <% @event.options.each_with_index do |option, val| %>
-      <li><%= link_to option.text, event_result_path(@event, @event.results[val].id), {:class => "options"} %></li>
+      <p><%= link_to option.text, event_result_path(@event, @event.results[val].id), {:class => "options"} %></p>
     <% end %>
   </div>
 </body>
