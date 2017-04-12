@@ -4,7 +4,7 @@
 
 <p> Enter your Initials</p>
 <%= form_for @scoreboard, url: {action: "create"} do |f|%>
-<%= f.text_field :initials %>
+<%= f.text_field :initials, :maxlength => 3 %>
 <%= f.submit "submit your initials"%>
 <%end%>
 </center>
