@@ -8,10 +8,8 @@
     </div>
     <div id="enter-initials">
       <%= form_for @scoreboard, url: {action: "create"} do |f|%>
-        <p><%= f.text_field :initials %></p>
-    </div>
-      <div id="submit-initials">
+        <p><%= f.text_field :initials, :maxlength => 3 %></p>
         <%= f.submit "Submit Your Initials"%>
       <%end%>
-      </div>
+    </div>
 </div>

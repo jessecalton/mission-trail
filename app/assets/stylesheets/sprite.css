@@ -15,8 +15,10 @@
 
 .bar {
   position:relative;
-  bottom: 620px;
-  left: 600px;
-
-
+  left: -300px;
+  bottom: 130px;
+  width: 118px;
+  height:130px;
+  margin: 2% auto;
+  background: url('/assets/bar.png') left center;
 }
