@@ -21,11 +21,15 @@ class Event < ApplicationRecord
   # scope :trail, -> { where(options_count?: true).where(seen?: false) }
 
   def self.reset_locals
-    seen_locals.update_attributes(seen?: false)
+    local.each do |event|
+      event.update_attributes(seen?: false)
+    end
   end
 
   def self.reset_tinder
-    seen_tinder.update_attributes(seen?: false)
+    tinder.each do |event|
+      event.update_attributes(seen?: false)
+    end
   end
 
   def self.reset_instagram
@@ -35,12 +39,8 @@ class Event < ApplicationRecord
   end
 
   def self.reset_google_maps
-    seen_google_maps.each do |map|
+    google_maps.each do |map|
       map.update_attributes(seen?: false)
     end
   end
-
-  # def options_count?
-  #   return !!self.options.length
-  # end
 end
