@@ -2,7 +2,6 @@
   background-color: black;
 }
 
-<<<<<<< HEAD
 canvas {
   border: #333 10px solid;
 }
@@ -13,8 +12,6 @@ h1 {
   width:54%;
 }
 
-=======
->>>>>>> b568300c6d16ad9e6ea5791d565964112faec5c3
 .header {
   text-align: center;
   font: normal 70px/1 "VT323", Helvetica, sans-serif;
@@ -40,7 +37,6 @@ h1 {
   font: 70px "VT323", sans-serif;
   text-shadow: 1px 1px white;
 }
-<<<<<<< HEAD
 
 a:link{
   color: white;
@@ -58,5 +54,3 @@ a:hover{
 a:active{
   color: red;
 }
-=======
->>>>>>> b568300c6d16ad9e6ea5791d565964112faec5c3
