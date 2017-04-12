@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Mission Trail</title>
-</head>
-<body>
-  <div class="header">
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
     <h1>Mission Trail</h1>
     <br>
   </div>
-  <div class="container">
-    <p class="typing">Your mission, should you choose to accept it: A hip, new, trendy bar has just opened in the Marina District. All ride-sharing services are nonexistent. You have to make it to this party before your FOMO decreases and you literally can't even. Traveling by foot, you have two hours to make it to the Marina. You are about to witness the struggle of the modern millenial...
-    The struggle is real.</p>
-  <div class="hiders">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="link">
-    <%= link_to "Start Game", { :action => "show"}, :method => :get %>
-  </div>
-</body>
-</html>
+    <div id="top-content-buffer"></div>
+      <div class="welcome-container">
+        <p>Your mission, should you choose to accept it: A hip, new, trendy bar has just opened in the Marina District. All ride-sharing services are nonexistent. You have to make it to this party before your FOMO decreases and you literally can't even. Traveling by foot, you have two hours to make it to the Marina. You are about to witness the struggle of the modern millenial...
+        The struggle is real.</p>
+      </div>
+    <br>
+    <br>
+    <div class="all-options">
+      <div class="options">
+        <%= link_to "Start Game", { :action => "show"}, :method => :get %>
+      </div>
+    </div>
+</div>
+
 
