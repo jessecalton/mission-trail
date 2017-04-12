@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require phaser
 //= require _game_event
+//= require sprite
