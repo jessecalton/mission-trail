@@ -21,7 +21,7 @@
     <img src=<%=@event.image_url%>>
   </div>
   <div id="event-content-buffer"></div>
-      <div class="trail-return-link"><%= link_to "Return to Trail", attr_change_path(@attr_change), method: "put"%>
+      <div class="trail-return-link"><%= link_to "Return to Trail", attr_change_path(@event.attr_change), method: "put"%>
       </div>
   </div>
 </div>
