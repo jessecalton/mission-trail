@@ -87,13 +87,13 @@ a:hover {
 }
 
 .all-options {
-  margin: 50px;
+
 }
 
 .flexbox-event-content {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 50vh;
   top-margin: 0px;
   left-margin: 50px;
   right-margin: 50px;
