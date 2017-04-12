@@ -39,16 +39,16 @@ h1 {
 }
 
 a:link{
-  color: white;
+  color: red;
   text-decoration: none;
 }
 
 a:visited{
-  color: purple;
+  color: red;
   text-decoration: none;
 }
 a:hover{
-  color: red;
+  color: purple;
 }
 
 a:active{
