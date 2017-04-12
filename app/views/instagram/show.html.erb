@@ -14,7 +14,7 @@
   </div>
 </div>
 <% unless @event.name == "good-insta" %>
-  <%= audio_tag("/assets/FAIL.mp3", autoplay: true) %>
+  <%= audio_tag("FAIL.mp3", autoplay: true) %>
   <% end %>
 <div class="options">
   <%=@event.text%>
