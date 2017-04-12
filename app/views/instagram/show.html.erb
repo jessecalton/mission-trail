@@ -13,7 +13,9 @@
     <div id="top-content-buffer"></div>
   </div>
 </div>
-<% unless @event.name == "good-insta" %>
+<% if @event.name == "good-insta" %>
+  <%= audio_tag("SUCCESS.mp3", autoplay: true) %>
+  <% else %>
   <%= audio_tag("FAIL.mp3", autoplay: true) %>
   <% end %>
 <div class="options">
