@@ -5,9 +5,6 @@ class GooglemapsController < ApplicationController
     @game = Game.find(session[:id])
     @game.update_attributes(checked_googlemaps: true)
     @event_array = Event.google_maps.where(seen?: false)
-    p "***************"
-    p @event_array.length
-    p "***************"
     if @event_array.empty?
       Event.reset_google_maps
       @event_array = Event.google_maps
