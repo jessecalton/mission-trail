@@ -10,9 +10,7 @@
       </div>
     <br>
     <br>
-    <audio autoplay>
-         <source src="/assets/INTRO.mp3">
-     </audio>
+    <%= audio_tag("INTRO.mp3", autoplay: true) %>
     <div class="all-options">
       <div class="options">
         <%= link_to "Start Game", { :action => "show"}, :method => :get %>
