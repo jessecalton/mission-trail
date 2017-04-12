@@ -9,7 +9,6 @@
 .stuff {
   padding: 50px;
   float: right;
-
 }
 
 .options {
@@ -98,4 +97,32 @@ a:hover {
   top-margin: 0px;
   left-margin: 50px;
   right-margin: 50px;
+}
+
+#new-game-link {
+  font: 60px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+  padding: 50px;
+  margin-top: 175px;
+}
+
+marquee {
+  font: 50px "VT323", sans-serif;
+  text-decoration: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#enter-initials {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#submit-initials {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
 }
