@@ -5,6 +5,8 @@
   <title></title>
 </head>
 <body>
+<div class="event-flexbox-wrapper">
+  <div class="top-content">
   <div id="stats">
     <p> Name: <%= @game.username %> </p>
     <p> FOMO: <%= @game.fomo %>% <br> </p>
@@ -12,29 +14,26 @@
     <p> Money: $<%= @game.money %> <br> </p>
     <p> Battery: <%= @game.battery %>% <br> </p>
   </div>
-  <div class="container">
-    <div class="header">
-      <h1>Trail Event</h1>
+      <div id="event-header">
+        <h1>Trail Event</h1>
+      </div>
+      <div id="top-content-buffer"></div>
+  </div>  
+</div>
+    <div class="options">
+      <%=@event.text%>
     </div>
-      <p class="event-typing">
-        <%=@event.text%>
-      </p>
-  <div class="hiders">
-    <p>&nbsp;</p>
-    <!-- <p>&nbsp;</p> -->
-<!--     <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p> -->
   </div>
-  </div>
-  <div class="image">
-    <img src=<%=@event.image_url%>>
-  </div>
-
-  <div class="stuff">
-    <% @event.options.each_with_index do |option, val| %>
-      <p><%= link_to option.text, event_result_path(@event, @event.results[val].id), {:class => "options"} %></p>
-    <% end %>
+  <div class="flexbox-event-content">
+    <div class="image">
+      <img src=<%=@event.image_url%>>
+    </div>
+    <div id="event-content-buffer"></div>
+    <div class="stuff">
+      <% @event.options.each_with_index do |option, val| %>
+        <%= link_to option.text, event_result_path(@event, @event.results[val].id), {:class => "options"} %> <br> <br>
+      <% end %>
+    </div>
   </div>
 </body>
 </html>
