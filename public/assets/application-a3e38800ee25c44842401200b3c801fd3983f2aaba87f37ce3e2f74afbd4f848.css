@@ -1,0 +1,324 @@
+.container {
+  position: relative;
+  float: right;
+  left-margin: 10%;
+  width: 70%;
+  font: 25px "VT323", sans-serif;
+}
+
+.stuff {
+  padding: 50px;
+  float: right;
+}
+
+.options {
+  text-align: center;
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+}
+
+.trail-return-link {
+  /*text-align: right;*/
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+  padding: 50px;
+  margin-top: 100px;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.image {
+    display: inline-block;
+    padding: 50px;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+.return-to-trail {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  line-height: 2;
+  font-color: white;
+  font-size: 20px;
+  background: red;
+  font: 25px "VT323", sans-serif;
+}
+
+#event-header {
+  text-align: center;
+  font: normal 70px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  display: block;
+}
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.event-flexbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-options {
+  margin: 50px;
+}
+
+.flexbox-event-content {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  top-margin: 0px;
+  left-margin: 50px;
+  right-margin: 50px;
+}
+
+#new-game-link {
+  font: 60px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+  padding: 50px;
+  margin-top: 175px;
+}
+
+marquee {
+  font: 50px "VT323", sans-serif;
+  text-decoration: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#enter-initials {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#submit-initials {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.background {
+  background-color: black;
+}
+
+canvas {
+  border: #333 10px solid;
+}
+
+h1 {
+
+  margin:auto;
+  width:54%;
+}
+
+.header {
+  text-align: center;
+  font: normal 70px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  margin: auto;
+}
+
+.link {
+  text-align: center;
+  top: 350px;
+  margin: auto;
+  position: relative;
+  font: 70px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+}
+
+#hop-on-trail-link {
+  text-align: center;
+  top: 150px;
+  margin: auto;
+  position: relative;
+  font: 70px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+}
+
+a:visited{
+  color: purple;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+
+a:active{
+  color: red;
+}
+.scoreboard {
+  margin: auto;
+    width: 14%;
+    padding: 10px;
+}
+.sprite {
+  position:relative;
+  right: 400px;
+  top: 50px;
+  width: 40px;
+  height: 60px;
+  margin: 2% auto;
+  background: url('/assets/walk.png') left center;
+  animation: play 1s steps(10) infinite;
+}
+
+@keyframes play {
+    100% { background-position: -1900px; }
+}
+
+.bar {
+  position:relative;
+  left: -300px;
+  bottom: 130px;
+  width: 118px;
+  height:130px;
+  margin: 2% auto;
+  background: url('/assets/bar.png') left center;
+}
+#stats {
+  color: white;
+  font: 25px "VT323", sans-serif;
+  background-color: black;
+  min-width: 170px;
+}
+
+#top-content-buffer {
+  min-width: 170px;
+}
+.create-game-form {
+  position: relative;
+  display: block;
+  line-height: 5;
+
+}
+
+.occupation-container {
+  margin: 50px;
+}
+
+#occupation-header {
+  text-align: center;
+  font: normal 40px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  display: block;
+}
+
+.occupations {
+  position: relative;
+  line-height: 2;
+}
+
+.occupation-question {
+  font: 25px "VT323", sans-serif;
+  color: yellow;
+}
+
+#job-title {
+  font: 25px "VT323", sans-serif;
+  color: yellow;
+
+}
+
+#job-descriptor {
+  font: 25px "VT323", sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+input {
+  font-family: "VT323";
+  border: none;
+  font-size: 25px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+select {
+  font-family: "VT323";
+  border: none;
+  font-size: 25px;
+  border-radius: 0;
+}
+
+body {
+  color: white;
+  font-size: 20px;
+}
+
+.hit-trail-button {
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font: 40px "VT323", sans-serif;
+}
+
+#hit-trail {
+  text-align: center;
+  margin: auto;
+}
+
+.welcome-container p {
+  margin: 20px;
+  text-align: center;
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
