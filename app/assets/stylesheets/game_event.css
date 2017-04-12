@@ -19,6 +19,15 @@
   text-decoration: none;
 }
 
+.trail-return-link {
+  /*text-align: right;*/
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+  padding: 50px;
+  margin-top: 100px;
+}
+
 /* unvisited link */
 a:link {
     color: red;
