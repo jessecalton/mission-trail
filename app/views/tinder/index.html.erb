@@ -1,0 +1,28 @@
+<div class="event-flexbox-wrapper">
+  <div class="top-content">
+    <div id="stats">
+      <p> Name: <%= @game.username %> </p>
+      <p> FOMO: <%= @game.fomo %>% <br> </p>
+      <p> Time: <%= @game.time %> Minutes <br> </p>
+      <p> Money: $<%= @game.money %> <br> </p>
+      <p> Battery: <%= @game.battery %>% <br> </p>
+    </div>
+    <div id="event-header">
+      <h1>Tinder Break</h1>
+    </div>
+    <div id="top-content-buffer"></div>
+  </div>
+</div>
+<div class="options">
+  <%=@event.text%>
+</div>
+  <div class="flexbox-event-content">
+    <div class="image">
+      <img src=<%=@event.image_url%>>
+    </div>
+    <div id="event-content-buffer"></div>
+      <div class="trail-return-link">
+        <%= link_to "Return to Trail", attr_change_path(@attr_change), method: "put"%>
+      </div>
+  </div>
+</div>
