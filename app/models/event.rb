@@ -6,10 +6,22 @@ class Event < ApplicationRecord
 
   scope :local, -> { where("name LIKE 'local%'").where(seen?: false) }
 
+  scope :seen_locals, -> { where("name LIKE 'local%'").where(seen?: true) }
+
+  scope :tinder, -> { where("name LIKE '%tinder'").where(seen?: false) }
+
+  scope :instagram, -> { where("name LIKE '%insta'") }
+
   # scope :trail, -> { where(options_count?: true).where(seen?: false) }
 
   def self.reset_locals
-    local.update_attributes(seen?: false)
+    seen_locals.update_attributes(seen?: false)
+  end
+
+  def self.reset_instagram
+    instagram.each do |event|
+      event.update_attributes(seen?: false)
+    end
   end
 
   # def options_count?
