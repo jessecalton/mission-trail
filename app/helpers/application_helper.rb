@@ -39,7 +39,7 @@ module ApplicationHelper
   # end
 
   def regenerate_events
-    @events = Event.all 
+    @events = Event.all
     @events.each do |event|
       if event.options.length != 0 && event.seen? == true
         event.update_attributes(seen?: false)
@@ -48,11 +48,16 @@ module ApplicationHelper
   end
 
   # def regenerate_local_events
-  #   @events = Event.all 
+  #   @events = Event.all
   #   @events.each do |event|
   #     if event.name.include?("local") && event.seen? == true
   #       event.update_attributes(seen?: false)
   #     end
   #   end
   # end
+  def point_calculate
+    @points = @game.battery + @game.money - @game.fomo
+    @points *= 97
+    @points = 9999 if @points >= 9999
+  end
 end

@@ -1,5 +1,5 @@
 class ScoreboardController < ApplicationController
-
+include ApplicationHelper
 def index
   @scoreboard = Scoreboard.all.sort_by(&:score).reverse
 end
@@ -7,16 +7,12 @@ end
 def new
 @scoreboard = Scoreboard.new
 @game = Game.find(session[:id])
-@points = @game.battery + @game.money - @game.fomo
-@points *= 97
-@points = 9999 if @points >= 9999
+  point_calculate
 end
 
 def create
   @game = Game.find(session[:id])
-  @points = @game.battery + @game.money - @game.fomo
-  @points *= 97
-  @points = 9999 if @points >= 9999
+  point_calculate
 
   @initials = params[:scoreboard][:initials]
   @score = Scoreboard.create(
