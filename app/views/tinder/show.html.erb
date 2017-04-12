@@ -16,6 +16,11 @@
 <div class="options">
   <%=@event.text%>
 </div>
+<% if @event.name == "good-tinder" || @event.name == "superlike-tinder" %>
+  <%= audio_tag("MATCH.mp3", autoplay: true) %>
+  <% else %>
+  <%= audio_tag("FAIL.mp3", autoplay: true) %>
+  <% end %>
   <div class="flexbox-event-content">
     <div class="image">
       <img src=<%=@event.image_url%>>
