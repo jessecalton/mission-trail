@@ -5,17 +5,21 @@
 
 }
 
+.occupation-container {
+  margin: 50px;
+}
+
+#occupation-header {
+  text-align: center;
+  font: normal 40px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  display: block;
+}
+
 .occupations {
   position: relative;
   line-height: 2;
-}
-
-#occupations-header {
- text-align: center;
-  font: normal 70px/1 "VT323", Helvetica, sans-serif;
-  color: rgb(255, 0, 0);
-  text-shadow: 3px 3px 0 white;
-  margin: auto;
 }
 
 .occupation-question {
@@ -35,8 +39,19 @@
   margin-right: 5%;
 }
 
-.selector-class {
-  font-family: "Press Start 2P";
+input {
+  font-family: "VT323";
+  border: none;
+  font-size: 25px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+select {
+  font-family: "VT323";
+  border: none;
+  font-size: 25px;
+  border-radius: 0;
 }
 
 body {
@@ -59,4 +74,12 @@ body {
 #hit-trail {
   text-align: center;
   margin: auto;
+}
+
+.welcome-container p {
+  margin: 20px;
+  text-align: center;
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
 }

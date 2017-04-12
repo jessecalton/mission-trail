@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-    <link rel="stylesheet" href="welcome.css">
-</head>
-<body>
-  <div id="occupations-header">
-    <p>Choose a Career Path:</p>
+<div class="page-flexbox-wrapper">
+  <div id="occupation-header">
+    <h1>Choose a Career Path</h1>
   </div>
-<div class=occupations>
-  <p id=job-title>Hedge Fund Manager:</p><p id=job-descriptor>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p>
-  <p id=job-title>Tech Bro:</p><p id=job-descriptor>The Tech Bro begins the game with the highest amount of phone battery.</p>
-  <p id=job-title>Yoga Instructor:</p><p id=job-descriptor>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
-</div>
+<div id="top-content-buffer"></div>
+  <div class="occupation-container">
+    <div class=occupations>
+      <p id=job-title>Hedge Fund Manager:</p><p id=job-descriptor>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery.</p>
+      <p id=job-title>Tech Bro:</p><p id=job-descriptor>The Tech Bro begins the game with the highest amount of phone battery.</p>
+      <p id=job-title>Yoga Instructor:</p><p id=job-descriptor>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
+    </div>
+
   <%= form_for @game, url: {action: "create"}, :html => {:class => "create-game-form"} do |f| %>
   <div class="occupation-question">
     <p>What is your name?<p><%= f.text_field :username %>

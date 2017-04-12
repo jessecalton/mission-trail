@@ -1,9 +1,10 @@
-<h1> new </h1>
 
+<center>
 <p>Your Score: <%= @points %></p>
 
-<p><center> Enter your Initials </center></p>
+<p> Enter your Initials</p>
 <%= form_for @scoreboard, url: {action: "create"} do |f|%>
 <%= f.text_field :initials %>
 <%= f.submit "submit your initials"%>
 <%end%>
+</center>
