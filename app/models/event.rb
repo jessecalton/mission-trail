@@ -10,12 +10,18 @@ class Event < ApplicationRecord
 
   scope :tinder, -> { where("name LIKE '%tinder'").where(seen?: false) }
 
+  scope :seen_tinder, -> { where("name LIKE '%tinder'").where(seen?: true) }
+
   scope :instagram, -> { where("name LIKE '%insta'") }
 
   # scope :trail, -> { where(options_count?: true).where(seen?: false) }
 
   def self.reset_locals
     seen_locals.update_attributes(seen?: false)
+  end
+
+  def self.reset_tinder
+    seen_tinder.update_attributes(seen?: false)
   end
 
   def self.reset_instagram
