@@ -2,6 +2,16 @@
   background-color: black;
 }
 
+canvas {
+  border: #333 10px solid;
+}
+
+h1 {
+
+  margin:auto;
+  width:54%;
+}
+
 .header {
   text-align: center;
   font: normal 70px/1 "VT323", Helvetica, sans-serif;
@@ -26,4 +36,21 @@
   position: relative;
   font: 70px "VT323", sans-serif;
   text-shadow: 1px 1px white;
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+}
+
+a:visited{
+  color: purple;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+
+a:active{
+  color: red;
 }
