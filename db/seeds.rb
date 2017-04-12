@@ -41,6 +41,9 @@ attr_change10 = AttrChange.create(fomo_change: 10, battery_change: 0, time_chang
 #Fomo Increase x 2 & Time Decrease & Money Decrease
 attr_change11 = AttrChange.create(fomo_change: 10, battery_change: 0, time_change: -5, money_change: -5)
 
+#Fomo Increase x 2 & Time Decrease
+attr_change12 = AttrChange.create(fomo_change: 10, battery_change: 0, time_change: -5, money_change: 0)
+
 ### googlemaps Events ###
 google_event1 = Event.create(name: "good-map", text: "You found a nifty shortcut through a hole in the wall store. The place had some awesome doodads, you remember this address for another time", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
 google_event2 = Event.create(name: "bad-map", text: "You check your map to find that you have been walking in the opposite direction to your destination. whoops..", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
@@ -194,6 +197,33 @@ got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is comin
 got_result1 = Result.create(text: "You immediately regret your decision. Khalisi would be so disappointed in you.", option_id: got_option1.id, attr_change_id: 2, event_id: got_event.id)
 got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like all put-together and masculine like Jon Snow.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id)
 
+### AirBnB Event ###
+
+air_bnb_event = Event.create(name: "airbnb", text: "You walk past airbnb and they have a special yurt sweat lodge event. Are you down?")
+
+air_bnb_option1 = Option.create(text: "I've got time to sweat it out.", event_id: air_bnb_event.id)
+air_bnb_option2 = Option.create(text: "Yurts are cool, but a tent with hipsters doesn't sound kosher.", event_id: air_bnb_event.id)
+air_bnb_option3 = Option.create(text: "I think I'll keep my shirt on and keep walking.", event_id: air_bnb_event.id)
+
+air_bnb_result1 = Result.create(text: "You take off your outer garments and enter the steamy yurt and immediately see your coworker in a trance chanting in Tibetan.", option_id: air_bnb_option1.id, event_id: air_bnb_event.id, attr_change_id: 2)
+air_bnb_result2 = Result.create(text: "You take a big whiff of 'too cool for school-ness' and keep on.", option_id: air_bnb_option2.id, event_id: air_bnb_event.id, attr_change_id: 1)
+air_bnb_result3 = Result.create(text: "You feel a wave of guilt and call your friend later that evening and plan a 2 week trip to the desert to live with real live Native Americans.", option_id: air_bnb_option3.id, event_id: air_bnb_event.id, attr_change_id: 12)
+
+### DBC Event ###
+
+dbc_event = Event.create(name: "dbc-event", text: "The newest coding bootcamp, 'Love Yourself First, Code Second' is having its grand opening. Interested?")
+
+dbc_option1 = Option.create(text: "Sure, I've always dreamt of making beautiful things.", event_id: dbc_event.id)
+dbc_option2 = Option.create(text: "Hell yes. A program like this might get me promoted at Starbucks.", event_id: dbc_event.id)
+dbc_option3 = Option.create(text: "Probably too advanced for me. I'll stick with my Commodore 64.", event_id: dbc_event.id)
+
+dbc_result1 = Result.create(text: "You sign up on the spot and post on Facebook that you are now a junior developer.", event_id: dbc_event.id, option_id: dbc_option1.id, attr_change_id: 3)
+dbc_result2 = Result.create(text: "Your dream is squashed when you realize there is actually a tuition to pay.", event_id: dbc_event.id, option_id: dbc_option2.id, attr_change_id: 2)
+dbc_result3 = Result.create(text: "You find out that you have been cryogenically frozen for over two decades. That's cold, Jack.", event_id: dbc_event.id, option_id: dbc_option3.id, attr_change_id: 2)
+
+###
+
+
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/hotdog.png")
 
@@ -221,8 +251,19 @@ local_event_8 = Event.create(name: "local-froyo", text: "'I just bought some sal
 ### Talk to Locals 9 ###
 local_event_9 = Event.create(name: "local-stroller-dog", text: "Someone is pushing a stroller. Upon closer examination, there is not a human baby, but a small dog in the stroller. \n Nothing strange here.", attr_change_id: 1)
 
+### Talk to Locals 10 ###
+local_event_10 = Event.create(name: "local-burly-man", text: "A burly guy wearing a tunic is standing in front of his zen crystal arts shop.'Want to sign up for our buy 3 get 4 coffee colonics offer? Namaste brother.'", attr_change_id: 1)
+
+### Talk to Locals 11 ###
+local_event_11 = Event.create(name: "local-grizzly-beard", text: "A grizzly-bearded dude starts walking alongside you. 'I see you're rockin' a face blanket man. Try out this new non-GMO hempseed beard oil. It'll change your life.'", attr_change_id: 3)
+
+### Talk to Locals 12 ###
+local_event_12 = Event.create(name: "local-vilde-event", text: "A blonde Norwegian girl with an acoustic is busking on the corner. She sings, 'So why oh why why oh why, are we so in denial, when we know we're not happy here?'", attr_change_id: 1)
+
 ### Game Ending ###
 
-average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/smile.png")
-bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/smile.png")
-good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/smile.png")
+average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/Image-1.jpg")
+bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/Image-1.jpg")
+good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/Image-1.jpg")
+worst_game_ending = Event.create(name: "worst_game_ending", text: "You have died of FOMO.", image_url: "/assets/Image-1.jpg")
+
