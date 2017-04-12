@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>FOMO</title>
-</head>
-<body>
-  <div class="header">
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
     <h1>What is FOMO?</h1>
   </div>
-  <div class="container">
-    <p>noun, informal</p>
-    <br>Anxiety that an exciting or interesting event may currently be happening elsewhere, often aroused by posts seen on social media. ‘Constant real-time awareness - through Facebook check-ins and Twitter updates - of the fun everyone is having can spark the instant insecurity of FOMO, or fear of missing out.’</p>
-  </div>
-  <div id="hop-on-trail-link">
-    <%= link_to "Hop On The Trail", controller: 'games', action: 'new' %>
-  </div>
-</body>
-</html>
+  <div id="top-content-buffer"></div>
+    <div class="welcome-container">
+      <p>noun, informal</p>
+      <br>
+      <p>Anxiety that an exciting or interesting event may currently be happening elsewhere, often aroused by posts seen on social media. ‘Constant real-time awareness - through Facebook check-ins and Twitter updates - of the fun everyone is having can spark the instant insecurity of FOMO, or fear of missing out.’</p>
+    </div>
+    <div class="all-options">
+      <div class="options">
+        <%= link_to "Hop On The Trail", controller: 'games', action: 'new' %>
+      </div>
+    </div>
+</div>
+
 

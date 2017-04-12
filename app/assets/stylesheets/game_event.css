@@ -21,6 +21,7 @@
 /* unvisited link */
 a:link {
     color: red;
+    text-decoration: none;
 }
 
 /* visited link */
@@ -28,13 +29,8 @@ a:visited {
     color: green;
 }
 
-/* selected link */
-a:active {
-    color: blue;
-}
-
 a:hover {
-  color: white;
+  color: rgb(255, 0, 0);
 }
 
 .image {
