@@ -8,13 +8,16 @@ def new
 @scoreboard = Scoreboard.new
 @game = Game.find(session[:id])
 @points = @game.battery + @game.money - @game.fomo
-@points *= 100
+@points *= 97
+@points = 9999 if @points >= 9999
 end
 
 def create
   @game = Game.find(session[:id])
   @points = @game.battery + @game.money - @game.fomo
-  @points *= 100
+  @points *= 97
+  @points = 9999 if @points >= 9999
+
   @initials = params[:scoreboard][:initials]
   @score = Scoreboard.create(
     score: @points,
