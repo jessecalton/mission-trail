@@ -23,8 +23,9 @@ class GamesController < ApplicationController
   end
 
   def create
+
     if params[:game][:occupation] == "Yoga Instructor"
-      @game = Game.create(
+      @game = Game.new(
         username: params[:game][:username],
         fomo: 50,
         battery: 50,
@@ -32,7 +33,7 @@ class GamesController < ApplicationController
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Hedge Fund Manager"
-      @game = Game.create(
+      @game = Game.new(
         username: params[:game][:username],
         fomo: 60,
         battery: 50,
@@ -40,7 +41,7 @@ class GamesController < ApplicationController
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Tech Bro"
-      @game = Game.create(
+      @game = Game.new(
         username: params[:game][:username],
         fomo: 60,
         battery: 70,
@@ -48,15 +49,17 @@ class GamesController < ApplicationController
         occupation: params[:game][:occupation],
         )
     end
-    session[:id] = @game.id
 
-    @events = Event.all
-
-    @events.each do |event|
-      event.update_attributes(seen?: false)
+    if @game.save
+      session[:id] = @game.id
+      @events = Event.all
+      @events.each do |event|
+        event.update_attributes(seen?: false)
+      end
+      redirect_to games_path
+    else
+      redirect_to new_game_path
     end
-
-    redirect_to games_path
   end
 
   def show
