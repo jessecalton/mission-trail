@@ -1,7 +1,6 @@
 class ScoreboardController < ApplicationController
 
 def index
-  @game = Game.find(session[:id])
   @scoreboard = Scoreboard.all.sort_by(&:score).reverse
 end
 

@@ -1,3 +1,29 @@
+<%if @fomo >= 100 %>
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
+    <h1>You never reached the party</h1>
+    <br>
+  </div>
+  <div id="top-content-buffer"></div>
+    <div class="options">
+      <%=@event.text%>
+    </div>
+    <div class="flexbox-event-content">
+      <div class="image">
+        <img src=<%=@event.image_url %>>
+      </div>
+      <div class="all-options">
+        <div class="options">
+          <%= link_to "New Game", controller: 'games', action: 'new' %>
+          <%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
+        </div>
+      </div>
+    </div>
+    <audio autoplay>
+      <!-- <source src="/assets/SONG1.mp3"> -->
+    </audio>
+</div>
+<%else%>
 <div class="page-flexbox-wrapper">
   <div id="event-header">
     <h1>You've reached the party!</h1>
@@ -22,3 +48,4 @@
       <source src="/assets/SONG1.mp3">
     </audio>
 </div>
+<%end%>
