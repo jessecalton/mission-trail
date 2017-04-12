@@ -27,21 +27,6 @@
   margin-top: 100px;
 }
 
-/* unvisited link */
-a:link {
-    color: red;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-    color: green;
-}
-
-a:hover {
-  color: rgb(255, 0, 0);
-}
-
 .image {
     display: inline-block;
     padding: 50px;
