@@ -7,7 +7,8 @@
 }
 
 .stuff {
-  padding: 5px;
+  padding: 50px;
+  float: right;
 
 }
 
@@ -35,7 +36,9 @@ a:hover {
 
 .image {
     display: inline-block;
-    padding: 5px;
+    padding: 50px;
+    max-width: 30%;
+    max-height: 30%;
 }
 
 .return-to-trail {
@@ -70,7 +73,20 @@ a:hover {
   flex-direction: column;
 }
 
+.event-flexbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 .all-options {
   margin: 50px;
+}
+
+.flexbox-event-content {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  top-margin: 0px;
+  left-margin: 50px;
+  right-margin: 50px;
 }
