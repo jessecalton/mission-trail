@@ -50,14 +50,18 @@ google_event2 = Event.create(name: "bad-map", text: "You check your map to find 
 
 ### Instagram Events ###
 
-insta_event1 = Event.create(name: "good-insta", text: "You have 11 Insta likes. You are happy.", attr_change_id: 4, image_url: "/assets/instagram.png" )
-insta_event2 = Event.create(name: "bad-insta", text: "You have 3 Instagram likes. Sucks to be you.", attr_change_id: 5, image_url: "/assets/instagram.png")
+insta_event1 = Event.create(name: "good-insta", text: "You have 11 Instagram likes. You feel well-liked and appreciated!", attr_change_id: 4, image_url: "/assets/instagram.png" )
+insta_event2 = Event.create(name: "bad-insta", text: "You have only 3 Instagram likes. You feel invisible and see your friend's Cabo vacation picks. FOMO...", attr_change_id: 5, image_url: "/assets/instagram.png")
+insta_event3 = Event.create(name: "trump-insta", text: "Donald Trump just started following you on Instagram. What about foreign policy old man?", attr_change_id: 5, image_url: "/assets/instagram.png")
+insta_event4 = Event.create(name: "stalker-insta", text: "That person you've been stalking on Instagram just made their profile private. Damn you technology!", attr_change_id: 5, image_url: "/assets/instagram.png")
 
 ### Tinder Events ###
 
 tinder_event1 = Event.create(name: "good-tinder", text: "You have a hot coconut water date with a hot yoga instructor.", attr_change_id: 4, image_url: "/assets/tinder.png")
 tinder_event2 = Event.create(name: "neutral-tinder", text: "You have no new Tinder matches.", attr_change_id: 6, image_url: "/assets/tinder.png")
 tinder_event3 = Event.create(name: "bad-tinder", text: "You text a hot match and you get a reply saying 'new phone who dis?'", attr_change_id: 5, image_url: "/assets/tinder.png")
+tinder_event4 = Event.create(name: "superlike-tinder", text: "You just got super-liked by a 50 year-old woman with three cats. Plus one for you!", attr_change_id: 4, image_url: "/assets/tinder.png")
+tinder_event5 = Event.create(name: "dad-on-tinder", text: "You're so over Tinder. You just saw a photo of your Dad on the app and accidentally swiped right. Gross!", attr_change_id: 5, image_url: "/assets/tinder.png")
 
 ### Ex Girlfriend Event ###
 
