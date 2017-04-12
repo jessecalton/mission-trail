@@ -2,8 +2,9 @@ class GamesController < ApplicationController
   include ApplicationHelper
 
   def index
+
     @game = Game.find(session[:id])
-    if @game.time <= 0
+    if @game.time <= 0 || @game.fomo >= 100
       redirect_to game_end_index_path
     end
 
@@ -17,7 +18,7 @@ class GamesController < ApplicationController
 
   end
 
-  def new 
+  def new
     @game = Game.new(params[:id])
     gon.gametext = "Hedge Fund Manager:\nThe Hedge Fund Manager begins the game with the most money, but the least\namount of phone battery.\nTech Bro:\nThe Tech Bro begins the game with the highest amount of phone battery.\nYoga Instructor:\nThe Yoga Instructor begins the game with the least amount of money,\nbut the lowest level of FOMO. Namaste, brah."
   end

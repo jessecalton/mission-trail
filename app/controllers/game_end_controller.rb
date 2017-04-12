@@ -4,7 +4,9 @@ class GameEndController < ApplicationController
     @game = Game.find(session[:id])
     @fomo = @game.fomo
 
-      if @fomo > 80
+      if @fomo >= 100
+        @event= Event.find_by(name: "worst_game_ending")
+      elsif @fomo > 80
         @event = Event.find_by(name: "bad_game_ending")
         gon.gametext = @event.text
         gon.gameimage = @event.image_url

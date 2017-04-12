@@ -1,3 +1,5 @@
+
+<% if @fomo < 100 %>
 <div class="header">
   <h4>You've reached the party</h4>
 </div>
@@ -12,6 +14,22 @@
 <div class="image">
   <img src=<%=@event.image_url %>>
 </div>
+<%else%>
+<div class="header">
+  <h4>You have failed to reach the party</h4>
+</div>
+<div class="container">
+    <p class="typing">
+      <%=@event.text%>
+    </p>
+</div>
+<audio autoplay>
+     <!-- <source src="/assets/SONG1.mp3"> -->
+ </audio>
+<div class="image">
+  <img src=<%=@event.image_url %>>
+</div>
+<%end%>
 <div class="link">
   <%= link_to "New Game", controller: 'games', action: 'new' %>
 </div>
