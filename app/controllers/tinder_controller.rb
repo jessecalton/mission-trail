@@ -6,9 +6,6 @@ class TinderController < ApplicationController
     @game = Game.find(session[:id])
     @game.update_attributes(checked_tinder: true)
     @event_array = Event.tinder.where(seen?: false)
-        p "**********"
-        p @event_array.length
-        p "*********************"
     if @event_array.empty?
       Event.reset_tinder
       @event_array = Event.tinder
