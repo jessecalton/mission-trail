@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 if (gon.time >= 30) {
   $('.bar').css("background", "url('/assets/blank.png')")
 }
@@ -13,4 +11,3 @@ else {
   $('.bar').css('left', distance + "px")
 }
 
-});
