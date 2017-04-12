@@ -13,6 +13,9 @@
     <div id="top-content-buffer"></div>
   </div>
 </div>
+<% unless @event.name == "good-insta" %>
+  <%= audio_tag("/assets/FAIL.mp3", autoplay: true) %>
+  <% end %>
 <div class="options">
   <%=@event.text%>
 </div>
@@ -26,4 +29,3 @@
     </div>
   </div>
 </div>
-
