@@ -29,24 +29,24 @@ class GamesController < ApplicationController
       @game = Game.new(
         username: params[:game][:username],
         fomo: 50,
-        battery: 50,
-        money: 35,
+        battery: 45,
+        money: 20,
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Hedge Fund Manager"
       @game = Game.new(
         username: params[:game][:username],
-        fomo: 60,
+        fomo: 65,
         battery: 50,
-        money: 70,
+        money: 40,
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Tech Bro"
       @game = Game.new(
         username: params[:game][:username],
-        fomo: 60,
+        fomo: 65,
         battery: 70,
-        money: 50,
+        money: 35,
         occupation: params[:game][:occupation],
         )
     end
