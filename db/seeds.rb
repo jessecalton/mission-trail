@@ -256,7 +256,7 @@ pronoun_option1 = Option.create(text: "Respond with a quick 'I haven't seen ze f
 pronoun_option2 = Option.create(text: "Smile awkwardly and Google 'ze' on the DL.", event_id: pronoun_event.id)
 
 pronoun_result1 = Result.create(text: "Despite the grey hair that you just saw in the mirror this morning, you feel golden.", event_id: pronoun_event.id, option_id: pronoun_option1.id, attr_change_id: 3, image_url: "/assets/burning_bro.jpg")
-pronoun_result2 = Result.create(text: "You feel enlightened after reading about gender pronouns for two hours.", event_id: pronoun_event.id, option_id: pronoun_option2.id, attr_change_id: 2, image_url: "/assets/sadness.jpg") #need a photo
+pronoun_result2 = Result.create(text: "You feel enlightened after reading about gender pronouns for two hours.", event_id: pronoun_event.id, option_id: pronoun_option2.id, attr_change_id: 2, image_url: "/assets/enlightened.jpg")
 
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/dysentery.jpg")
@@ -274,7 +274,7 @@ local_event_4 = Event.create(name: "local-kramer", text: "I have a line in the u
 local_event_5 = Event.create(name: "local-giants", text: "This guy gave you some free Giants tickets! It is a great place to take Tinder selfies and get hit by bottles", attr_change_id: 3, image_url: "/assets/giants_ticket.jpg")
 
 ### Talk to Locals 6 ###
-local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped by a tech bro on an electric unicycle. He shouts 'Scooty-Puff Junior,' as he scoots away.", attr_change_id: 2, image_url: "/assets/airwheel.jpeg") #need to update image
+local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped by a tech bro on an electric unicycle. He shouts 'Scooty-Puff Junior,' as he scoots away.", attr_change_id: 2, image_url: "/assets/airwheel.jpg")
 
 ### Talk to Locals 7 ###
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3, image_url: "/assets/altright_bro.jpg")
