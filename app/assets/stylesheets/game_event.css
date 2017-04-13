@@ -97,8 +97,9 @@
   font: 60px "VT323", sans-serif;
   text-shadow: 1px 1px white;
   text-decoration: none;
-  padding: 50px;
-  margin-top: 175px;
+  padding: 30px;
+  margin-top: 25px;
+  max-height: 50px;
 }
 
 marquee {
