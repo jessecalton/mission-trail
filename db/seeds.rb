@@ -115,7 +115,7 @@ corner_2_option3 = Option.create(text: "$10 - Buy blueberry muffin vape juice", 
 corner_2_option4 = Option.create(text: "Leave Store", event_id: corner_event2.id)
 
 corner_2_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_2_option1.id, attr_change_id: 9, event_id: corner_event2.id, image_url: "/assets/flannel.jpg")
-corner_2_result2 = Result.create(text: "Your phone has some more juice! Check that Tinder!", option_id: corner_2_option2.id, attr_change_id: 7, event_id: corner_event2.id, image_url: "/assets/doblet.jpeg")
+corner_2_result2 = Result.create(text: "Your phone has some more juice! Check that Tinder!", option_id: corner_2_option2.id, attr_change_id: 7, event_id: corner_event2.id, image_url: "/assets/doblet_charge.jpeg")
 corner_2_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_2_option3.id, attr_change_id: 8, event_id: corner_event2.id, image_url: "/assets/vaping.jpg")
 corner_2_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_2_option4.id, attr_change_id: 1, event_id: corner_event2.id, image_url: "/assets/keep_money.jpg")
 
@@ -199,14 +199,14 @@ hot_dog_result3 = Result.create(text: "You bought a vegan hot dog from Billy Boy
 got_event = Event.create(name: "thrones-event", text: "Word has just gotten out that Game of Thrones will be canceled mid-season. \n George R.R. Martin has decided to spend his remaining days curating his fantasy football teams and watching Anime. \n Millenials are outraged and have taken to the streets!", image_url: "/assets/protest.jpg")
 
 got_option1 = Option.create(text: "Throw an environmentally-friendly Duraflame on a pile of burning books.", event_id: got_event.id)
-got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id, image_url: "/assets/duraflame.jpg")
+got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id)
 
 got_result1 = Result.create(text: "You immediately regret your decision. Khalisi would be so disappointed in you.", option_id: got_option1.id, attr_change_id: 12, event_id: got_event.id, image_url: "/assets/game_of_thrones_regret.jpg")
 got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like all put-together and masculine like Jon Snow.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id, image_url: "/assets/game_of_thrones.jpg")
 
 ### AirBnB Event ###
 
-air_bnb_event = Event.create(name: "airbnb", text: "You walk past airbnb and they have a special yurt sweat lodge event. Are you down?", image_url: "/assets/airbnb_yurt")
+air_bnb_event = Event.create(name: "airbnb", text: "You walk past airbnb and they have a special yurt sweat lodge event. Are you down?", image_url: "/assets/airbnb_yurt.jpg")
 
 air_bnb_option1 = Option.create(text: "I've got time to sweat it out.", event_id: air_bnb_event.id)
 air_bnb_option2 = Option.create(text: "Yurts are cool, but a tent with hipsters doesn't sound kosher.", event_id: air_bnb_event.id)
@@ -230,12 +230,12 @@ dbc_result3 = Result.create(text: "You find out that you have been cryogenically
 
 ### Coffee Event ###
 
-coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian")
+coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian.jpg")
 
 coffee_option1 = Option.create(text: "Go straight to the nearest roastery and make it right.", event_id: coffee_event.id)
 coffee_option2 = Option.create(text: "Snicker and say, 'It's just a cup of Joe.'", event_id: coffee_event.id)
 
-coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian")
+coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian.jpg")
 coffee_result2 = Result.create(text: "No biggie. Now they'll have a solid story to share with their grandkids someday.", event_id: coffee_event.id, option_id: coffee_option2.id, attr_change_id: 2, image_url: "/assets/coffee_grandkids.jpg")
 
 ### Ukulele Event ###
@@ -299,5 +299,5 @@ local_event_12 = Event.create(name: "local-vilde-event", text: "A blonde Norwegi
 average_game_ending = Event.create(name: "average_game_ending", text: "The Party is OK. You pretend to have the greatest time ever to seem cool.", image_url: "/assets/Image-1.jpg")
 bad_game_ending = Event.create(name: "bad_game_ending", text: "You reached the party. Its sucks, and you're probably dying of dysentery. You wish you stayed home rewatching 'Friends' again", image_url: "/assets/Image-1.jpg")
 good_game_ending = Event.create(name: "good_game_ending", text: "The Party is the greatest ever. People love your small talk and hipster style", image_url: "/assets/Image-1.jpg")
-worst_game_ending = Event.create(name: "worst_game_ending", text: "You have died of FOMO.", image_url: "/assets/Image-1.jpg")
+worst_game_ending = Event.create(name: "worst_game_ending", text: "You have died of FOMO. You literally can't even right now and forever.", image_url: "/assets/mr-skeletal.jpeg")
 
