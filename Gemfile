@@ -36,7 +36,7 @@ gem 'gon'
 gem 'faker'
 gem 'awesome_print'
 gem 'better_errors'
-ruby "2.3.1"
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

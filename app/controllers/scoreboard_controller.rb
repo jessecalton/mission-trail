@@ -1,7 +1,7 @@
 class ScoreboardController < ApplicationController
 include ApplicationHelper
 def index
-  @scoreboard = Scoreboard.all.sort_by(&:score).reverse
+  @scoreboard = Scoreboard.all.sort_by(&:score).reverse.first(15)
 end
 
 def new

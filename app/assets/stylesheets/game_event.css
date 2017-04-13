@@ -34,6 +34,15 @@
     max-height: 30%;
 }
 
+.final-image {
+    display: inline-block;
+    padding: 20px;
+    left-margin: 50%;
+    right-margin: 50%;
+    max-width: 70%;
+    max-height: 40%;
+}
+
 .return-to-trail {
   outline: none;
   text-decoration: none;
