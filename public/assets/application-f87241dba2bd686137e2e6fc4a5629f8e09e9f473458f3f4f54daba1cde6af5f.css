@@ -27,21 +27,6 @@
   margin-top: 100px;
 }
 
-/* unvisited link */
-a:link {
-    color: red;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-    color: green;
-}
-
-a:hover {
-  color: rgb(255, 0, 0);
-}
-
 .image {
     display: inline-block;
     padding: 50px;
@@ -87,13 +72,13 @@ a:hover {
 }
 
 .all-options {
-  margin: 50px;
+
 }
 
 .flexbox-event-content {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 50vh;
   top-margin: 0px;
   left-margin: 50px;
   right-margin: 50px;
@@ -167,16 +152,16 @@ h1 {
 }
 
 a:link{
-  color: white;
+  color: red;
   text-decoration: none;
 }
 
 a:visited{
-  color: purple;
+  color: red;
   text-decoration: none;
 }
 a:hover{
-  color: red;
+  color: purple;
 }
 
 a:active{
@@ -189,8 +174,8 @@ a:active{
 }
 .sprite {
   position:relative;
-  right: 400px;
-  top: 50px;
+  right: 70px;
+  top: 0px;
   width: 40px;
   height: 60px;
   margin: 2% auto;
@@ -202,14 +187,10 @@ a:active{
     100% { background-position: -1900px; }
 }
 
-.bar {
+.second_sprite {
   position:relative;
-  left: -300px;
-  bottom: 130px;
-  width: 118px;
-  height:130px;
-  margin: 2% auto;
-  background: url('/assets/bar.png') left center;
+  bottom:20px;
+  left: 100px;
 }
 #stats {
   color: white;
