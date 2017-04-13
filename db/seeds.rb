@@ -302,7 +302,7 @@ good_game_ending = Event.create(name: "good_game_ending", text: "The Party is th
 worst_game_ending = Event.create(name: "worst_game_ending", text: "You have died of FOMO. You literally can't even right now and forever.", image_url: "/assets/mr-skeletal.jpeg")
 
 ### fake scoreboard ###
-points = 2000
+points = 1000
 20.times do
   Scoreboard.create(initials: "AAA", score: points )
 end
