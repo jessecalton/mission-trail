@@ -9,20 +9,14 @@
     <div class="options">
       <%=@event.text%>
     </div>
-    <div class="flexbox-event-content">
-      <div class="image">
-        <img src=<%=@event.image_url %>>
-      </div>
-      <div class="all-options">
         <div class="options">
-          <%= link_to "New Game", controller: 'games', action: 'new' %>
           <%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
+          <br>
+          <%= link_to "New Game", controller: 'games', action: 'new' %>
         </div>
-      </div>
-    </div>
-    <audio autoplay>
-      <!-- <source src="/assets/SONG1.mp3"> -->
-    </audio>
+    <!-- <div class="flexbox-event-content"> -->
+        <center><img src=<%=@event.image_url %> class="final-image"></center>
+    <!-- </div> -->
 </div>
 <%else%>
 <div class="page-flexbox-wrapper">
@@ -34,17 +28,14 @@
     <div class="options">
       <%=@event.text%>
     </div>
-    <div class="flexbox-event-content">
-      <div class="image">
-        <img src=<%=@event.image_url %>>
-      </div>
-      <div class="all-options">
         <div class="options">
-          <%= link_to "New Game", controller: 'games', action: 'new' %>
           <%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
+          <br>
+          <%= link_to "New Game", controller: 'games', action: 'new' %>
         </div>
-      </div>
-    </div>
+    <!-- <div class="flexbox-event-content"> -->
+        <center><img src=<%=@event.image_url %> class="final-image"></center>
+    <!-- </div> -->
     <%= audio_tag("SONG1.mp3", autoplay: true) %>
 </div>
 <%end%>
