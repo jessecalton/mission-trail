@@ -51,6 +51,9 @@ attr_change13 = AttrChange.create(fomo_change: 10, battery_change: -5, time_chan
 
 google_event1 = Event.create(name: "good-map", text: "You found a nifty shortcut through a hole-in-the-wall store. The place had some awesome doodads. You remember this address for another time.", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
 google_event2 = Event.create(name: "bad-map", text: "You check your map to find that you have been walking in the opposite direction of your destination. whoops..", attr_change_id: 5, image_url: "/assets/googlemaps.png" )
+google_event3 = Event.create(name: "recalculating-map", text: "Recalculating...", attr_change_id: 5, image_url: "/assets/googlemaps.png" )
+google_event4 = Event.create(name: "randy-map", text: "The Google Maps voice is making you feel randy, tonight is going to be epic!", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+google_event5 = Event.create(name: "dbc-map", text: "Google Maps redirected you to 633 Folsom Street. Those darn DBC students hacked it again!", attr_change_id: 5, image_url: "/assets/googlemaps.png" )
 
 ### Instagram Events ###
 
