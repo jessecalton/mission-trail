@@ -56,7 +56,7 @@ module ApplicationHelper
   #   end
   # end
   def point_calculate
-    @points =@game.battery + @game.money - @game.fomo
+    @points = 40 + @game.battery + @game.money - @game.fomo
     @points = 0 if @points <= 0
     @points *= 97
     @points = 9999 if @points >= 9999
