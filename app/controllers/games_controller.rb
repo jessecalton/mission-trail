@@ -2,8 +2,17 @@ class GamesController < ApplicationController
   include ApplicationHelper
 
   def index
-
     @game = Game.find(session[:id])
+    @sprite_arr = ["/assets/stopsign.png", "/assets/tree.png", "/assets/blank.png"]
+
+    if @game.time <= 5
+      @second_sprite = "/assets/bar.png"
+    else
+      @second_sprite = @sprite_arr.sample
+    end
+
+    gon.sprite_arr = @second_sprite
+
     if @game.time <= 0 || @game.fomo >= 100
       redirect_to game_end_index_path
     end
