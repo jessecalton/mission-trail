@@ -115,7 +115,7 @@ corner_2_option3 = Option.create(text: "$10 - Buy blueberry muffin vape juice", 
 corner_2_option4 = Option.create(text: "Leave Store", event_id: corner_event2.id)
 
 corner_2_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_2_option1.id, attr_change_id: 9, event_id: corner_event2.id, image_url: "/assets/flannel.jpg")
-corner_2_result2 = Result.create(text: "Your phone has some more juice! Check that Tinder!", option_id: corner_2_option2.id, attr_change_id: 7, event_id: corner_event2.id, image_url: "/assets/doblet.jpeg")
+corner_2_result2 = Result.create(text: "Your phone has some more juice! Check that Tinder!", option_id: corner_2_option2.id, attr_change_id: 7, event_id: corner_event2.id, image_url: "/assets/doblet_charge.jpeg")
 corner_2_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_2_option3.id, attr_change_id: 8, event_id: corner_event2.id, image_url: "/assets/vaping.jpg")
 corner_2_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_2_option4.id, attr_change_id: 1, event_id: corner_event2.id, image_url: "/assets/keep_money.jpg")
 
@@ -206,7 +206,7 @@ got_result2 = Result.create(text: "You made a tough, bold, decision. You feel li
 
 ### AirBnB Event ###
 
-air_bnb_event = Event.create(name: "airbnb", text: "You walk past airbnb and they have a special yurt sweat lodge event. Are you down?", image_url: "/assets/airbnb_yurt")
+air_bnb_event = Event.create(name: "airbnb", text: "You walk past airbnb and they have a special yurt sweat lodge event. Are you down?", image_url: "/assets/airbnb_yurt.jpg")
 
 air_bnb_option1 = Option.create(text: "I've got time to sweat it out.", event_id: air_bnb_event.id)
 air_bnb_option2 = Option.create(text: "Yurts are cool, but a tent with hipsters doesn't sound kosher.", event_id: air_bnb_event.id)
@@ -230,12 +230,12 @@ dbc_result3 = Result.create(text: "You find out that you have been cryogenically
 
 ### Coffee Event ###
 
-coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian")
+coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian.jpg")
 
 coffee_option1 = Option.create(text: "Go straight to the nearest roastery and make it right.", event_id: coffee_event.id)
 coffee_option2 = Option.create(text: "Snicker and say, 'It's just a cup of Joe.'", event_id: coffee_event.id)
 
-coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian")
+coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian.jpg")
 coffee_result2 = Result.create(text: "No biggie. Now they'll have a solid story to share with their grandkids someday.", event_id: coffee_event.id, option_id: coffee_option2.id, attr_change_id: 2, image_url: "/assets/coffee_grandkids.jpg")
 
 ### Ukulele Event ###
