@@ -14,7 +14,7 @@
 }
 
 .second_sprite {
-  position:relative;
-  bottom:20px;
-  left: 100px;
+  position:relative !important;
+  bottom:20px !important;
+  left: 100px !important;
 }
