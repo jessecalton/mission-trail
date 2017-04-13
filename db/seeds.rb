@@ -48,19 +48,20 @@ attr_change12 = AttrChange.create(fomo_change: 10, battery_change: 0, time_chang
 attr_change13 = AttrChange.create(fomo_change: 10, battery_change: -5, time_change: -5, money_change: 0)
 
 ### googlemaps Events ###
+
 google_event1 = Event.create(name: "good-map", text: "You found a nifty shortcut through a hole in the wall store. The place had some awesome doodads, you remember this address for another time", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
 google_event2 = Event.create(name: "bad-map", text: "You check your map to find that you have been walking in the opposite direction to your destination. whoops..", attr_change_id: 5, image_url: "/assets/googlemaps.png" )
 
 ### Instagram Events ###
 
 insta_event1 = Event.create(name: "good-insta", text: "You have 11 Instagram likes. You feel well-liked and appreciated!", attr_change_id: 4, image_url: "/assets/instagram.png" )
-insta_event2 = Event.create(name: "bad-insta", text: "You have only 3 Instagram likes. You feel invisible and see your friend's Cabo vacation picks. FOMO...", attr_change_id: 5, image_url: "/assets/instagram.png")
+insta_event2 = Event.create(name: "bad-insta", text: "You have only 3 Instagram likes. You feel invisible and see your friend's Cabo vacation pics. FOMO...", attr_change_id: 5, image_url: "/assets/instagram.png")
 insta_event3 = Event.create(name: "trump-insta", text: "Donald Trump just started following you on Instagram. What about foreign policy old man?", attr_change_id: 5, image_url: "/assets/instagram.png")
 insta_event4 = Event.create(name: "stalker-insta", text: "That person you've been stalking on Instagram just made their profile private. Damn you technology!", attr_change_id: 5, image_url: "/assets/instagram.png")
 
 ### Tinder Events ###
 
-tinder_event1 = Event.create(name: "good-tinder", text: "You have a hot coconut water date with a hot yoga instructor.", attr_change_id: 4, image_url: "/assets/tinder.png")
+tinder_event1 = Event.create(name: "good-tinder", text: "You have a coconut water date with a hot yoga instructor.", attr_change_id: 4, image_url: "/assets/tinder.png")
 tinder_event2 = Event.create(name: "neutral-tinder", text: "You have no new Tinder matches.", attr_change_id: 6, image_url: "/assets/tinder.png")
 tinder_event3 = Event.create(name: "bad-tinder", text: "You text a hot match and you get a reply saying 'new phone who dis?'", attr_change_id: 5, image_url: "/assets/tinder.png")
 tinder_event4 = Event.create(name: "superlike-tinder", text: "You just got super-liked by a 50 year-old woman with three cats. Plus one for you!", attr_change_id: 4, image_url: "/assets/tinder.png")
@@ -79,22 +80,22 @@ option4 = Option.create(text: "Kick them and make them drop their coconut water 
 result1 = Result.create(text: "You hid behind a compost bin. Nice move, Slick.", option_id: option1.id, attr_change_id: attr_change1.id, event_id: event.id, image_url: "/assets/compost_bin.jpg")
 result2 = Result.create(text: "Well, that was awkward.", option_id: option2.id, attr_change_id: attr_change12.id, event_id: event.id, image_url: "/assets/awkward.jpg")
 result3 = Result.create(text: "You disappeared behind a cloud of Dragonfruit vape smoke. That was so tight!", option_id: option3.id, attr_change_id: attr_change2.id, event_id: event.id, image_url: "/assets/vape_smoke.jpg")
-result4 = Result.create(text: "You kicked them and ran! Serves 'em right! That relationship was the worst two weeks ever!", option_id: option4.id, attr_change_id: attr_change2.id, event_id: event.id, image_url: "/assets/kick_n_run.jpg")
+result4 = Result.create(text: "You kicked them and ran! Serves 'em right. That relationship was the worst two weeks ever!", option_id: option4.id, attr_change_id: attr_change2.id, event_id: event.id, image_url: "/assets/kick_n_run.jpg")
 
 ### OG Kushman trade flannel event ###
 event2 = Event.create(name: "og-kush", text: "Hey brah, I'll trade you that flannel for some OG Kush.", image_url: "/assets/flannel_bro.jpg", attr_change_id: 1)
 
-kush_option1 = Option.create(text: "Sounds good boss playa!", event_id: event2.id)
+kush_option1 = Option.create(text: "Sounds good boss.", event_id: event2.id)
 kush_option2 = Option.create(text: "No thanks. I'm on a two week liver cleanse.", event_id: event2.id)
 
-result1 = Result.create(text: "You hooked up some OG Kush! You are mellowed out!", option_id: kush_option1.id, attr_change_id: attr_change3.id, event_id: event2.id, image_url: "/assets/mellowed_out.jpg")
-result2 = Result.create(text: "Good job in turning down that poison! You stayed true! You are so much better than everyone else! (but you're dying inside...)", option_id: kush_option2.id, attr_change_id: attr_change2.id, event_id: event2.id, image_url: "/assets/dying_inside.jpg")
+result1 = Result.create(text: "You hooked up some OG Kush. You are mellowed out!", option_id: kush_option1.id, attr_change_id: attr_change3.id, event_id: event2.id, image_url: "/assets/mellowed_out.jpg")
+result2 = Result.create(text: "Good job in turning down that poison! You stayed true. You are so much better than everyone else! (but you're dying inside...)", option_id: kush_option2.id, attr_change_id: attr_change2.id, event_id: event2.id, image_url: "/assets/dying_inside.jpg")
 
 ### Corner Store Event 1 ###
 
 corner_event1 = Event.create(name: "corner-store-1", text: "You have reached the Chill ASF Corner Store", image_url: "/assets/chill_asf.jpg")
 
-corner_option1 = Option.create(text: "$10 - Buy a flannel", event_id: corner_event1.id)
+corner_option1 = Option.create(text: "$10 - Buy a lumberjack flannel", event_id: corner_event1.id)
 corner_option2 = Option.create(text: "$5 - Buy a doblet and charge your phone", event_id: corner_event1.id)
 corner_option3 = Option.create(text: "$10 - Buy some Australian gooseberry vape juice", event_id: corner_event1.id)
 corner_option4 = Option.create(text: "Leave Store", event_id: corner_event1.id)
@@ -106,7 +107,7 @@ corner_result4 = Result.create(text: "You left without buying anything. You get 
 
 ### Corner Store Event 2 ###
 
-corner_event2 = Event.create(name: "corner-store-2", text: "You have arrived at the Toschi Station corner store", image_url: "/assets/toschi_store.jpg")
+corner_event2 = Event.create(name: "corner-store-2", text: "You have arrived at the Toschi Station Corner Store", image_url: "/assets/toschi_store.jpg")
 
 corner_2_option1 = Option.create(text: "$10 - Buy a flannel", event_id: corner_event2.id)
 corner_2_option2 = Option.create(text: "$5 - Buy a doblet and charge your phone", event_id: corner_event2.id)
@@ -116,26 +117,26 @@ corner_2_option4 = Option.create(text: "Leave Store", event_id: corner_event2.id
 corner_2_result1 = Result.create(text: "You bought a flannel. I miss the 90's, too.", option_id: corner_2_option1.id, attr_change_id: 9, event_id: corner_event2.id, image_url: "/assets/flannel.jpg")
 corner_2_result2 = Result.create(text: "Your phone has some more juice! Check that Tinder!", option_id: corner_2_option2.id, attr_change_id: 7, event_id: corner_event2.id, image_url: "/assets/doblet.jpeg")
 corner_2_result3 = Result.create(text: "You bought blueberry muffin vape juice. Vape Nation!", option_id: corner_2_option3.id, attr_change_id: 8, event_id: corner_event2.id, image_url: "/assets/vaping.jpg")
-corner_2_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_2_option4.id, attr_change_id: 1, event_id: corner_event2.id, image_url: "/assets/corner-store.jpeg")
+corner_2_result4 = Result.create(text: "You left without buying anything. You get to keep your money.", option_id: corner_2_option4.id, attr_change_id: 1, event_id: corner_event2.id, image_url: "/assets/keep_money.jpg")
 
 ### Half-eaten Burrito Event ###
 
-burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground", image_url: "/assets/burrito.jpg") #need to update photo
+burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground", image_url: "/assets/burrito.jpg")
 
 burrito_option1 = Option.create(text: "Eat it?", event_id: burrito_event.id)
 burrito_option2 = Option.create(text: "Leave it be.", event_id: burrito_event.id)
 
 burrito_result1 = Result.create(text: "You have died of dysentery.\n Just kidding! This is modern San Francisco! You cure all your ills with Soylent and move on.", option_id: burrito_option1.id, attr_change_id: 2, event_id: burrito_event.id, image_url: "/assets/dysentery.jpg")
 
-burrito_result2 = Result.create(text: "You left it alone. Probably for the best since you don't believe in vaccines.", option_id: burrito_option2.id, attr_change_id: 3, event_id: burrito_event.id) #need to get a photo
+burrito_result2 = Result.create(text: "You left it alone. Probably for the best since you don't believe in vaccines.", option_id: burrito_option2.id, attr_change_id: 3, event_id: burrito_event.id, image_url: "/assets/vaccine.jpg")
 
 ### Wine Bar Event ###
 
-wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to an art gallery wine tasting!", image_url: "/assets/wine.jpg") #need to update photo
+wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to an art gallery wine tasting!", image_url: "/assets/wine_tasting.jpg")
 
 wine_option = Option.create(text: "Go in! It's like free pre-gaming!", event_id: wine_bar1.id)
 
-wine_result = Result.create(text: "This is probably a much better party than the hip, new trendy bar in the Marina. Unfortunately, FOMO is real and you must continue.", option_id: wine_option.id, attr_change_id: 2, event_id: wine_bar1.id, image_url: "/assets/wine.jpg") #need to update photo
+wine_result = Result.create(text: "This is probably a much better party than the hip, new trendy bar in the Marina. Unfortunately, FOMO is real and you must continue.", option_id: wine_option.id, attr_change_id: 3, event_id: wine_bar1.id, image_url: "/assets/wine_party.jpg")
 
 ### Micro-Dosing Event ###
 
@@ -155,7 +156,6 @@ mix_tape_option1 = Option.create(text: "Fo' sho', bro!", event_id: mix_tape_even
 mix_tape_option2 = Option.create(text: "No, thanks.", event_id: mix_tape_event.id)
 
 mix_tape_result1 = Result.create(text: "You bought the mix tape for $5. It's a scratched up CD-R and you don't own anything that plays CDs, but you tell all your friends it's straight fire, yo.", option_id: mix_tape_option1.id, attr_change_id: 8, event_id: mix_tape_event.id, image_url: "/assets/scratched_cdr.jpg")
-
 mix_tape_result2 = Result.create(text: "You passed on the mix tape. The Chainsmokers are more your cup of white cherry blossom tea anyways.", option_id: mix_tape_option2.id, attr_change_id: 1, event_id: mix_tape_event.id, image_url: "/assets/cherry_blossom_tea.jpg")
 
 ### Selfie Event ###
@@ -199,7 +199,7 @@ hot_dog_result3 = Result.create(text: "You bought a vegan hot dog from Billy Boy
 got_event = Event.create(name: "thrones-event", text: "Word has just gotten out that Game of Thrones will be canceled mid-season. \n George R.R. Martin has decided to spend his remaining days curating his fantasy football teams and watching Anime. \n Millenials are outraged and have taken to the streets!", image_url: "/assets/protest.jpg")
 
 got_option1 = Option.create(text: "Throw an environmentally-friendly Duraflame on a pile of burning books.", event_id: got_event.id)
-got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id)
+got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id, image_url: "/assets/duraflame.jpg")
 
 got_result1 = Result.create(text: "You immediately regret your decision. Khalisi would be so disappointed in you.", option_id: got_option1.id, attr_change_id: 12, event_id: got_event.id, image_url: "/assets/game_of_thrones_regret.jpg")
 got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like all put-together and masculine like Jon Snow.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id, image_url: "/assets/game_of_thrones.jpg")
@@ -212,15 +212,15 @@ air_bnb_option1 = Option.create(text: "I've got time to sweat it out.", event_id
 air_bnb_option2 = Option.create(text: "Yurts are cool, but a tent with hipsters doesn't sound kosher.", event_id: air_bnb_event.id)
 air_bnb_option3 = Option.create(text: "I think I'll keep my shirt on and keep walking.", event_id: air_bnb_event.id)
 
-air_bnb_result1 = Result.create(text: "You take off your outer garments and enter the steamy yurt and immediately see your coworker in a trance chanting in Tibetan.", option_id: air_bnb_option1.id, event_id: air_bnb_event.id, attr_change_id: 2, image_url: "/assets/airbnb_chanting.jpg")
-air_bnb_result2 = Result.create(text: "You take a big whiff of 'too cool for school-ness' and keep on.", option_id: air_bnb_option2.id, event_id: air_bnb_event.id, attr_change_id: 3, image_url: "/assets/glasses_dude.jpg") #need to update image
+air_bnb_result1 = Result.create(text: "You take off your outer garments, enter the steamy yurt and immediately see your coworker in a trance chanting in Tibetan.", option_id: air_bnb_option1.id, event_id: air_bnb_event.id, attr_change_id: 2, image_url: "/assets/airbnb_chanting.jpg")
+air_bnb_result2 = Result.create(text: "You take a big whiff of 'too cool for school-ness' and keep on.", option_id: air_bnb_option2.id, event_id: air_bnb_event.id, attr_change_id: 1, image_url: "/assets/dude_glasses.jpg")
 air_bnb_result3 = Result.create(text: "You feel a wave of guilt and call your friend later that evening and plan a 2 week trip to the desert to live with real live Native Americans.", option_id: air_bnb_option3.id, event_id: air_bnb_event.id, attr_change_id: 12, image_url: "/assets/airbnb_desert_trip.jpg")
 
 ### DBC Event ###
 
 dbc_event = Event.create(name: "dbc-event", text: "The newest coding bootcamp, 'Love Yourself First, Code Second' is having its grand opening. Interested?", image_url: "/assets/coding_love.jpg")
 
-dbc_option1 = Option.create(text: "Sure, I've always dreamt of making beautiful things.", event_id: dbc_event.id) 
+dbc_option1 = Option.create(text: "Sure, I've always dreamt of making beautiful things.", event_id: dbc_event.id)
 dbc_option2 = Option.create(text: "Hell yes. A program like this might get me promoted at Starbucks.", event_id: dbc_event.id)
 dbc_option3 = Option.create(text: "Probably too advanced for me. I'll stick with my Commodore 64.", event_id: dbc_event.id)
 
@@ -228,8 +228,35 @@ dbc_result1 = Result.create(text: "You sign up on the spot and post on Facebook 
 dbc_result2 = Result.create(text: "Your dream is squashed when you realize there is actually a tuition to pay.", event_id: dbc_event.id, option_id: dbc_option2.id, attr_change_id: 12, image_url: "/assets/sadness.jpg")
 dbc_result3 = Result.create(text: "You find out that you have been cryogenically frozen for over two decades. That's cold, Jack.", event_id: dbc_event.id, option_id: dbc_option3.id, attr_change_id: 12, image_url: "/assets/coding_cryogenic.jpg")
 
-###
+### Coffee Event ###
 
+coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian")
+
+coffee_option1 = Option.create(text: "Go straight to the nearest roastery and make it right.", event_id: coffee_event.id)
+coffee_option2 = Option.create(text: "Snicker and say, 'It's just a cup of Joe.'", event_id: coffee_event.id)
+
+coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian")
+coffee_result2 = Result.create(text: "No biggie. Now they'll have a solid story to share with their grandkids someday.", event_id: coffee_event.id, option_id: coffee_option2.id, attr_change_id: 2, image_url: "/assets/coffee_grandkids.jpg")
+
+### Ukulele Event ###
+
+ukulele_event = Event.create(name: "ukulele-event", text: "A young girl with a ukelele won't let you pass by and serenades you with a Hawaiian-style Taylor Swift medley.", image_url: "/assets/ukulele_girl.jpg")
+
+ukulele_option1 = Option.create(text: "Join in for a 'Shake It Off' duet.", event_id: ukulele_event.id)
+ukulele_option2 = Option.create(text: "Yell something in Esperanto and run down the trail.", event_id: ukulele_event.id)
+
+ukulele_result1 = Result.create(text: "You re-spark your hidden desire to be a singer and declare to the world (under your breath), 'I will be heard.'", event_id: ukulele_event.id, option_id: ukulele_option1.id, attr_change_id: 3, image_url: "/assets/ukulele_singer.jpg")
+ukulele_result2 = Result.create(text: "You temporarily experience PTSD due to a dark day you spent last year watching Taylor Swift and Beyonce videos.", event_id: ukulele_event.id, option_id: ukulele_option2.id, attr_change_id: 2, image_url: "/assets/ukulele_dark_day.jpg")
+
+### Pronoun Event ###
+
+pronoun_event = Event.create(name: "pronoun-event", text: "A buff chick rockin' flannel says 'How are ze doing today?'", image_url: "/assets/pronoun_buff_chick.jpg")
+
+pronoun_option1 = Option.create(text: "Respond with a quick 'I haven't seen ze for ages.'", event_id: pronoun_event.id)
+pronoun_option2 = Option.create(text: "Smile awkwardly and Google 'ze' on the DL.", event_id: pronoun_event.id)
+
+pronoun_result1 = Result.create(text: "Despite the grey hair that you just saw in the mirror this morning, you feel golden.", event_id: pronoun_event.id, option_id: pronoun_option1.id, attr_change_id: 3, image_url: "/assets/burning_bro.jpg")
+pronoun_result2 = Result.create(text: "You feel enlightened after reading about gender pronouns for two hours.", event_id: pronoun_event.id, option_id: pronoun_option2.id, attr_change_id: 2, image_url: "/assets/sadness.jpg") #need a photo
 
 ### Talk to Locals 1 ###
 local_event_1 = Event.create(name: "local_hot_dog", text: "A local woman tells you, 'I just ate a tofu dog from Billy Boy's Hot Dog stand. I hope I'm not dying of dysentery. I'm a Vegan by the way...'", attr_change_id: 1, image_url: "/assets/dysentery.jpg")
