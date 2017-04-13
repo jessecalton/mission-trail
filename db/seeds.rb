@@ -199,7 +199,7 @@ hot_dog_result3 = Result.create(text: "You bought a vegan hot dog from Billy Boy
 got_event = Event.create(name: "thrones-event", text: "Word has just gotten out that Game of Thrones will be canceled mid-season. \n George R.R. Martin has decided to spend his remaining days curating his fantasy football teams and watching Anime. \n Millenials are outraged and have taken to the streets!", image_url: "/assets/protest.jpg")
 
 got_option1 = Option.create(text: "Throw an environmentally-friendly Duraflame on a pile of burning books.", event_id: got_event.id)
-got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id, image_url: "/assets/duraflame.jpg")
+got_option2 = Option.create(text: "You see the vandals afoot. \n Winter is coming. \n You get the hell out of there.", event_id: got_event.id)
 
 got_result1 = Result.create(text: "You immediately regret your decision. Khalisi would be so disappointed in you.", option_id: got_option1.id, attr_change_id: 12, event_id: got_event.id, image_url: "/assets/game_of_thrones_regret.jpg")
 got_result2 = Result.create(text: "You made a tough, bold, decision. You feel like all put-together and masculine like Jon Snow.", option_id: got_option2.id, attr_change_id: 3, event_id: got_event.id, image_url: "/assets/game_of_thrones.jpg")
@@ -230,12 +230,12 @@ dbc_result3 = Result.create(text: "You find out that you have been cryogenically
 
 ### Coffee Event ###
 
-coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian")
+coffee_event = Event.create(name: "coffee-event", text: "You just knocked over someone's Ethiopian pour-over cup of coffee.", image_url: "/assets/coffee_Ethiopian.jpg")
 
 coffee_option1 = Option.create(text: "Go straight to the nearest roastery and make it right.", event_id: coffee_event.id)
 coffee_option2 = Option.create(text: "Snicker and say, 'It's just a cup of Joe.'", event_id: coffee_event.id)
 
-coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian")
+coffee_result1 = Result.create(text: "You race back with a Tanzanian blend and restore order to the Millenial Nation.", event_id: coffee_event.id, option_id: coffee_option1.id, attr_change_id: 3, image_url: "/assets/coffee_Tanzanian.jpg")
 coffee_result2 = Result.create(text: "No biggie. Now they'll have a solid story to share with their grandkids someday.", event_id: coffee_event.id, option_id: coffee_option2.id, attr_change_id: 2, image_url: "/assets/coffee_grandkids.jpg")
 
 ### Ukulele Event ###
