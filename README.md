@@ -21,6 +21,10 @@ A text-based adventure game clone of The Oregon Trail video game updated for the
 * PostgreSQL
 * ConsoleCam
 
+## Demo
+
+![Demo](mission-trail-demo.gif)
+
 ## Deployment
 
 The finished application can be viewed by visiting:
