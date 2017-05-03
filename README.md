@@ -8,10 +8,10 @@ A text-based adventure game clone of The Oregon Trail video game updated for the
 
 ## Contributors
 
-* [Aaron Calander](https://www.linkedin.com/in/aaroncalander) / Front-End Lead Developer : <https://www.linkedin.com/in/aaroncalander>
-* Jesse Calton / Full Stack Developer : <https://www.linkedin.com/in/jessecalton>
-* Chris Huynh / Back-End Developer : <https://www.linkedin.com/in/christopher-huynh-28121a76>
-* Vilde Vevatne / Audio/Back-End Developer : <https://www.linkedin.com/in/vilde-vevatne>
+* [Aaron Calander](https://www.linkedin.com/in/aaroncalander) / Front-End Lead Developer : <https://github.com/aaroncalander>
+* [Jesse Calton](https://www.linkedin.com/in/jessecalton) / Full Stack Developer : <https://github.com/jessecalton>
+* [Chris Huynh](https://www.linkedin.com/in/christopher-huynh-28121a76) / Back-End Developer : <https://github.com/ChHuynh>
+* [Vilde Vevatne](https://www.linkedin.com/in/vilde-vevatne) / Audio/Back-End Developer : <https://github.com/vildevev>
 
 ## Tech Stack
 
