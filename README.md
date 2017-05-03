@@ -4,6 +4,8 @@
 
 A text-based adventure game clone of The Oregon Trail video game updated for the Millennial generation.
 
+![Home](mission-trail-home.png)
+
 ## Contributors
 
 * Aaron Calander / Front-End Lead Developer : <https://www.linkedin.com/in/aaroncalander>
