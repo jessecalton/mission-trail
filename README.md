@@ -1,3 +1,5 @@
+![Intro](mission-trail-intro.png)
+
 # Mission Trail
 
 A text-based adventure game clone of The Oregon Trail video game updated for the Millennial generation.
