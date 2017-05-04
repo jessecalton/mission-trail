@@ -1,4 +1,4 @@
-# 🌁 Mission Trail 🌁
+# 🌉 Mission Trail 🌉
 
 ![Intro](mission-trail-intro.png)
 
