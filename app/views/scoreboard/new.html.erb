@@ -1,0 +1,15 @@
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
+    <p>Your Score: <%= @points %></p>
+  </div>
+  <div id="top-content-buffer"></div>
+    <div class="welcome-container">
+      <p>Enter your Initials</p>
+    </div>
+    <div id="enter-initials">
+      <%= form_for @scoreboard, url: {action: "create"} do |f|%>
+        <p><%= f.text_field :initials, :maxlength => 3 %></p>
+        <%= f.submit "Submit Your Initials"%>
+      <%end%>
+    </div>
+</div>

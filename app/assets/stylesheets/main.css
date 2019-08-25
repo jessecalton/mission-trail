@@ -1,0 +1,56 @@
+.background {
+  background-color: black;
+}
+
+canvas {
+  border: #333 10px solid;
+}
+
+h1 {
+
+  margin:auto;
+  width:54%;
+}
+
+.header {
+  text-align: center;
+  font: normal 70px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  margin: auto;
+}
+
+.link {
+  text-align: center;
+  top: 350px;
+  margin: auto;
+  position: relative;
+  font: 70px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+}
+
+#hop-on-trail-link {
+  text-align: center;
+  top: 150px;
+  margin: auto;
+  position: relative;
+  font: 70px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+}
+
+a:link{
+  color: red;
+  text-decoration: none;
+}
+
+a:visited{
+  color: red;
+  text-decoration: none;
+}
+a:hover{
+  color: purple;
+}
+
+a:active{
+  color: red;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408020352) do
+ActiveRecord::Schema.define(version: 20170411163851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,24 +27,27 @@ ActiveRecord::Schema.define(version: 20170408020352) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.text     "text"
-    t.string   "image_url"
-    t.integer  "attr_change_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "image_url",      default: "/assets/smile.png"
+    t.integer  "attr_change_id", default: 1
+    t.boolean  "seen?",          default: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
   create_table "games", force: :cascade do |t|
     t.string   "username"
     t.integer  "fomo"
     t.integer  "battery"
-    t.integer  "time",              default: 120
+    t.integer  "time",               default: 60
     t.integer  "money"
     t.string   "occupation"
-    t.boolean  "checked_instagram", default: false
-    t.boolean  "checked_tinder",    default: false
+    t.boolean  "checked_instagram",  default: false
+    t.boolean  "checked_tinder",     default: false
+    t.boolean  "talked_to_locals",   default: false
+    t.boolean  "checked_googlemaps", default: false
     t.integer  "user_id"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "options", force: :cascade do |t|
@@ -59,8 +62,16 @@ ActiveRecord::Schema.define(version: 20170408020352) do
     t.integer  "option_id"
     t.integer  "attr_change_id"
     t.integer  "event_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "image_url",      default: "/assets/smile.png"
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+  end
+
+  create_table "scoreboards", force: :cascade do |t|
+    t.string   "initials",   limit: 3, default: "AAA"
+    t.integer  "score",                                null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "users", force: :cascade do |t|

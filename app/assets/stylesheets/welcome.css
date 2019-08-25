@@ -1,0 +1,85 @@
+.create-game-form {
+  position: relative;
+  display: block;
+  line-height: 5;
+
+}
+
+.occupation-container {
+  margin: 50px;
+}
+
+#occupation-header {
+  text-align: center;
+  font: normal 40px/1 "VT323", Helvetica, sans-serif;
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 3px 0 white;
+  display: block;
+}
+
+.occupations {
+  position: relative;
+  line-height: 2;
+}
+
+.occupation-question {
+  font: 25px "VT323", sans-serif;
+  color: yellow;
+}
+
+#job-title {
+  font: 25px "VT323", sans-serif;
+  color: yellow;
+
+}
+
+#job-descriptor {
+  font: 25px "VT323", sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+input {
+  font-family: "VT323";
+  border: none;
+  font-size: 25px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+select {
+  font-family: "VT323";
+  border: none;
+  font-size: 25px;
+  border-radius: 0;
+}
+
+body {
+  color: white;
+  font-size: 20px;
+}
+
+.hit-trail-button {
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font: 40px "VT323", sans-serif;
+}
+
+#hit-trail {
+  text-align: center;
+  margin: auto;
+}
+
+.welcome-container p {
+  margin: 20px;
+  text-align: center;
+  font: 50px "VT323", sans-serif;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+}

@@ -3,59 +3,73 @@ class GamesController < ApplicationController
 
   def index
     @game = Game.find(session[:id])
-    p @game
+    @sprite_arr = ["/assets/stopsign.png", "/assets/tree.png", "/assets/blank.png"]
 
+    if @game.time <= 5
+      @second_sprite = "/assets/bar.png"
+    else
+      @second_sprite = @sprite_arr.sample
+    end
+
+    gon.sprite_arr = @second_sprite
+
+    if @game.time <= 0 || @game.fomo >= 100
+      redirect_to game_end_index_path
+    end
+
+    @game = Game.find(session[:id])
     gon.username = @game.username
-    gon.gametext = "Get to Anchor & Hope"
+    gon.gametext = " "
     gon.fomo = @game.fomo
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
-    gon.gameimage = "assets/couple.jpg"
-    # gon.option1 = "assets/button_option1.png"
-    # gon.option2 = "assets/button_option2.png"
-    # gon.option3 = "assets/button_option3.png"
-    # gon.option4 = "assets/button_option4.png"
-    gon.result = "result"
-    gon.resultroute = "/games/new"
-    gon.option1route = "/games/new"
+
   end
 
   def new
     @game = Game.new(params[:id])
-    
+    Event.all.each { |event| event.update_attributes(seen?: false) }
   end
 
   def create
+
     if params[:game][:occupation] == "Yoga Instructor"
-      @game = Game.create(
+      @game = Game.new(
         username: params[:game][:username],
-        fomo: 30,
-        battery: 20,
-        money: 35,
+        fomo: 50,
+        battery: 45,
+        money: 20,
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Hedge Fund Manager"
-      @game = Game.create(
+      @game = Game.new(
         username: params[:game][:username],
-        fomo: 50,
-        battery: 20,
-        money: 70,
+        fomo: 65,
+        battery: 50,
+        money: 40,
         occupation: params[:game][:occupation],
         )
     elsif params[:game][:occupation] == "Tech Bro"
-      @game = Game.create(
+      @game = Game.new(
         username: params[:game][:username],
-        fomo: 50,
-        battery: 40,
-        money: 50,
+        fomo: 65,
+        battery: 70,
+        money: 35,
         occupation: params[:game][:occupation],
         )
     end
-    session[:id] = @game.id
-    p "****************"
-    p @game.id
-    redirect_to games_path
+
+    if @game.save
+      session[:id] = @game.id
+      @events = Event.all
+      @events.each do |event|
+        event.update_attributes(seen?: false)
+      end
+      redirect_to games_path
+    else
+      redirect_to new_game_path
+    end
   end
 
   def show
@@ -63,7 +77,6 @@ class GamesController < ApplicationController
   end
 
   def update
-    p "it works"
     redirect_to games_path
   end
 

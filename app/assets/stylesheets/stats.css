@@ -1,0 +1,10 @@
+#stats {
+  color: white;
+  font: 25px "VT323", sans-serif;
+  background-color: black;
+  min-width: 170px;
+}
+
+#top-content-buffer {
+  min-width: 170px;
+}

@@ -1,0 +1,41 @@
+<%if @fomo >= 100 %>
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
+    <h1>You never reached the party</h1>
+    <br>
+  </div>
+  <%= audio_tag("SADEND.mp3", autoplay: true) %>
+  <div id="top-content-buffer"></div>
+    <div class="options">
+      <%=@event.text%>
+    </div>
+        <div class="options">
+          <%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
+          <br>
+          <%= link_to "New Game", controller: 'games', action: 'new' %>
+        </div>
+    <!-- <div class="flexbox-event-content"> -->
+        <center><img src=<%=@event.image_url %> class="final-image"></center>
+    <!-- </div> -->
+</div>
+<%else%>
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
+    <h1>You've reached the party!</h1>
+    <br>
+  </div>
+  <div id="top-content-buffer"></div>
+    <div class="options">
+      <%=@event.text%>
+    </div>
+        <div class="options">
+          <%= link_to "Add to Scoreboard", controller: 'scoreboard', action: 'new' %>
+          <br>
+          <%= link_to "New Game", controller: 'games', action: 'new' %>
+        </div>
+    <!-- <div class="flexbox-event-content"> -->
+        <center><img src=<%=@event.image_url %> class="final-image"></center>
+    <!-- </div> -->
+    <%= audio_tag("SONG1.mp3", autoplay: true) %>
+</div>
+<%end%>

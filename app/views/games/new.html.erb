@@ -1,13 +1,23 @@
-<%= form_for @game, url: {action: "create"}, html: {class: "new_game_form"} do |f| %>
-  <h4>What is your name?</h4> <%= f.text_field :username %> 
-  <h4>What is your occupation?</h4><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"]%>
-  <br>
-  <%= f.submit "Hit The Trail!" %>
-  <% end %>
-
-  <div class="occupation-info">
-
-  <h4>Hedge Fund Manager:</h4><p>The Hedge Fund Manager begins the game with the most money, but the least amount of phone battery</p>
-  <h4>Tech Bro:</h4><p>The Tech Bro begins the game with the highest amount of phone battery</p>
-  <h4>Yoga Instructor:</h4><p>The Yoga Instructor begins the game with the least amount of money, but the lowest level of FOMO. Namaste, brah.</p>
+<div class="page-flexbox-wrapper">
+  <div id="occupation-header">
+    <h1>Choose a Career Path</h1>
   </div>
+<div id="top-content-buffer"></div>
+  <div class="occupation-container">
+    <div class=occupations>
+      <p id=job-title>Hedge Fund Manager:</p><p id=job-descriptor>The Ivy League-educated Hedge Fund Manager begins the game with the most money, highest level of FOMO and loves "The Wolf of Wall Street" for all the wrong reasons.</p>
+      <p id=job-title>Tech Bro:</p><p id=job-descriptor>The valedictorian of his high school class, Tech Bro is an aspiring rapper and Tinder svengali. He begins the game with the most phone battery.</p>
+      <p id=job-title>Yoga Instructor:</p><p id=job-descriptor>The Yoga Instructor begins the game with the least amount of money, but through constant mantras and sun salutations begins the game with the lowest level of FOMO.</p>
+    </div>
+
+  <%= form_for @game, url: {action: "create"}, :html => {:class => "create-game-form"} do |f| %>
+  <div class="occupation-question">
+    <p>What is your name?<p><%= f.text_field :username %>
+    <br>
+    <p>What is your occupation?<p><%= f.select :occupation, ['Hedge Fund Manager', 'Tech Bro', "Yoga Instructor"], { :class => 'selector-class' }%>
+  </div>
+  <div id="hit-trail">
+    <%= f.submit "Let's Hit The Trail", :class => 'hit-trail-button' %>
+    <% end %>
+  </div>
+

@@ -1,0 +1,28 @@
+<div class="page-flexbox-wrapper">
+  <div id="event-header">
+    <h1>High Scores</h1>
+  </div>
+<br>
+  <div id="top-content-buffer"></div>
+    <div id="new-game-link">
+      <div class="options">
+        <%= link_to "Start New Game", root_path%>
+      </div>
+      <br>
+      <br>
+    </div>
+        <div id="top-content-buffer"></div>
+<div class="welcome-container">
+  <marquee behavior="scroll" align="middle" direction="up" style="height:800px">
+<!--   <div class="scoreboard"> -->
+    <%count = 1%>
+    <%@scoreboard.each do |board| %>
+      <%=count%>. <%=board.initials%>: <%=board.score%>
+      <br>
+      <br>
+      <%count += 1%>
+    <%end%>
+<!--   </div> -->
+  </marquee>
+</div>
+

@@ -1,3 +1,28 @@
-<script src="/assets/_game_event.js"></script>
-
-<%= button_to "Return to Trail", event_result_path(@result), method: "put" %>
+<div class="event-flexbox-wrapper">
+  <div class="top-content">
+    <div id="stats">
+      <p> Name: <%= @game.username %> </p>
+      <p> FOMO: <%= @game.fomo %>% <br> </p>
+      <p> Time: <%= @game.time %> Minutes <br> </p>
+      <p> Money: $<%= @game.money %> <br> </p>
+      <p> Battery: <%= @game.battery %>% <br> </p>
+    </div>
+    <div id="event-header">
+      <h1>Your Result</h1>
+    </div>
+    <div id="top-content-buffer"></div>
+  </div>
+</div>
+<div class="options">
+  <%=@result.text%>
+</div>
+<div class="flexbox-event-content">
+  <div class="image">
+    <img src=<%=@result.image_url%>>
+  </div>
+  <div id="event-content-buffer"></div>
+      <div class="trail-return-link">
+        <%= link_to "Return to Trail", event_result_path(@result), method: "put"%>
+    </div>
+  </div>
+</div>

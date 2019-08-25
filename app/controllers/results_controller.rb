@@ -3,7 +3,7 @@ class ResultsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.find(params[:event_id])
     @game = Game.find(session[:id])
     @result = Result.find(params[:id])
 
@@ -13,6 +13,7 @@ class ResultsController < ApplicationController
     gon.battery = @game.battery
     gon.time = @game.time
     gon.money = @game.money
+    gon.gameimage = @result.image_url
   end
 
   def update
@@ -27,6 +28,10 @@ class ResultsController < ApplicationController
     @game.update_attributes(time: (@game.time += @result.attr_change.time_change))
     @game.update_attributes(money: (@game.money += @result.attr_change.money_change))
     @game.update_attributes(checked_instagram: false)
+    @game.update_attributes(checked_tinder: false)
+    @game.update_attributes(talked_to_locals: false)
+    @game.update_attributes(checked_googlemaps: false)
+
 
     redirect_to games_path
   end
