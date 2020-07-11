@@ -24,8 +24,6 @@ pickle-email-*.html
 /.bundle
 /vendor/bundle
 
-/config/secrets.yml
-
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
 
